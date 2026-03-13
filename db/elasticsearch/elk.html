@@ -10,13 +10,13 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/db/mysql/covering-index.html">
+        <link rel="canonical" href="https://ashe-wiki.github.io/db/elasticsearch/elk.html">
       
       
-        <link rel="prev" href="b%2Btree.html">
+        <link rel="prev" href="kibana.html">
       
       
-        <link rel="next" href="index-failure.html">
+        <link rel="next" href="../../algo/index.html">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>covering-index - Ashe Wiki</title>
+        <title>ELK收集SpringBoot日志 - Ashe Wiki</title>
       
     
     
@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#logstash" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -114,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              covering-index
+              ELK收集SpringBoot日志
             
           </span>
         </div>
@@ -287,7 +292,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="ix.html" class="md-tabs__link">
+        <a href="../mysql/ix.html" class="md-tabs__link">
           
   
   
@@ -1403,8 +1408,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1415,11 +1418,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -1440,7 +1443,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1458,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ix.html" class="md-nav__link">
+      <a href="../mysql/ix.html" class="md-nav__link">
         
   
   
@@ -1486,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="b%2Btree.html" class="md-nav__link">
+      <a href="../mysql/b%2Btree.html" class="md-nav__link">
         
   
   
@@ -1511,17 +1514,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="covering-index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../mysql/covering-index.html" class="md-nav__link">
         
   
   
@@ -1537,7 +1533,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1550,7 +1545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index-failure.html" class="md-nav__link">
+      <a href="../mysql/index-failure.html" class="md-nav__link">
         
   
   
@@ -1578,7 +1573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sql-flow.html" class="md-nav__link">
+      <a href="../mysql/sql-flow.html" class="md-nav__link">
         
   
   
@@ -1606,7 +1601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dirty-read.html" class="md-nav__link">
+      <a href="../mysql/dirty-read.html" class="md-nav__link">
         
   
   
@@ -1634,7 +1629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mvcc.html" class="md-nav__link">
+      <a href="../mysql/mvcc.html" class="md-nav__link">
         
   
   
@@ -1662,7 +1657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="join.html" class="md-nav__link">
+      <a href="../mysql/join.html" class="md-nav__link">
         
   
   
@@ -1865,6 +1860,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1875,11 +1872,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -1900,7 +1897,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1918,7 +1915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../elasticsearch/install.html" class="md-nav__link">
+      <a href="install.html" class="md-nav__link">
         
   
   
@@ -1946,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../elasticsearch/yellow-index.html" class="md-nav__link">
+      <a href="yellow-index.html" class="md-nav__link">
         
   
   
@@ -1974,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../elasticsearch/sb-es.html" class="md-nav__link">
+      <a href="sb-es.html" class="md-nav__link">
         
   
   
@@ -2002,7 +1999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../elasticsearch/kibana.html" class="md-nav__link">
+      <a href="kibana.html" class="md-nav__link">
         
   
   
@@ -2027,10 +2024,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../elasticsearch/elk.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ELK收集SpringBoot日志
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="elk.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2046,6 +2068,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#logstash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安装Logstash
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#springbootjar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        准备SpringBoot的jar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logstash_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        准备Logstash的配置文件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data-view页面验证日志是否成功插入
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2507,6 +2591,58 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#logstash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安装Logstash
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#springbootjar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        准备SpringBoot的jar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logstash_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        准备Logstash的配置文件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        data-view页面验证日志是否成功插入
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2553,7 +2689,7 @@
     
     
       <li class="md-path__item">
-        <a href="ix.html" class="md-path__link">
+        <a href="../mysql/ix.html" class="md-path__link">
           
   <span class="md-ellipsis">
     Db
@@ -2574,10 +2710,10 @@
     
     
       <li class="md-path__item">
-        <a href="ix.html" class="md-path__link">
+        <a href="install.html" class="md-path__link">
           
   <span class="md-ellipsis">
-    MySQL
+    Elasticsearch
   </span>
 
         </a>
@@ -2596,7 +2732,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/db/mysql/covering-index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/db/elasticsearch/elk.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2604,57 +2740,87 @@
   
 
 
-  <h1>covering-index</h1>
+  <h1>ELK收集SpringBoot日志</h1>
 
-<p>什么是索引覆盖？</p>
-<ul>
-<li>一个查询所需的所有数据（包括 SELECT 列、WHERE 条件列、JOIN 列、ORDER BY 列等）都可以直接从索引树中获取，而无需回表。</li>
-</ul>
 <blockquote>
-<p><strong>所谓回表，查询过程中通过索引的B+树查询，但是叶子节点中没有存储非索引列的值，于是根据主键ID，到聚簇索引查询整行数据，再获取具体列的值。（也就是查询过程即使走了索引，但是仍然再根据主键ID再查一次）</strong></p>
+<p>在Elasticsearch中创建好index（可以理解为关系型数据库的table），然后在Kibana页面创建index对应的data-veiw（document的可视化界面）。</p>
+<p>整个ELK流程简而言之，就是springboot输出日志到服务器某个指定文件上，然后Logstash程序通过读取这个日志文件，并把日志插入到Elasticsearch的index中，然后你就可以通过Kibana的data-view页面检索你想要查询的日志信息。</p>
 </blockquote>
-<p>在 MySQL 的 InnoDB 引擎中，数据存储结构分为两种：</p>
-<ul>
-<li>聚簇索引（Clustered Index）：通常是主键索引，叶子节点存储的是整行数据。  </li>
-<li>二级索引（Secondary Index / 非聚簇索引）：叶子节点存储的是索引列的值 + 主键值。  </li>
-</ul>
-<p>索引覆盖就是为了解决回表现象的解决方案。</p>
-<blockquote>
-<p>如果查询的列全部都包含在某个二级索引中，那么 MySQL 直接从这个二级索引里就能拿到所有需要的数据，完全不需要去查聚簇索引。</p>
-</blockquote>
-<p>比如 users 表，建立联合索引 idx_name_age (name, age)
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Alice&#39;</span><span class="p">;</span>
+<h2 id="logstash">安装Logstash<a class="headerlink" href="#logstash" title="Permanent link">&para;</a></h2>
+<p>https://www.elastic.co/guide/en/logstash/8.16/installing-logstash.html</p>
+<p>尽量保持你的Elasticsearch、Kibana、Logstash的version一致，我所使用的version为8.16.0</p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-1.png" /></p>
+<p>启动成功，并演示了hello world后，就可以准备Logstash的配置文件和SpringBoot的jar了。</p>
+<h2 id="springbootjar">准备SpringBoot的jar<a class="headerlink" href="#springbootjar" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-2.png" /></p>
+<p>log4j2-spring.xml
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;Configuration</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;INFO&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Appenders&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- 日志文件输出 日志 --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;RollingFile</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;File&quot;</span><span class="w"> </span><span class="na">fileName=</span><span class="s">&quot;logs/my_app.log&quot;</span>
+<span class="w">                     </span><span class="na">filePattern=</span><span class="s">&quot;logs/$${date:yyyy-MM}/my_app-%d{MM-dd-yyyy}-%i.log.gz&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;PatternLayout</span><span class="w"> </span><span class="na">pattern=</span><span class="s">&quot;%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Policies&gt;</span>
+<span class="w">                </span><span class="cm">&lt;!-- 指定的时间间隔触发日志滚动，未配置，默认1小时 --&gt;</span>
+<span class="w">                </span><span class="nt">&lt;TimeBasedTriggeringPolicy/&gt;</span>
+<span class="w">                </span><span class="cm">&lt;!-- 日志文件大小达到指定大小时触发日志滚动，Log4j2 就会滚动日志文件 --&gt;</span>
+<span class="w">                </span><span class="nt">&lt;SizeBasedTriggeringPolicy</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;10MB&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="cm">&lt;!-- 满足其中一个触发条件（时间/文件大小），都会执行日志滚动 --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/Policies&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!-- 最多保留 10 个滚动的日志文件，有限删除最旧的日志文件 --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;DefaultRolloverStrategy</span><span class="w"> </span><span class="na">max=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/RollingFile&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- 控制台输出 日志 --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Console</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Console&quot;</span><span class="w"> </span><span class="na">target=</span><span class="s">&quot;SYSTEM_OUT&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;PatternLayout</span><span class="w"> </span><span class="na">pattern=</span><span class="s">&quot;%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Console&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Appenders&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;Loggers&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Root</span><span class="w"> </span><span class="na">level=</span><span class="s">&quot;info&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;AppenderRef</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;File&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Root&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Loggers&gt;</span>
+<span class="nt">&lt;/Configuration&gt;</span>
+</code></pre></div></p>
+<p>非常简单的一个项目，通过请求接口的参数控制日志内容</p>
+<h2 id="logstash_1">准备Logstash的配置文件<a class="headerlink" href="#logstash_1" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>input<span class="w"> </span><span class="o">{</span>
+<span class="w">  </span>file<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nv">path</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="s2">&quot;/home/es/temp/logs/my_app.log&quot;</span><span class="w"> </span><span class="c1"># SpringBoot日志的绝对路径</span>
+<span class="w">    </span><span class="nv">start_position</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="s2">&quot;beginning&quot;</span>
+<span class="w">    </span><span class="nv">sincedb_path</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="s2">&quot;/dev/null&quot;</span>
+<span class="w">  </span><span class="o">}</span>
+<span class="o">}</span>
+
+filter<span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="c1"># 可以在这里添加过滤器来处理日志，例如使用grok解析日志格式</span>
+<span class="o">}</span>
+
+output<span class="w"> </span><span class="o">{</span>
+<span class="w">  </span>elasticsearch<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nv">hosts</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="o">[</span><span class="s2">&quot;https://your.elasticsearch.ip:9200&quot;</span><span class="o">]</span>
+<span class="w">    </span><span class="nv">index</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="s2">&quot;cat_index&quot;</span><span class="w"> </span><span class="c1"># 你创建的index的name</span>
+<span class="w">    </span><span class="nv">user</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="s2">&quot;elastic&quot;</span>
+<span class="w">    </span><span class="nv">password</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="s2">&quot;your_password&quot;</span>
+<span class="w">    </span><span class="nv">ssl</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="nb">true</span>
+<span class="w">    </span><span class="nv">ssl_certificate_verification</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="nb">false</span><span class="w"> </span><span class="c1"># 禁用ssl验证</span>
+<span class="w">  </span><span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div>
-idx_name_age 索引节点里存有 name 和 age，就不用根据主键ID回表查询。（将要查询的字段和where条件的字段加上联合索引，使得叶子节点上的索引值可以覆盖select的字段，这种解决方案就叫索引覆盖）</p>
-<hr />
-<p>理解索引覆盖的前提是：认识InnoDB存储引擎的两种索引结构——聚簇索引（Clustered Index） &amp; 二级索引（Secondary Index）  </p>
-<blockquote>
-<p>聚簇索引叶子节点存储的是 <strong>主键值 &amp; row(record的完整记录)</strong>，因此<code>where id = 1</code>这样的查询直接就能获取该行的每个字段值，也就不存在回表的说法。<br />
-二级索引叶子节点存储的是<strong>二级索引列值 &amp; 主键值</strong>，因此<code>select col(非索引列) from t where index_col = xxx;</code>这样的查询必须回表，经由聚簇索引再查询一次。</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code>B+Tree (Clustered Index)
-
-非叶子节点
-   ↓
-[ key | pointer ]
-
-叶子节点
-   ↓
-[ 主键值 | col1 | col2 | col3 | ... | colN ]
-
-
-
-
-二级索引 B+Tree
-
-非叶子节点
-   ↓
-[ key | pointer ]
-
-叶子节点
-   ↓
-[ 二级索引列值 | 主键值 ]
-</code></pre></div>
+<p>如果你的Elasticsearch本身是http访问，那么可以忽略这个配置）关于禁用ssl验证那里，也可以将Elasticsearch服务器的CA证书（通常是.crt文件）导入到Java的信任库中。 我没尝试那种做法~</p>
+<p>通过这个配置文件来启动Logstash （我将其保存在了Logstash的conf目录下）
+<code>bin/logstash -f /home/es/logstash-8.16.0/config/logstash.conf</code></p>
+<h2 id="data-view">data-view页面验证日志是否成功插入<a class="headerlink" href="#data-view" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-3.png" />
+<img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-4.png" /></p>
+<p>通过调用接口，less日志文件，可以看到已经有对应的日志输出了。</p>
+<p>这时我们在data-view的检索窗口，尝试检索“Expressing”</p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-5.png" /></p>
+<p>可以看到，已经查询到了对应日志所映射生成的document了。</p>
+<p>在Kibana页面还可以更方面的展开日志</p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-6.png" /></p>
 
 
 
