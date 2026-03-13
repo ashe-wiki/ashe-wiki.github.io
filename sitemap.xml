@@ -49,6 +49,10 @@
          <lastmod>2026-03-13</lastmod>
     </url>
     <url>
+         <loc>https://ashe-wiki.github.io/db/redis/redis-cluster.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
          <loc>https://ashe-wiki.github.io/db/redis/struct.html</loc>
          <lastmod>2026-03-13</lastmod>
     </url>
@@ -74,6 +78,10 @@
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/devops/transactional-mq.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/devops/workflow.html</loc>
          <lastmod>2026-03-13</lastmod>
     </url>
     <url>

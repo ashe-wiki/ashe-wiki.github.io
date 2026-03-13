@@ -10,11 +10,13 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/other/index.html">
+        <link rel="canonical" href="https://ashe-wiki.github.io/devops/workflow.html">
       
       
-        <link rel="prev" href="../devops/workflow.html">
+        <link rel="prev" href="distributed-lock.html">
       
+      
+        <link rel="next" href="../other/index.html">
       
       
         
@@ -25,7 +27,7 @@
     
     
       
-        <title>Index - Ashe Wiki</title>
+        <title>workflow - Ashe Wiki</title>
       
     
     
@@ -77,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -112,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              workflow
             
           </span>
         </div>
@@ -320,11 +327,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../devops/transactional-mq.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="transactional-mq.html" class="md-tabs__link">
           
   
   
@@ -340,13 +349,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../other/index.html" class="md-tabs__link">
           
   
   
@@ -1742,24 +1749,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -1777,7 +1789,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1795,7 +1807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../devops/transactional-mq.html" class="md-nav__link">
+      <a href="transactional-mq.html" class="md-nav__link">
         
   
   
@@ -1823,7 +1835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../devops/cache.html" class="md-nav__link">
+      <a href="cache.html" class="md-nav__link">
         
   
   
@@ -1851,7 +1863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../devops/mq-loss.html" class="md-nav__link">
+      <a href="mq-loss.html" class="md-nav__link">
         
   
   
@@ -1879,7 +1891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../devops/distributed-transaction.html" class="md-nav__link">
+      <a href="distributed-transaction.html" class="md-nav__link">
         
   
   
@@ -1907,7 +1919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../devops/rate-limiting.html" class="md-nav__link">
+      <a href="rate-limiting.html" class="md-nav__link">
         
   
   
@@ -1935,7 +1947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../devops/distributed-lock.html" class="md-nav__link">
+      <a href="distributed-lock.html" class="md-nav__link">
         
   
   
@@ -1960,10 +1972,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../devops/workflow.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    workflow
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="workflow.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1979,6 +2016,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 核心定义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 两大设计哲学
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 拆分粒度控制原则
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 流程设计思路
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1995,29 +2094,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -2035,7 +2129,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2050,17 +2144,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../other/index.html" class="md-nav__link">
         
   
   
@@ -2076,7 +2163,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2106,6 +2192,58 @@
   
   
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 核心定义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 两大设计哲学
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 拆分粒度控制原则
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 流程设计思路
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2148,10 +2286,10 @@
     
     
       <li class="md-path__item">
-        <a href="index.html" class="md-path__link">
+        <a href="transactional-mq.html" class="md-path__link">
           
   <span class="md-ellipsis">
-    Other
+    DevOps
   </span>
 
         </a>
@@ -2170,7 +2308,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/other/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/devops/workflow.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2178,9 +2316,70 @@
   
 
 
-  <h1>Index</h1>
+  <h1>workflow</h1>
 
-<p>other...</p>
+<h2 id="1">1. 核心定义<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p><strong>工作流</strong>是对目标实现过程的<strong>效率化拆解</strong>与<strong>有序组织</strong>，通过：</p>
+<ul>
+<li>
+<p><strong>任务分解</strong>：将复杂行为拆解为简单任务单元</p>
+</li>
+<li>
+<p><strong>流程编排</strong>：建立任务间协作规则，逼近全局最优路径</p>
+</li>
+</ul>
+<hr />
+<h2 id="2">2. 两大设计哲学<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>分而治之（Divide and Conquer）</strong>  </li>
+<li>
+<p>把大任务拆解为可管理的小任务</p>
+</li>
+<li>
+<p><strong>自动协调（Orchestration）</strong>  </p>
+</li>
+<li>让小任务按预定规则自动流转</li>
+</ol>
+<p>从生物层面来看，器官功能模块化分工即为拆分，生命活动的行为就是组合。</p>
+<p>从企业层面来看，企业岗位即为拆分，同事协作就是组合。</p>
+<p>从微服务架构来看，微服务解耦即为拆分，服务间互相调用就是组合。</p>
+<p>让一个人手搓原子弹，让一百个人做一道菜，都是荒唐之举，拆分过粗，无法形成并行；拆分过细，则会引入不必要的沟通成本和冗余的资源调度。  </p>
+<hr />
+<h2 id="3">3. 拆分粒度控制原则<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>核心关注点</th>
+<th>评估方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>任务复杂度</strong></td>
+<td>流程环节数量、分支路径、异常概率</td>
+<td>任务分解树分析</td>
+</tr>
+<tr>
+<td><strong>执行单元效能</strong></td>
+<td>资源占用率、响应延迟、容错能力</td>
+<td>单元性能基线测试</td>
+</tr>
+<tr>
+<td><strong>接口稳定性</strong></td>
+<td>协议一致性、数据格式、调用频率</td>
+<td>接口兼容性测试</td>
+</tr>
+<tr>
+<td><strong>依赖强度</strong></td>
+<td>同步/异步比例、超时阈值、回滚机制</td>
+<td>依赖关系拓扑分析</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4">4. 流程设计思路<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p><img alt="pic" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/workflow.png" /></p>
 
 
 

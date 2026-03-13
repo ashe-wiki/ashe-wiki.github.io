@@ -10,29 +10,31 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/other/index.html">
+        <link rel="canonical" href="https://ashe-wiki.github.io/db/redis/redis-cluster.html">
       
       
-        <link rel="prev" href="../devops/workflow.html">
+        <link rel="prev" href="eviction-policy.html">
       
+      
+        <link rel="next" href="../../algo/index.html">
       
       
         
       
       
-      <link rel="icon" href="../assets/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>Index - Ashe Wiki</title>
+        <title>redis-cluster - Ashe Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1-redis" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -87,7 +94,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../../index.html" title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -112,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              redis-cluster
             
           </span>
         </div>
@@ -223,7 +230,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="../../index.html" class="md-tabs__link">
         
   
   
@@ -251,7 +258,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../lang/go/slice.html" class="md-tabs__link">
+        <a href="../../lang/go/slice.html" class="md-tabs__link">
           
   
   
@@ -270,6 +277,8 @@
   
   
   
+    
+  
   
     
     
@@ -277,11 +286,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../db/mysql/ix.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../mysql/ix.html" class="md-tabs__link">
           
   
   
@@ -304,7 +315,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../algo/index.html" class="md-tabs__link">
+        <a href="../../algo/index.html" class="md-tabs__link">
           
   
   
@@ -324,7 +335,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../devops/transactional-mq.html" class="md-tabs__link">
+        <a href="../../devops/transactional-mq.html" class="md-tabs__link">
           
   
   
@@ -340,13 +351,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../other/index.html" class="md-tabs__link">
           
   
   
@@ -380,7 +389,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../../index.html" title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -415,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -542,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/slice.html" class="md-nav__link">
+      <a href="../../lang/go/slice.html" class="md-nav__link">
         
   
   
@@ -570,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/map.html" class="md-nav__link">
+      <a href="../../lang/go/map.html" class="md-nav__link">
         
   
   
@@ -598,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/channel.html" class="md-nav__link">
+      <a href="../../lang/go/channel.html" class="md-nav__link">
         
   
   
@@ -626,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/defer.html" class="md-nav__link">
+      <a href="../../lang/go/defer.html" class="md-nav__link">
         
   
   
@@ -654,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/sync.html" class="md-nav__link">
+      <a href="../../lang/go/sync.html" class="md-nav__link">
         
   
   
@@ -682,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/generics.html" class="md-nav__link">
+      <a href="../../lang/go/generics.html" class="md-nav__link">
         
   
   
@@ -710,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/memory-escape.html" class="md-nav__link">
+      <a href="../../lang/go/memory-escape.html" class="md-nav__link">
         
   
   
@@ -738,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/memory-leak.html" class="md-nav__link">
+      <a href="../../lang/go/memory-leak.html" class="md-nav__link">
         
   
   
@@ -766,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/context.html" class="md-nav__link">
+      <a href="../../lang/go/context.html" class="md-nav__link">
         
   
   
@@ -794,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/gmp.html" class="md-nav__link">
+      <a href="../../lang/go/gmp.html" class="md-nav__link">
         
   
   
@@ -822,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/memory-allocator.html" class="md-nav__link">
+      <a href="../../lang/go/memory-allocator.html" class="md-nav__link">
         
   
   
@@ -908,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/meditation/2025-12-14-diary.html" class="md-nav__link">
+      <a href="../../lang/meditation/2025-12-14-diary.html" class="md-nav__link">
         
   
   
@@ -994,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/environment.html" class="md-nav__link">
+      <a href="../../lang/rust/environment.html" class="md-nav__link">
         
   
   
@@ -1022,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/web.html" class="md-nav__link">
+      <a href="../../lang/rust/web.html" class="md-nav__link">
         
   
   
@@ -1108,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/markdown/grammar.html" class="md-nav__link">
+      <a href="../../lang/markdown/grammar.html" class="md-nav__link">
         
   
   
@@ -1148,24 +1157,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -1183,7 +1197,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1251,7 +1265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/ix.html" class="md-nav__link">
+      <a href="../mysql/ix.html" class="md-nav__link">
         
   
   
@@ -1279,7 +1293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/b%2Btree.html" class="md-nav__link">
+      <a href="../mysql/b%2Btree.html" class="md-nav__link">
         
   
   
@@ -1307,7 +1321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/covering-index.html" class="md-nav__link">
+      <a href="../mysql/covering-index.html" class="md-nav__link">
         
   
   
@@ -1335,7 +1349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/index-failure.html" class="md-nav__link">
+      <a href="../mysql/index-failure.html" class="md-nav__link">
         
   
   
@@ -1363,7 +1377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/sql-flow.html" class="md-nav__link">
+      <a href="../mysql/sql-flow.html" class="md-nav__link">
         
   
   
@@ -1391,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/dirty-read.html" class="md-nav__link">
+      <a href="../mysql/dirty-read.html" class="md-nav__link">
         
   
   
@@ -1419,7 +1433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/mvcc.html" class="md-nav__link">
+      <a href="../mysql/mvcc.html" class="md-nav__link">
         
   
   
@@ -1447,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/join.html" class="md-nav__link">
+      <a href="../mysql/join.html" class="md-nav__link">
         
   
   
@@ -1480,6 +1494,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1490,11 +1506,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -1515,7 +1531,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1533,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/struct.html" class="md-nav__link">
+      <a href="struct.html" class="md-nav__link">
         
   
   
@@ -1561,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/persistence-strategy.html" class="md-nav__link">
+      <a href="persistence-strategy.html" class="md-nav__link">
         
   
   
@@ -1589,7 +1605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/eviction-policy.html" class="md-nav__link">
+      <a href="eviction-policy.html" class="md-nav__link">
         
   
   
@@ -1614,10 +1630,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../db/redis/redis-cluster.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    redis-cluster
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="redis-cluster.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1633,6 +1674,57 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 拉取 Redis 镜像
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2、创建配置文件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3、创建脚本
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1710,7 +1802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../algo/index.html" class="md-nav__link">
+      <a href="../../algo/index.html" class="md-nav__link">
         
   
   
@@ -1795,7 +1887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../devops/transactional-mq.html" class="md-nav__link">
+      <a href="../../devops/transactional-mq.html" class="md-nav__link">
         
   
   
@@ -1823,7 +1915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../devops/cache.html" class="md-nav__link">
+      <a href="../../devops/cache.html" class="md-nav__link">
         
   
   
@@ -1851,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../devops/mq-loss.html" class="md-nav__link">
+      <a href="../../devops/mq-loss.html" class="md-nav__link">
         
   
   
@@ -1879,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../devops/distributed-transaction.html" class="md-nav__link">
+      <a href="../../devops/distributed-transaction.html" class="md-nav__link">
         
   
   
@@ -1907,7 +1999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../devops/rate-limiting.html" class="md-nav__link">
+      <a href="../../devops/rate-limiting.html" class="md-nav__link">
         
   
   
@@ -1935,7 +2027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../devops/distributed-lock.html" class="md-nav__link">
+      <a href="../../devops/distributed-lock.html" class="md-nav__link">
         
   
   
@@ -1963,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../devops/workflow.html" class="md-nav__link">
+      <a href="../../devops/workflow.html" class="md-nav__link">
         
   
   
@@ -1995,29 +2087,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -2035,7 +2122,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2050,17 +2137,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../other/index.html" class="md-nav__link">
         
   
   
@@ -2076,7 +2156,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2107,6 +2186,47 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 拉取 Redis 镜像
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2、创建配置文件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3、创建脚本
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2130,7 +2250,7 @@
   
   
     <li class="md-path__item">
-      <a href="../index.html" class="md-path__link">
+      <a href="../../index.html" class="md-path__link">
         
   <span class="md-ellipsis">
     Home
@@ -2147,11 +2267,37 @@
   
     
     
+      
+  
+  
+    
+    
       <li class="md-path__item">
-        <a href="index.html" class="md-path__link">
+        <a href="../mysql/ix.html" class="md-path__link">
           
   <span class="md-ellipsis">
-    Other
+    Db
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="struct.html" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Redis
   </span>
 
         </a>
@@ -2170,7 +2316,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/other/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/db/redis/redis-cluster.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2178,9 +2324,125 @@
   
 
 
-  <h1>Index</h1>
+  <h1>redis-cluster</h1>
 
-<p>other...</p>
+<h2 id="1-redis">1. 拉取 Redis 镜像<a class="headerlink" href="#1-redis" title="Permanent link">&para;</a></h2>
+<p>使用以下命令拉取 Redis 6.2 版本镜像（选了一个较为稳定的版本）：</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>redis:6.2
+</code></pre></div>
+<h2 id="2">2、创建配置文件<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>比如在服务器的用户目录下/home/w/（俺的服务器用户目录）
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>redis_cluster
+<span class="nb">cd</span><span class="w"> </span>redis_cluster
+mkdir<span class="w"> </span>bin
+mkdir<span class="w"> </span>conf
+mkdir<span class="w"> </span>data
+<span class="nb">cd</span><span class="w"> </span>data
+mkdir<span class="w"> </span>node-1
+mkdir<span class="w"> </span>node-2
+mkdir<span class="w"> </span>node-3
+mkdir<span class="w"> </span>node-5
+mkdir<span class="w"> </span>node-6
+</code></pre></div>
+conf目录创建配置文件vim redis-node-1.conf ，依次6个文件redis-node-1.conf  redis-node-2.conf  redis-node-3.conf  redis-node-4.conf  redis-node-5.conf  redis-node-6.conf
+<div class="highlight"><pre><span></span><code><span class="nb">bind</span><span class="w"> </span><span class="m">0</span>.0.0.0
+protected-mode<span class="w"> </span>no
+cluster-enabled<span class="w"> </span>yes
+cluster-config-file<span class="w"> </span>nodes-7000.conf
+cluster-node-timeout<span class="w"> </span><span class="m">5000</span>
+cluster-announce-ip<span class="w"> </span><span class="m">192</span>.168.1.6
+cluster-announce-port<span class="w"> </span><span class="m">7000</span>
+cluster-announce-bus-port<span class="w"> </span><span class="m">17000</span>
+
+user<span class="w"> </span>r_user<span class="w"> </span>on<span class="w"> </span>&gt;read123<span class="w"> </span>~*<span class="w"> </span>+@read<span class="w"> </span>~*<span class="w"> </span>-@write<span class="w"> </span>~*<span class="w"> </span>-@admin
+user<span class="w"> </span>rw_user<span class="w"> </span>on<span class="w"> </span>&gt;write123<span class="w"> </span>~*<span class="w"> </span>+@read<span class="w"> </span>~*<span class="w"> </span>+@write<span class="w"> </span>~*<span class="w"> </span>-@admin
+user<span class="w"> </span>admin<span class="w"> </span>on<span class="w"> </span>&gt;admin123<span class="w"> </span>~*<span class="w"> </span><span class="p">&amp;</span>*<span class="w"> </span>+@all
+user<span class="w"> </span>default<span class="w"> </span>off
+</code></pre></div></p>
+<h2 id="3">3、创建脚本<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>创建初始化脚本 vim init_redis.sh 
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Creating Redis cluster...&quot;</span>
+
+<span class="c1"># 启动6个Redis节点</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..6<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nv">port</span><span class="o">=</span><span class="k">$((</span><span class="m">6999</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$i</span><span class="k">))</span>
+<span class="w">  </span><span class="nv">container</span><span class="o">=</span><span class="s2">&quot;redis-node-</span><span class="nv">$i</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nv">config</span><span class="o">=</span><span class="s2">&quot;/home/w/redis/conf/redis-node-</span><span class="nv">$i</span><span class="s2">.conf&quot;</span>
+<span class="w">  </span><span class="nv">data</span><span class="o">=</span><span class="s2">&quot;/home/w/redis/data/node-</span><span class="nv">$i</span><span class="s2">&quot;</span>
+
+<span class="w">  </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span><span class="nv">$container</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-p<span class="w"> </span><span class="nv">$port</span>:6379<span class="w"> </span>-p<span class="w"> </span><span class="k">$((</span><span class="nv">port</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">10000</span><span class="k">))</span>:16379<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--net<span class="w"> </span>redis-cluster<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-v<span class="w"> </span><span class="nv">$config</span>:/usr/local/etc/redis/redis.conf<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-v<span class="w"> </span><span class="nv">$data</span>:/data<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-e<span class="w"> </span><span class="nv">TZ</span><span class="o">=</span><span class="s2">&quot;Asia/Shanghai&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ulimit<span class="w"> </span><span class="nv">nofile</span><span class="o">=</span><span class="m">100000</span>:100000<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>redis:6.2<span class="w"> </span>redis-server<span class="w"> </span>/usr/local/etc/redis/redis.conf
+
+<span class="w">  </span><span class="c1"># 检查容器是否启动成功</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Failed to start </span><span class="nv">$container</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="k">done</span>
+
+<span class="c1"># 等待节点启动</span>
+sleep<span class="w"> </span><span class="m">10</span>
+
+<span class="c1"># 获取所有节点的 IP，这里是容器IP</span>
+<span class="nv">nodes</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..6<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nv">ip</span><span class="o">=</span><span class="k">$(</span>docker<span class="w"> </span>inspect<span class="w"> </span>-f<span class="w"> </span><span class="s1">&#39;{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}&#39;</span><span class="w"> </span>redis-node-<span class="nv">$i</span><span class="k">)</span>
+<span class="w">  </span><span class="nv">nodes</span><span class="o">+=</span><span class="s2">&quot;</span><span class="nv">$ip</span><span class="s2">:6379 &quot;</span>
+<span class="k">done</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Nodes: </span><span class="nv">$nodes</span><span class="s2">&quot;</span>
+
+<span class="c1"># 创建 Redis 集群（使用密码连接）</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>redis-node-1<span class="w"> </span>redis-cli<span class="w"> </span>-u<span class="w"> </span>redis://admin:admin123@localhost:6379<span class="w"> </span>--cluster<span class="w"> </span>create<span class="w"> </span><span class="nv">$nodes</span><span class="w"> </span>--cluster-replicas<span class="w"> </span><span class="m">1</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;All Redis nodes should be running now. Here is the list of running containers:&quot;</span>
+docker<span class="w"> </span>ps<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>redis
+</code></pre></div></p>
+<p>创建停止脚本 vim stop_redis.sh
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># 停止redis cluster</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..6<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span>docker<span class="w"> </span>stop<span class="w"> </span>redis-node-<span class="nv">$i</span>
+<span class="k">done</span>
+</code></pre></div></p>
+<p>创建删除镜像脚本 vim rm_redis.sh
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..6<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span>docker<span class="w"> </span>rm<span class="w"> </span>redis-node-<span class="nv">$i</span>
+<span class="k">done</span>
+</code></pre></div></p>
+<p>创建启动容器脚本 vim start_redis.sh 
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..6<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span>docker<span class="w"> </span>start<span class="w"> </span>redis-node-<span class="nv">$i</span>
+<span class="k">done</span>
+</code></pre></div></p>
+<p>查看集群状态信息</p>
+<p>docker exec -it redis-node-1 redis-cli CLUSTER INFO</p>
+<p>带密码版</p>
+<p>docker exec -it redis-node-1 redis-cli -u redis://admin:admin123@localhost:6379 CLUSTER INFO
+<img alt="我的图片" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/redis-cluster-01.png" /></p>
+<p>查看集群节点信息</p>
+<p>docker exec -it redis-node-1 redis-cli CLUSTER NODES</p>
+<p>docker exec -it redis-node-1 redis-cli -u redis://admin:admin123@localhost:6379 CLUSTER NODES</p>
+<p><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/redis-cluster-02.png" /></p>
+<p>最后通过客户端连接测试</p>
+<p><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/redis-cluster-03.png" /></p>
+<p><br><br>
+后记：不得不说Redis Cluster集群还是很消耗CPU和带宽资源的，因为我的服务器是自己的旧笔记本搭建，启动后系统的CPU和网络资源负载很大（怪不得Redis应用一般独占一台服务器资源）</p>
+<p><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/redis-cluster-04.png" />
+<img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/redis-cluster-05.png" /></p>
 
 
 
@@ -2240,14 +2502,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
-        <script src="../javascripts/mermaid-init.js"></script>
+        <script src="../../javascripts/mermaid-init.js"></script>
       
     
   </body>

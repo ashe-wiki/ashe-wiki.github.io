@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1-core-concept" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -616,6 +621,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    channel
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="channel.html" class="md-nav__link md-nav__link--active">
         
   
@@ -632,6 +655,67 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-core-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Core Concept
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-unbuffered-vs-buffered-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Unbuffered vs. Buffered Channel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-direction-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Direction Channel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-close-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Close Channel
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1629,6 +1713,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/redis/redis-cluster.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    redis-cluster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1947,6 +2059,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/workflow.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2056,6 +2196,58 @@
   
   
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-core-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Core Concept
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-unbuffered-vs-buffered-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Unbuffered vs. Buffered Channel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-direction-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Direction Channel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-close-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Close Channel
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2184,13 +2376,127 @@
 <blockquote>
 <p>fatal error: all goroutines are asleep - deadlock!</p>
 </blockquote>
-<p>channel + goroutine 通常会像是一个协程分发任务（生产者），多个协程（消费者）会并发地消费任务。  </p>
-<blockquote>
-<p>相对而言，使用协程（是用空间换时间），不使用协程（是用时间换空间，假设耗时t_0），这就引申出使用协程的判断依据，当一个任务拆分
-后，创建协程和分配任务的时间t_1 + 最慢的子任务耗时t_2 + 结果汇总（Channel 传输/锁竞争）的时间t_3 = t_total，如果t_total没有&gt; 明显小于t_0，那么这个任务的拆分就是在白忙活。</p>
-</blockquote>
 <p>select就是多路复用监听channels的作用，如果所有 channel 都关闭了且没有数据了，select 会立即选中 default（如果有）
 <a href="https://github.com/ashe-c0de/lang-lab/blob/main/golang/channel/go-select.go">代码示例</a></p>
+<h2 id="1-core-concept">1. Core Concept<a class="headerlink" href="#1-core-concept" title="Permanent link">&para;</a></h2>
+<p>Channels are the pipes that connect concurrent goroutines. A channel is a technique which allows to let one goroutine to send data to another goroutine. </p>
+<p><img alt="channel" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/go/channel.jpg" /></p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nx">messages</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">chan</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// producer goroutine</span>
+<span class="w">    </span><span class="k">go</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">messages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;ping&quot;</span><span class="w"> </span><span class="p">}()</span>
+<span class="w">    </span><span class="c1">// consumer goroutine | main goroutine</span>
+<span class="w">    </span><span class="nx">msg</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">messages</span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>go<span class="w"> </span>run<span class="w"> </span>channels.go<span class="w"> </span>
+ping
+</code></pre></div></p>
+<p>Think of goroutines as the "workers" and channels as the "communication lines" that allow these workers to coordinate and exchange information effectively.</p>
+<p><strong>By default sends and receives block until both the sender and receiver are ready</strong>. This property allowed us to wait at the end of our program for the "ping" message without having to use any other synchronization.</p>
+<hr />
+<h2 id="2-unbuffered-vs-buffered-channel">2. Unbuffered vs. Buffered Channel<a class="headerlink" href="#2-unbuffered-vs-buffered-channel" title="Permanent link">&para;</a></h2>
+<p>Unbuffered channels are created without specifying a buffer size, like in above example. The key feature of unbuffered channels is their synchronous.
+Buffered channels are created by specifying a buffer size. The key feature of buffered channels is their asynchronous nature: sending and receiving operations are not blocking until the buffer is full or empty.</p>
+<p>Let's look at an example of a buffered channel:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// create a buffered channel with capacity 2</span>
+<span class="w">    </span><span class="nx">ch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">chan</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c1">// start timing to calculate the time elapsed</span>
+<span class="w">    </span><span class="nx">start</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">()</span>
+
+<span class="w">    </span><span class="k">go</span><span class="w"> </span><span class="nx">sender</span><span class="p">(</span><span class="nx">ch</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="p">)</span>
+<span class="w">    </span><span class="k">go</span><span class="w"> </span><span class="nx">receiver</span><span class="p">(</span><span class="nx">ch</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c1">// delay for two goroutines to complete</span>
+<span class="w">    </span><span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="mi">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">sender</span><span class="p">(</span><span class="nx">ch</span><span class="w"> </span><span class="kd">chan</span><span class="o">&lt;-</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Time</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Sending %d at %s\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Since</span><span class="p">(</span><span class="nx">start</span><span class="p">))</span>
+<span class="w">        </span><span class="nx">ch</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nx">i</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Sent %d at %s\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Since</span><span class="p">(</span><span class="nx">start</span><span class="p">))</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">receiver</span><span class="p">(</span><span class="nx">ch</span><span class="w"> </span><span class="o">&lt;-</span><span class="kd">chan</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Time</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// delay start to demonstrate buffer filling up</span>
+<span class="w">    </span><span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">val</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">ch</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Received %d at %s\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">val</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Since</span><span class="p">(</span><span class="nx">start</span><span class="p">))</span>
+
+<span class="w">        </span><span class="c1">// sleep to simulate slow receiver</span>
+<span class="w">        </span><span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="mi">1000</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Millisecond</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/*</span>
+<span class="cm">Output:</span>
+<span class="cm">Sending 1 at 0s</span>
+<span class="cm">Sent 1 at 0s</span>
+<span class="cm">Sending 2 at 0s</span>
+<span class="cm">Sent 2 at 0s</span>
+<span class="cm">Sending 3 at 0s</span>
+<span class="cm">Received 1 at 2.0000571s</span>
+<span class="cm">Sent 3 at 2.0000571s</span>
+<span class="cm">Received 2 at 3.0003522s</span>
+<span class="cm">Received 3 at 4.000808s</span>
+<span class="cm">*/</span>
+</code></pre></div>
+<p>As we can see from the output, the first two values are sent without blocking. However, when it comes to value 3, the sender has to wait util the receiver makes some space in the buffer by receieving value 1. After that, the sender can send value 3 to the channel.</p>
+<p>Buffered channels are created by specifying a buffer size. The key feature of buffered channels is their asynchronous nature: <strong>sending and receiving operations are not blocking until the buffer is full or empty</strong>.</p>
+<hr />
+<h2 id="3-direction-channel">3. Direction Channel<a class="headerlink" href="#3-direction-channel" title="Permanent link">&para;</a></h2>
+<p>Directional channels are channels that are restricted to either sending or receiving operations. Go allows us to specify the direction of a channel, making it either send-only or receive-only. This feature enhances type safety and clarifies the intended use of a channel within a function.</p>
+<p>We can specify the direction of a channel using the following syntax:</p>
+<ul>
+<li>chan&lt;- for a send-only channel</li>
+<li>&lt;-chan for a receive-only channel</li>
+</ul>
+<p>In the sender function, ch chan&lt;- int indicates that ch is a send-only channel. Similarly, in the receiver function, ch &lt;-chan int specifies that ch is a receive-only channel.</p>
+<p>Specifying the direction of a channel is crucial for maintaining type safety in your Go programs. When you design a function to only send data, you can pass a send-only channel to that function. This prevents accidental attempts to receive data from the channel within the function, which would be a compile-time error.</p>
+<p>By using directional channels, you make your code's intentions clearer and reduce the likelihood of errors related to channel operations. </p>
+<hr />
+<h2 id="4-close-channel">4. Close Channel<a class="headerlink" href="#4-close-channel" title="Permanent link">&para;</a></h2>
+<p>In Go, we can close a channel using the close function. The primary purpose of closing a channel is to notify receivers that no more data will be sent, allowing them to stop waiting for additional data.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">ch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">chan</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">close</span><span class="p">(</span><span class="nx">ch</span><span class="p">)</span>
+
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Attempting to send to a closed channel...&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">ch</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+
+<span class="cm">/*</span>
+<span class="cm">Output:</span>
+<span class="cm">Attempting to send to a closed channel...</span>
+<span class="cm">panic: send on closed channel</span>
+<span class="cm">*/</span>
+</code></pre></div>
+<p>For receivers, reading from a closed channel immediately returns the zero value of the channel's type without blocking. </p>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">ch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">chan</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span>
+
+<span class="w">    </span><span class="nb">close</span><span class="p">(</span><span class="nx">ch</span><span class="p">)</span>
+
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Reading from a closed channel:&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">ch</span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Value: %v, Channel open: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">ok</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="cm">/*</span>
+<span class="cm">Output:</span>
+<span class="cm">Reading from a closed channel:</span>
+<span class="cm">Value: 0, Channel open: false</span>
+<span class="cm">*/</span>
+</code></pre></div>
+<p>This design could be considered a signal pattern. For example, signal that the goroutine has stopped working or that no more data will be sent.</p>
 
 
 
