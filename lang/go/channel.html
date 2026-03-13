@@ -10,37 +10,39 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/lang/rust/environment/">
+        <link rel="canonical" href="https://ashe-wiki.github.io/lang/go/channel.html">
       
       
-        <link rel="prev" href="../../meditation/2025-12-14-diary/">
+        <link rel="prev" href="map.html">
       
       
-        <link rel="next" href="../web/">
+        <link rel="next" href="defer.html">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>Environment - Ashe Wiki</title>
+        <title>channel - Ashe Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
 
     
     
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
       
     
     
@@ -53,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,11 +79,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#neovim" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -92,7 +89,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../../index.html" title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -117,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Environment
+              channel
             
           </span>
         </div>
@@ -155,46 +152,6 @@
     
     
     
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
-    
     
       <div class="md-header__source">
         <a href="https://github.com/ashe-c0de/ashe-wiki" title="Go to repository" class="md-source" data-md-component="source">
@@ -228,7 +185,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../index.html" class="md-tabs__link">
         
   
   
@@ -260,7 +217,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../go/" class="md-tabs__link">
+        <a href="slice.html" class="md-tabs__link">
           
   
   
@@ -283,7 +240,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../db/mysql/" class="md-tabs__link">
+        <a href="../../db/mysql/index.html" class="md-tabs__link">
           
   
   
@@ -303,7 +260,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../algo/" class="md-tabs__link">
+        <a href="../../algo/index.html" class="md-tabs__link">
           
   
   
@@ -323,7 +280,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../devops/" class="md-tabs__link">
+        <a href="../../devops/index.html" class="md-tabs__link">
           
   
   
@@ -343,7 +300,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../other/" class="md-tabs__link">
+        <a href="../../other/index.html" class="md-tabs__link">
           
   
   
@@ -377,7 +334,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../../index.html" title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -412,7 +369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -493,8 +450,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -508,13 +467,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
@@ -535,7 +492,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -553,14 +510,302 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/" class="md-nav__link">
+      <a href="slice.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Index
+    slice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="map.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="channel.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    channel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="defer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    defer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sync.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    sync
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="generics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    generics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="memory-escape.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    memory-escape
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="memory-leak.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    memory-leak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="context.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    context
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gmp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gmp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="memory-allocator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    memory-allocator
   
 
     
@@ -646,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../meditation/2025-12-14-diary/" class="md-nav__link">
+      <a href="../meditation/2025-12-14-diary.html" class="md-nav__link">
         
   
   
@@ -679,8 +924,6 @@
                 
   
   
-    
-  
   
   
     
@@ -696,11 +939,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
@@ -721,7 +966,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -736,35 +981,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Environment
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../rust/environment.html" class="md-nav__link">
         
   
   
@@ -780,46 +1000,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#neovim" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        neovim 插件
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rust" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        打开rust项目
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -832,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/" class="md-nav__link">
+      <a href="../rust/web.html" class="md-nav__link">
         
   
   
@@ -925,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../markdown/grammar/" class="md-nav__link">
+      <a href="../markdown/grammar.html" class="md-nav__link">
         
   
   
@@ -1022,7 +1202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/mysql/" class="md-nav__link">
+      <a href="../../db/mysql/index.html" class="md-nav__link">
         
   
   
@@ -1111,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../algo/" class="md-nav__link">
+      <a href="../../algo/index.html" class="md-nav__link">
         
   
   
@@ -1200,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../devops/" class="md-nav__link">
+      <a href="../../devops/index.html" class="md-nav__link">
         
   
   
@@ -1289,7 +1469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../other/" class="md-nav__link">
+      <a href="../../other/index.html" class="md-nav__link">
         
   
   
@@ -1335,36 +1515,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#neovim" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        neovim 插件
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rust" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        打开rust项目
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1388,7 +1538,7 @@
   
   
     <li class="md-path__item">
-      <a href="../../.." class="md-path__link">
+      <a href="../../index.html" class="md-path__link">
         
   <span class="md-ellipsis">
     Home
@@ -1411,7 +1561,7 @@
     
     
       <li class="md-path__item">
-        <a href="../../go/" class="md-path__link">
+        <a href="slice.html" class="md-path__link">
           
   <span class="md-ellipsis">
     Lang
@@ -1432,10 +1582,10 @@
     
     
       <li class="md-path__item">
-        <a href="./" class="md-path__link">
+        <a href="slice.html" class="md-path__link">
           
   <span class="md-ellipsis">
-    Rust
+    Go
   </span>
 
         </a>
@@ -1454,7 +1604,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/lang/rust/environment.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/lang/go/channel.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1462,26 +1612,43 @@
   
 
 
-  <h1>Environment</h1>
+  <h1>channel</h1>
 
-<p>Windows 安装 rustup<br />
-Windows 安装 <code>MSVC v14x - VS 20xx C++ x64/x86 build tools</code> &amp; <code>Windows 10/11 SDK</code> (通过<a href="https://visualstudio.microsoft.com/zh-hans/visual-cpp-build-tools">build tools</a>)<br />
-scoop 安装 node.js、tree-sitter、ripgrep<br />
-Windows 安装 neovim</p>
-<h2 id="neovim">neovim 插件<a class="headerlink" href="#neovim" title="Permanent link">&para;</a></h2>
-<ul>
-<li>rustaceanvim</li>
-<li>treesitter</li>
-<li>cmp</li>
-<li>telescope.nvim</li>
-<li>crates.nvim</li>
-<li>neo-tree.nvim</li>
-</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">hchan</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">qcount</span><span class="w">   </span><span class="kt">uint</span><span class="w">           </span><span class="c1">// 当前队列中已有的元素个数（即 channel 中待接收的数据量）</span>
+<span class="w">    </span><span class="nx">dataqsiz</span><span class="w"> </span><span class="kt">uint</span><span class="w">           </span><span class="c1">// 环形缓冲区的容量（即 make(chan T, N) 中的 N）</span>
+<span class="w">    </span><span class="nx">buf</span><span class="w">      </span><span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span><span class="w"> </span><span class="c1">// 指向底层环形缓冲区数组的指针</span>
+<span class="w">    </span><span class="nx">elemsize</span><span class="w"> </span><span class="kt">uint16</span><span class="w">         </span><span class="c1">// 单个元素的大小（字节）</span>
+<span class="w">    </span><span class="nx">closed</span><span class="w">   </span><span class="kt">uint32</span><span class="w">         </span><span class="c1">// 通道是否已关闭的标志（0:未关闭, 1:已关闭）</span>
+<span class="w">    </span><span class="nx">elemtype</span><span class="w"> </span><span class="o">*</span><span class="nx">_type</span><span class="w">         </span><span class="c1">// 元素的类型信息（用于反射和类型检查）</span>
+<span class="w">    </span><span class="nx">sendx</span><span class="w">    </span><span class="kt">uint</span><span class="w">           </span><span class="c1">// 发送索引：下一个数据要写入缓冲区的位置</span>
+<span class="w">    </span><span class="nx">recvx</span><span class="w">    </span><span class="kt">uint</span><span class="w">           </span><span class="c1">// 接收索引：下一个数据要从缓冲区读取的位置</span>
+<span class="w">    </span><span class="nx">recvq</span><span class="w">    </span><span class="nx">waitq</span><span class="w">          </span><span class="c1">// 等待接收数据的 goroutine 队列（链表）</span>
+<span class="w">    </span><span class="nx">sendq</span><span class="w">    </span><span class="nx">waitq</span><span class="w">          </span><span class="c1">// 等待发送数据的 goroutine 队列（链表）</span>
+
+<span class="w">    </span><span class="nx">lock</span><span class="w"> </span><span class="nx">mutex</span><span class="w">              </span><span class="c1">// 互斥锁：保护上述所有字段，保证并发安全</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>无缓冲 Channel 是实现 Goroutine 之间强同步的最佳方式，它确保了数据发送和接收操作同时发生。<a href="https://github.com/ashe-c0de/lang-lab/blob/main/golang/channel/goroutine-communication.go">代码示例</a></p>
 <blockquote>
-<p><a href="https://github.com/ashe-c0de/dotfiles-env/blob/main/neovim/init.lua">我的neovim的init.lua</a></p>
+<p>context.WithTimeout就是计时器结合无缓冲channel实现的</p>
 </blockquote>
-<h2 id="rust">打开rust项目<a class="headerlink" href="#rust" title="Permanent link">&para;</a></h2>
-<p>在powershell中进入rust项目，键入<code>nvim .</code>即可像IDE一样开发rust项目了。</p>
+<p>有缓冲 Channel 在发送和接受操作时是非阻塞的，除非缓冲已满（发送操作阻塞）或缓冲空了（接受操作阻塞）。  </p>
+<p>重复close channel会发生panic</p>
+<blockquote>
+<p>panic: close of closed channel</p>
+</blockquote>
+<p>往未初始化的channel（nil）中发送数据，会发生error</p>
+<blockquote>
+<p>fatal error: all goroutines are asleep - deadlock!</p>
+</blockquote>
+<p>channel + goroutine 通常会像是一个协程分发任务（生产者），多个协程（消费者）会并发地消费任务。  </p>
+<blockquote>
+<p>相对而言，使用协程（是用空间换时间），不使用协程（是用时间换空间，假设耗时t_0），这就引申出使用协程的判断依据，当一个任务拆分
+后，创建协程和分配任务的时间t_1 + 最慢的子任务耗时t_2 + 结果汇总（Channel 传输/锁竞争）的时间t_3 = t_total，如果t_total没有&gt; 明显小于t_0，那么这个任务的拆分就是在白忙活。</p>
+</blockquote>
+<p>select就是多路复用监听channels的作用，如果所有 channel 都关闭了且没有数据了，select 会立即选中 default（如果有）
+<a href="https://github.com/ashe-c0de/lang-lab/blob/main/golang/channel/go-select.go">代码示例</a></p>
 
 
 
@@ -1541,14 +1708,14 @@ Windows 安装 neovim</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
-        <script src="../../../javascripts/mermaid-init.js"></script>
+        <script src="../../javascripts/mermaid-init.js"></script>
       
     
   </body>

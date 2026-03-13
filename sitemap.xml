@@ -1,43 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://ashe-wiki.github.io/</loc>
+         <loc>https://ashe-wiki.github.io/index.html</loc>
          <lastmod>2026-03-13</lastmod>
     </url>
     <url>
-         <loc>https://ashe-wiki.github.io/algo/</loc>
+         <loc>https://ashe-wiki.github.io/algo/index.html</loc>
          <lastmod>2026-03-13</lastmod>
     </url>
     <url>
-         <loc>https://ashe-wiki.github.io/db/mysql/</loc>
+         <loc>https://ashe-wiki.github.io/db/mysql/index.html</loc>
          <lastmod>2026-03-13</lastmod>
     </url>
     <url>
-         <loc>https://ashe-wiki.github.io/devops/</loc>
+         <loc>https://ashe-wiki.github.io/devops/index.html</loc>
          <lastmod>2026-03-13</lastmod>
     </url>
     <url>
-         <loc>https://ashe-wiki.github.io/lang/go/</loc>
+         <loc>https://ashe-wiki.github.io/lang/go/channel.html</loc>
          <lastmod>2026-03-13</lastmod>
     </url>
     <url>
-         <loc>https://ashe-wiki.github.io/lang/markdown/grammar/</loc>
+         <loc>https://ashe-wiki.github.io/lang/go/context.html</loc>
          <lastmod>2026-03-13</lastmod>
     </url>
     <url>
-         <loc>https://ashe-wiki.github.io/lang/meditation/2025-12-14-diary/</loc>
+         <loc>https://ashe-wiki.github.io/lang/go/defer.html</loc>
          <lastmod>2026-03-13</lastmod>
     </url>
     <url>
-         <loc>https://ashe-wiki.github.io/lang/rust/environment/</loc>
+         <loc>https://ashe-wiki.github.io/lang/go/generics.html</loc>
          <lastmod>2026-03-13</lastmod>
     </url>
     <url>
-         <loc>https://ashe-wiki.github.io/lang/rust/web/</loc>
+         <loc>https://ashe-wiki.github.io/lang/go/gmp.html</loc>
          <lastmod>2026-03-13</lastmod>
     </url>
     <url>
-         <loc>https://ashe-wiki.github.io/other/</loc>
+         <loc>https://ashe-wiki.github.io/lang/go/map.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/lang/go/memory-allocator.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/lang/go/memory-escape.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/lang/go/memory-leak.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/lang/go/slice.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/lang/go/sync.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/lang/markdown/grammar.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/lang/meditation/2025-12-14-diary.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/lang/rust/environment.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/lang/rust/web.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/other/index.html</loc>
          <lastmod>2026-03-13</lastmod>
     </url>
 </urlset>
