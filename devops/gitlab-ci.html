@@ -10,31 +10,31 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/lang/go/defer.html">
+        <link rel="canonical" href="https://ashe-wiki.github.io/devops/gitlab-ci.html">
       
       
-        <link rel="prev" href="channel.html">
+        <link rel="prev" href="gitlab.html">
       
       
-        <link rel="next" href="sync.html">
+        <link rel="next" href="../other/index.html">
       
       
         
       
       
-      <link rel="icon" href="../../assets/favicon.png">
+      <link rel="icon" href="../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>defer - Ashe Wiki</title>
+        <title>GitLab社区版CI/CD实现 - Ashe Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -89,7 +94,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../index.html" title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../index.html" title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -114,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              defer
+              GitLab社区版CI/CD实现
             
           </span>
         </div>
@@ -225,7 +230,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
@@ -242,8 +247,6 @@
   
   
   
-    
-  
   
     
     
@@ -251,13 +254,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="slice.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../lang/go/slice.html" class="md-tabs__link">
           
   
   
@@ -287,7 +288,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../db/mysql/ix.html" class="md-tabs__link">
+        <a href="../db/mysql/ix.html" class="md-tabs__link">
           
   
   
@@ -310,7 +311,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../algo/index.html" class="md-tabs__link">
+        <a href="../algo/index.html" class="md-tabs__link">
           
   
   
@@ -326,11 +327,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../devops/transactional-mq.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="transactional-mq.html" class="md-tabs__link">
           
   
   
@@ -350,7 +353,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../other/index.html" class="md-tabs__link">
+        <a href="../other/index.html" class="md-tabs__link">
           
   
   
@@ -384,7 +387,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../index.html" title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -419,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -443,29 +446,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -483,7 +481,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -498,8 +496,6 @@
                 
   
   
-    
-  
   
   
     
@@ -510,11 +506,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -535,7 +531,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -553,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="slice.html" class="md-nav__link">
+      <a href="../lang/go/slice.html" class="md-nav__link">
         
   
   
@@ -581,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="map.html" class="md-nav__link">
+      <a href="../lang/go/map.html" class="md-nav__link">
         
   
   
@@ -609,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="channel.html" class="md-nav__link">
+      <a href="../lang/go/channel.html" class="md-nav__link">
         
   
   
@@ -634,17 +630,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="defer.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../lang/go/defer.html" class="md-nav__link">
         
   
   
@@ -660,7 +649,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -673,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sync.html" class="md-nav__link">
+      <a href="../lang/go/sync.html" class="md-nav__link">
         
   
   
@@ -701,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="generics.html" class="md-nav__link">
+      <a href="../lang/go/generics.html" class="md-nav__link">
         
   
   
@@ -729,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="memory-escape.html" class="md-nav__link">
+      <a href="../lang/go/memory-escape.html" class="md-nav__link">
         
   
   
@@ -757,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="memory-leak.html" class="md-nav__link">
+      <a href="../lang/go/memory-leak.html" class="md-nav__link">
         
   
   
@@ -785,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="context.html" class="md-nav__link">
+      <a href="../lang/go/context.html" class="md-nav__link">
         
   
   
@@ -813,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="gmp.html" class="md-nav__link">
+      <a href="../lang/go/gmp.html" class="md-nav__link">
         
   
   
@@ -841,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="memory-allocator.html" class="md-nav__link">
+      <a href="../lang/go/memory-allocator.html" class="md-nav__link">
         
   
   
@@ -927,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../meditation/2025-12-14-diary.html" class="md-nav__link">
+      <a href="../lang/meditation/2025-12-14-diary.html" class="md-nav__link">
         
   
   
@@ -1013,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/environment.html" class="md-nav__link">
+      <a href="../lang/rust/environment.html" class="md-nav__link">
         
   
   
@@ -1041,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/declare-variables.html" class="md-nav__link">
+      <a href="../lang/rust/declare-variables.html" class="md-nav__link">
         
   
   
@@ -1069,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/cargo.html" class="md-nav__link">
+      <a href="../lang/rust/cargo.html" class="md-nav__link">
         
   
   
@@ -1097,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/data-type.html" class="md-nav__link">
+      <a href="../lang/rust/data-type.html" class="md-nav__link">
         
   
   
@@ -1125,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/function.html" class="md-nav__link">
+      <a href="../lang/rust/function.html" class="md-nav__link">
         
   
   
@@ -1153,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/control-flow.html" class="md-nav__link">
+      <a href="../lang/rust/control-flow.html" class="md-nav__link">
         
   
   
@@ -1181,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/stack%26heap.html" class="md-nav__link">
+      <a href="../lang/rust/stack%26heap.html" class="md-nav__link">
         
   
   
@@ -1209,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/ownership.html" class="md-nav__link">
+      <a href="../lang/rust/ownership.html" class="md-nav__link">
         
   
   
@@ -1237,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/web.html" class="md-nav__link">
+      <a href="../lang/rust/web.html" class="md-nav__link">
         
   
   
@@ -1323,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown/grammar.html" class="md-nav__link">
+      <a href="../lang/markdown/grammar.html" class="md-nav__link">
         
   
   
@@ -1466,7 +1454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/ix.html" class="md-nav__link">
+      <a href="../db/mysql/ix.html" class="md-nav__link">
         
   
   
@@ -1494,7 +1482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/b%2Btree.html" class="md-nav__link">
+      <a href="../db/mysql/b%2Btree.html" class="md-nav__link">
         
   
   
@@ -1522,7 +1510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/covering-index.html" class="md-nav__link">
+      <a href="../db/mysql/covering-index.html" class="md-nav__link">
         
   
   
@@ -1550,7 +1538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/index-failure.html" class="md-nav__link">
+      <a href="../db/mysql/index-failure.html" class="md-nav__link">
         
   
   
@@ -1578,7 +1566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/sql-flow.html" class="md-nav__link">
+      <a href="../db/mysql/sql-flow.html" class="md-nav__link">
         
   
   
@@ -1606,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/dirty-read.html" class="md-nav__link">
+      <a href="../db/mysql/dirty-read.html" class="md-nav__link">
         
   
   
@@ -1634,7 +1622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/mvcc.html" class="md-nav__link">
+      <a href="../db/mysql/mvcc.html" class="md-nav__link">
         
   
   
@@ -1662,7 +1650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/join.html" class="md-nav__link">
+      <a href="../db/mysql/join.html" class="md-nav__link">
         
   
   
@@ -1748,7 +1736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/redis/struct.html" class="md-nav__link">
+      <a href="../db/redis/struct.html" class="md-nav__link">
         
   
   
@@ -1776,7 +1764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/redis/persistence-strategy.html" class="md-nav__link">
+      <a href="../db/redis/persistence-strategy.html" class="md-nav__link">
         
   
   
@@ -1804,7 +1792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/redis/eviction-policy.html" class="md-nav__link">
+      <a href="../db/redis/eviction-policy.html" class="md-nav__link">
         
   
   
@@ -1832,7 +1820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/redis/redis-cluster.html" class="md-nav__link">
+      <a href="../db/redis/redis-cluster.html" class="md-nav__link">
         
   
   
@@ -1918,7 +1906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/install.html" class="md-nav__link">
+      <a href="../db/elasticsearch/install.html" class="md-nav__link">
         
   
   
@@ -1946,7 +1934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/yellow-index.html" class="md-nav__link">
+      <a href="../db/elasticsearch/yellow-index.html" class="md-nav__link">
         
   
   
@@ -1974,7 +1962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/sb-es.html" class="md-nav__link">
+      <a href="../db/elasticsearch/sb-es.html" class="md-nav__link">
         
   
   
@@ -2002,7 +1990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/kibana.html" class="md-nav__link">
+      <a href="../db/elasticsearch/kibana.html" class="md-nav__link">
         
   
   
@@ -2030,7 +2018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/elk.html" class="md-nav__link">
+      <a href="../db/elasticsearch/elk.html" class="md-nav__link">
         
   
   
@@ -2123,7 +2111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algo/index.html" class="md-nav__link">
+      <a href="../algo/index.html" class="md-nav__link">
         
   
   
@@ -2155,24 +2143,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -2190,7 +2183,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2208,7 +2201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/transactional-mq.html" class="md-nav__link">
+      <a href="transactional-mq.html" class="md-nav__link">
         
   
   
@@ -2236,7 +2229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/cache.html" class="md-nav__link">
+      <a href="cache.html" class="md-nav__link">
         
   
   
@@ -2264,7 +2257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/mq-loss.html" class="md-nav__link">
+      <a href="mq-loss.html" class="md-nav__link">
         
   
   
@@ -2292,7 +2285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/distributed-transaction.html" class="md-nav__link">
+      <a href="distributed-transaction.html" class="md-nav__link">
         
   
   
@@ -2320,7 +2313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/rate-limiting.html" class="md-nav__link">
+      <a href="rate-limiting.html" class="md-nav__link">
         
   
   
@@ -2348,7 +2341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/distributed-lock.html" class="md-nav__link">
+      <a href="distributed-lock.html" class="md-nav__link">
         
   
   
@@ -2376,7 +2369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/workflow.html" class="md-nav__link">
+      <a href="workflow.html" class="md-nav__link">
         
   
   
@@ -2404,7 +2397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/gitlab.html" class="md-nav__link">
+      <a href="gitlab.html" class="md-nav__link">
         
   
   
@@ -2429,10 +2422,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../devops/gitlab-ci.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitLab社区版CI/CD实现
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="gitlab-ci.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2448,6 +2466,96 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        准备工作
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        操作流程：
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="操作流程：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        下载并安装
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配置
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推送代码触发pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipelinejobcicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        将Pipeline的job尝试替换为构建应用并运行(CI/CD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2517,7 +2625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../other/index.html" class="md-nav__link">
+      <a href="../other/index.html" class="md-nav__link">
         
   
   
@@ -2563,6 +2671,86 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        准备工作
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        操作流程：
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="操作流程：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        下载并安装
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配置
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推送代码触发pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipelinejobcicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        将Pipeline的job尝试替换为构建应用并运行(CI/CD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2586,7 +2774,7 @@
   
   
     <li class="md-path__item">
-      <a href="../../index.html" class="md-path__link">
+      <a href="../index.html" class="md-path__link">
         
   <span class="md-ellipsis">
     Home
@@ -2603,37 +2791,11 @@
   
     
     
-      
-  
-  
-    
-    
       <li class="md-path__item">
-        <a href="slice.html" class="md-path__link">
+        <a href="transactional-mq.html" class="md-path__link">
           
   <span class="md-ellipsis">
-    Lang
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-    
-  
-
-      
-        
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="slice.html" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    Go
+    DevOps
   </span>
 
         </a>
@@ -2652,7 +2814,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/lang/go/defer.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/devops/gitlab-ci.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2660,18 +2822,135 @@
   
 
 
-  <h1>defer</h1>
+  <h1>GitLab社区版CI/CD实现</h1>
 
-<p>defer的特性</p>
+<h2 id="_1">准备工作<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>服务器配置：2c8g，最好大于等于8g否则可能内存不足</p>
+<p>系统环境：CentOS Linux release 7.9.2009 (Core)</p>
+<p>安装包：gitlab-ce-11.1.1-ce.0.el7.x86_64.rpm 和 gitlab-runner-11.1.1-1.x86_64.rpm</p>
+<p>CI/CD流程：</p>
 <ul>
-<li>defer的statement总是在其他statement执行之后执行</li>
-<li>存在多个defer，遵循后进先出LIFO顺序</li>
-<li>defer的statement即使在发生panic的情况下仍然会执行</li>
+<li>代码推送： 开发者将代码推送到GitLab的远程仓库。</li>
+<li>触发CI/CD Pipeline： 当代码被推送到GitLab仓库时，GitLab会检测到仓库的变化，并根据仓库根目录下的.gitlab-ci.yml文件配置来触发CI/CD Pipeline。</li>
+<li>GitLab Runner： GitLab实例会将构建任务发送给注册的GitLab Runner。GitLab Runner执行job并将结果发送回GitLab。</li>
+<li>执行Job： GitLab Runner会克隆仓库的代码到其工作目录，并开始执行.gitlab-ci.yml文件中定义的各个job。每个job是一个构建脚本，可以执行各种任务，比如编译代码、运行测试、部署应用到服务器等。</li>
 </ul>
-<p>defer和return的执行顺序</p>
-<p>return 语句先计算并确定返回值（或赋值给具名返回变量），然后执行 defer，最后函数真正返回。</p>
-<p>如果函数返回值是匿名的，defer 无法修改最终返回的结果，因为函数返回的是数值。
-如果函数返回值是具名的，defer 可以修改它，因为具名返回值本质上是一个函数作用域内的变量。</p>
+<h2 id="_2">操作流程：<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">下载并安装<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>由于网络等原因，我选择清华大学镜像站下载安装包至本地（通过配置/etc/yum.repos.d/gitlab-ce.repo的方式，以yum在线安装也可以，但是遇到问题，卸载重新安装又要再次等待网络下载的时间，比较麻烦）
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>--user-agent<span class="o">=</span><span class="s2">&quot;Mozilla&quot;</span><span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7/gitlab-ce-11.1.1-ce.0.el7.x86_64.rpm
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>--user-agent<span class="o">=</span><span class="s2">&quot;Mozilla&quot;</span><span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/gitlab-runner/yum/el7/gitlab-runner-11.1.1-1.x86_64.rpm
+</code></pre></div>
+<p>rpm命令安装
+<div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-ivh<span class="w"> </span>gitlab-ce-11.1.1-ce.0.el7.x86_64.rpm
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-ivh<span class="w"> </span>gitlab-runner-11.1.1-1.x86_64.rpm
+</code></pre></div></p>
+<h3 id="_4">配置<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>GitLab就需要修改下外部访问GitLab地址
+<div class="highlight"><pre><span></span><code>vim<span class="w"> </span>/etc/gitlab/gitlab.rb
+</code></pre></div></p>
+<p>默认GitLab外部访问地址是：external_url 'http://gitlab.example.com'</p>
+<p>需要将其改成访问你服务器的GitLab地址，由于我没有域名只有ip，我的修改为external_url 'http://server_ip:10086'</p>
+<p>修改后刷新配置gitlab-ctl reconfigure</p>
+<p>重新启动gitlab-ctl restart</p>
+<p>在操作系统防火墙放行你GitLab的端口（如果是云服务器，还需要在网络层面放行端口）</p>
+<p>sudo firewall-cmd --add-port=10086/tcp --permanent</p>
+<p>sudo firewall-cmd --reload</p>
+<p>sudo firewall-cmd --list-all</p>
+<p>然后浏览器访问http://server_ip:10086</p>
+<p>页面会让你初始化密码，用户默认为root。</p>
+<p>然后通过root账户登录，创建Group和Project，进入project的设置项。</p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-1.png" /></p>
+<p>在这里，获取到GitLab Runner需要使用的token，GitLab Runner通过它注册至GitLab实例。</p>
+<p>配置GitLab Runner，这里有一个坑，GitLab Runner本身是以gitlab-runner这个用户在执行指令。</p>
+<p>因此gitlab-runner start直接启动GitLab Runner会发现启动不起来（gitlab-runner status），通过sudo journalctl -u gitlab-runner -f可以查看启动时的相关日志，其中会提及到没有权限创建/home/gitlab-runner这个目录（这是其默认的工作目录）。</p>
+<p>这是因为GitLab Runner已经安装完毕，通过cat /etc/passwd可以看到gitlab-runner这个用户，所以GitLab Runner的行为实际上是以gitlab-runner用户来执行的。</p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-2.png" /></p>
+<p>由此，我们手动创建其默认的工作目录/home/gitlab-runner，然后将这个工作目录的用户更改为gitlab-runner且允许读写权限</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>gitlab-runner:gitlab-runner<span class="w"> </span>/home/gitlab-runner
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>/home/gitlab-runner
+</code></pre></div>
+<p>然后启动
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>gitlab-runner<span class="w"> </span>start
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>gitlab-runner<span class="w"> </span>status
+</code></pre></div>
+<p>就可以看到terminal输出gitlab-runner: Service is running!表示正在运行了。</p>
+<p>至此，我们可以将GitLab Runner注册至GitLab上了。有两种方式：通过命令（gitlab-runner register）注册；直接编辑GitLab Runner的配置文件（/etc/gitlab-runner/config.toml）来注册。</p>
+<p>初次建议使用命令注册（然后对比注册前后配置文件发生的变化）</p>
+<p>注册成功后，重启Gitlab Runner
+<div class="highlight"><pre><span></span><code>gitlab-runner<span class="w"> </span>stop
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>gitlab-runner<span class="w"> </span>start
+</code></pre></div>
+于Gitlab页面查看，Runner是否注册成功且为激活状态</p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-3.png" /></p>
+<h2 id="pipeline">推送代码触发pipeline<a class="headerlink" href="#pipeline" title="Permanent link">&para;</a></h2>
+<p>首先新建一个项目推送至你的Gitlab服务器。</p>
+<p>然后在项目根路径下新建一个.gitlab-ci.yml文件。Gitlab服务器会根据这个文件来触发Pipeline，使得Gitlab Runner来执行yml文件中的job。</p>
+<p><div class="highlight"><pre><span></span><code>---
+stages:
+<span class="w">  </span>-<span class="w"> </span>simple
+
+<span class="c1"># 输出 Hello World</span>
+<span class="c1"># 注意这个tags标签，是和你创建的Gitlab Runner绑定的，如果你的runner不存在这个tag，那么job则不会执行</span>
+hello_world:
+<span class="w">  </span>stage:<span class="w"> </span>simple
+<span class="w">  </span>script:
+<span class="w">    </span>-<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello World&quot;</span>
+<span class="w">  </span>tags:
+<span class="w">    </span>-<span class="w"> </span>oh
+</code></pre></div>
+推送代码，然后在Pipeline中查看job是否被成功执行。</p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-4.png" /></p>
+<p>点进去可以查看具体执行的细节（CI/CD验证成功）</p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-5.png" /></p>
+<h2 id="pipelinejobcicd">将Pipeline的job尝试替换为构建应用并运行(CI/CD)<a class="headerlink" href="#pipelinejobcicd" title="Permanent link">&para;</a></h2>
+<p>在此，我的项目为SpringBoot项目，因此分为两个步骤</p>
+<p>构建：maven clean package</p>
+<p>运行jar包：nohup java -jar xxx.jar</p>
+<p>因此修改.gitlab-ci.yml文件</p>
+<div class="highlight"><pre><span></span><code> stages:
+  - build
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - echo &quot;build start&quot;
+    - pwd
+    - mvn clean package
+    - echo &quot;build end&quot;
+  artifacts:
+    paths:
+      - target/  # 将target目录保存为artifacts
+  tags:
+    - oh
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo &quot;deploy start&quot;
+    - pwd
+    - ls -l  # 列出当前目录内容，确认是否接收到artifacts
+    - cp /home/deploy/start.sh start.sh
+    - chmod +x start.sh
+    - ./start.sh
+    - echo &quot;deploy end&quot;
+  dependencies:
+    - build_job  # 确保这个job依赖于build_job
+  tags:
+    - oh
+</code></pre></div>
+<p>上述内容中的启动脚本/home/deploy/start.sh，这个文件依然要确保用户为gitlab-runner否则还是会失败（要明确yml中的所有行为都是由gitlab-runner用户执行的）</p>
+<p>推送代码，触发CI/CD，然后查看job的执行情况</p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-6.png" /></p>
+<p>在服务器上，通过ps -ef | grep ${程序名}查看进程的启动时间是否与你CI/CD的部署时间吻合，若一致则说明整个构建&amp;部署流程全部成功。</p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-7.png" /></p>
+<p>最后，你可以通过修改接口推送代码，测试接口，来判断当前部署的程序是否已经是更新后的程序。</p>
 
 
 
@@ -2731,14 +3010,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
-        <script src="../../javascripts/mermaid-init.js"></script>
+        <script src="../javascripts/mermaid-init.js"></script>
       
     
   </body>

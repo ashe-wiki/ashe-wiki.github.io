@@ -10,31 +10,31 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/lang/go/defer.html">
+        <link rel="canonical" href="https://ashe-wiki.github.io/devops/gitlab.html">
       
       
-        <link rel="prev" href="channel.html">
+        <link rel="prev" href="workflow.html">
       
       
-        <link rel="next" href="sync.html">
+        <link rel="next" href="gitlab-ci.html">
       
       
         
       
       
-      <link rel="icon" href="../../assets/favicon.png">
+      <link rel="icon" href="../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>defer - Ashe Wiki</title>
+        <title>CentOS安装GitLab社区版 - Ashe Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -89,7 +89,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../index.html" title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../index.html" title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              defer
+              CentOS安装GitLab社区版
             
           </span>
         </div>
@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
@@ -242,8 +242,6 @@
   
   
   
-    
-  
   
     
     
@@ -251,13 +249,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="slice.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../lang/go/slice.html" class="md-tabs__link">
           
   
   
@@ -287,7 +283,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../db/mysql/ix.html" class="md-tabs__link">
+        <a href="../db/mysql/ix.html" class="md-tabs__link">
           
   
   
@@ -310,7 +306,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../algo/index.html" class="md-tabs__link">
+        <a href="../algo/index.html" class="md-tabs__link">
           
   
   
@@ -326,11 +322,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../devops/transactional-mq.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="transactional-mq.html" class="md-tabs__link">
           
   
   
@@ -350,7 +348,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../other/index.html" class="md-tabs__link">
+        <a href="../other/index.html" class="md-tabs__link">
           
   
   
@@ -384,7 +382,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../index.html" title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -419,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -443,29 +441,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -483,7 +476,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -498,8 +491,6 @@
                 
   
   
-    
-  
   
   
     
@@ -510,11 +501,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -535,7 +526,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -553,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="slice.html" class="md-nav__link">
+      <a href="../lang/go/slice.html" class="md-nav__link">
         
   
   
@@ -581,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="map.html" class="md-nav__link">
+      <a href="../lang/go/map.html" class="md-nav__link">
         
   
   
@@ -609,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="channel.html" class="md-nav__link">
+      <a href="../lang/go/channel.html" class="md-nav__link">
         
   
   
@@ -634,17 +625,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="defer.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../lang/go/defer.html" class="md-nav__link">
         
   
   
@@ -660,7 +644,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -673,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sync.html" class="md-nav__link">
+      <a href="../lang/go/sync.html" class="md-nav__link">
         
   
   
@@ -701,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="generics.html" class="md-nav__link">
+      <a href="../lang/go/generics.html" class="md-nav__link">
         
   
   
@@ -729,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="memory-escape.html" class="md-nav__link">
+      <a href="../lang/go/memory-escape.html" class="md-nav__link">
         
   
   
@@ -757,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="memory-leak.html" class="md-nav__link">
+      <a href="../lang/go/memory-leak.html" class="md-nav__link">
         
   
   
@@ -785,7 +768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="context.html" class="md-nav__link">
+      <a href="../lang/go/context.html" class="md-nav__link">
         
   
   
@@ -813,7 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="gmp.html" class="md-nav__link">
+      <a href="../lang/go/gmp.html" class="md-nav__link">
         
   
   
@@ -841,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="memory-allocator.html" class="md-nav__link">
+      <a href="../lang/go/memory-allocator.html" class="md-nav__link">
         
   
   
@@ -927,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../meditation/2025-12-14-diary.html" class="md-nav__link">
+      <a href="../lang/meditation/2025-12-14-diary.html" class="md-nav__link">
         
   
   
@@ -1013,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/environment.html" class="md-nav__link">
+      <a href="../lang/rust/environment.html" class="md-nav__link">
         
   
   
@@ -1041,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/declare-variables.html" class="md-nav__link">
+      <a href="../lang/rust/declare-variables.html" class="md-nav__link">
         
   
   
@@ -1069,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/cargo.html" class="md-nav__link">
+      <a href="../lang/rust/cargo.html" class="md-nav__link">
         
   
   
@@ -1097,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/data-type.html" class="md-nav__link">
+      <a href="../lang/rust/data-type.html" class="md-nav__link">
         
   
   
@@ -1125,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/function.html" class="md-nav__link">
+      <a href="../lang/rust/function.html" class="md-nav__link">
         
   
   
@@ -1153,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/control-flow.html" class="md-nav__link">
+      <a href="../lang/rust/control-flow.html" class="md-nav__link">
         
   
   
@@ -1181,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/stack%26heap.html" class="md-nav__link">
+      <a href="../lang/rust/stack%26heap.html" class="md-nav__link">
         
   
   
@@ -1209,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/ownership.html" class="md-nav__link">
+      <a href="../lang/rust/ownership.html" class="md-nav__link">
         
   
   
@@ -1237,7 +1220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rust/web.html" class="md-nav__link">
+      <a href="../lang/rust/web.html" class="md-nav__link">
         
   
   
@@ -1323,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown/grammar.html" class="md-nav__link">
+      <a href="../lang/markdown/grammar.html" class="md-nav__link">
         
   
   
@@ -1466,7 +1449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/ix.html" class="md-nav__link">
+      <a href="../db/mysql/ix.html" class="md-nav__link">
         
   
   
@@ -1494,7 +1477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/b%2Btree.html" class="md-nav__link">
+      <a href="../db/mysql/b%2Btree.html" class="md-nav__link">
         
   
   
@@ -1522,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/covering-index.html" class="md-nav__link">
+      <a href="../db/mysql/covering-index.html" class="md-nav__link">
         
   
   
@@ -1550,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/index-failure.html" class="md-nav__link">
+      <a href="../db/mysql/index-failure.html" class="md-nav__link">
         
   
   
@@ -1578,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/sql-flow.html" class="md-nav__link">
+      <a href="../db/mysql/sql-flow.html" class="md-nav__link">
         
   
   
@@ -1606,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/dirty-read.html" class="md-nav__link">
+      <a href="../db/mysql/dirty-read.html" class="md-nav__link">
         
   
   
@@ -1634,7 +1617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/mvcc.html" class="md-nav__link">
+      <a href="../db/mysql/mvcc.html" class="md-nav__link">
         
   
   
@@ -1662,7 +1645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/join.html" class="md-nav__link">
+      <a href="../db/mysql/join.html" class="md-nav__link">
         
   
   
@@ -1748,7 +1731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/redis/struct.html" class="md-nav__link">
+      <a href="../db/redis/struct.html" class="md-nav__link">
         
   
   
@@ -1776,7 +1759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/redis/persistence-strategy.html" class="md-nav__link">
+      <a href="../db/redis/persistence-strategy.html" class="md-nav__link">
         
   
   
@@ -1804,7 +1787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/redis/eviction-policy.html" class="md-nav__link">
+      <a href="../db/redis/eviction-policy.html" class="md-nav__link">
         
   
   
@@ -1832,7 +1815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/redis/redis-cluster.html" class="md-nav__link">
+      <a href="../db/redis/redis-cluster.html" class="md-nav__link">
         
   
   
@@ -1918,7 +1901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/install.html" class="md-nav__link">
+      <a href="../db/elasticsearch/install.html" class="md-nav__link">
         
   
   
@@ -1946,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/yellow-index.html" class="md-nav__link">
+      <a href="../db/elasticsearch/yellow-index.html" class="md-nav__link">
         
   
   
@@ -1974,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/sb-es.html" class="md-nav__link">
+      <a href="../db/elasticsearch/sb-es.html" class="md-nav__link">
         
   
   
@@ -2002,7 +1985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/kibana.html" class="md-nav__link">
+      <a href="../db/elasticsearch/kibana.html" class="md-nav__link">
         
   
   
@@ -2030,7 +2013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/elk.html" class="md-nav__link">
+      <a href="../db/elasticsearch/elk.html" class="md-nav__link">
         
   
   
@@ -2123,7 +2106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algo/index.html" class="md-nav__link">
+      <a href="../algo/index.html" class="md-nav__link">
         
   
   
@@ -2155,24 +2138,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -2190,7 +2178,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2208,7 +2196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/transactional-mq.html" class="md-nav__link">
+      <a href="transactional-mq.html" class="md-nav__link">
         
   
   
@@ -2236,7 +2224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/cache.html" class="md-nav__link">
+      <a href="cache.html" class="md-nav__link">
         
   
   
@@ -2264,7 +2252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/mq-loss.html" class="md-nav__link">
+      <a href="mq-loss.html" class="md-nav__link">
         
   
   
@@ -2292,7 +2280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/distributed-transaction.html" class="md-nav__link">
+      <a href="distributed-transaction.html" class="md-nav__link">
         
   
   
@@ -2320,7 +2308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/rate-limiting.html" class="md-nav__link">
+      <a href="rate-limiting.html" class="md-nav__link">
         
   
   
@@ -2348,7 +2336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/distributed-lock.html" class="md-nav__link">
+      <a href="distributed-lock.html" class="md-nav__link">
         
   
   
@@ -2376,7 +2364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/workflow.html" class="md-nav__link">
+      <a href="workflow.html" class="md-nav__link">
         
   
   
@@ -2401,10 +2389,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../devops/gitlab.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="gitlab.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2420,6 +2415,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -2432,7 +2428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../devops/gitlab-ci.html" class="md-nav__link">
+      <a href="gitlab-ci.html" class="md-nav__link">
         
   
   
@@ -2517,7 +2513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../other/index.html" class="md-nav__link">
+      <a href="../other/index.html" class="md-nav__link">
         
   
   
@@ -2586,7 +2582,7 @@
   
   
     <li class="md-path__item">
-      <a href="../../index.html" class="md-path__link">
+      <a href="../index.html" class="md-path__link">
         
   <span class="md-ellipsis">
     Home
@@ -2603,37 +2599,11 @@
   
     
     
-      
-  
-  
-    
-    
       <li class="md-path__item">
-        <a href="slice.html" class="md-path__link">
+        <a href="transactional-mq.html" class="md-path__link">
           
   <span class="md-ellipsis">
-    Lang
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-    
-  
-
-      
-        
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="slice.html" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    Go
+    DevOps
   </span>
 
         </a>
@@ -2652,7 +2622,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/lang/go/defer.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/devops/gitlab.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2660,18 +2630,42 @@
   
 
 
-  <h1>defer</h1>
+  <h1>CentOS安装GitLab社区版</h1>
 
-<p>defer的特性</p>
-<ul>
-<li>defer的statement总是在其他statement执行之后执行</li>
-<li>存在多个defer，遵循后进先出LIFO顺序</li>
-<li>defer的statement即使在发生panic的情况下仍然会执行</li>
-</ul>
-<p>defer和return的执行顺序</p>
-<p>return 语句先计算并确定返回值（或赋值给具名返回变量），然后执行 defer，最后函数真正返回。</p>
-<p>如果函数返回值是匿名的，defer 无法修改最终返回的结果，因为函数返回的是数值。
-如果函数返回值是具名的，defer 可以修改它，因为具名返回值本质上是一个函数作用域内的变量。</p>
+<p>选择使用清华大学的镜像站来下载社区版的GitLab
+https://mirror.tuna.tsinghua.edu.cn/help/gitlab-ce/</p>
+<p><code>sudo vim /etc/yum.repos.d/gitlab-ce.repo</code>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>gitlab-ce<span class="o">]</span>
+<span class="nv">name</span><span class="o">=</span>Gitlab<span class="w"> </span>CE<span class="w"> </span>Repository
+<span class="nv">baseurl</span><span class="o">=</span>https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el<span class="nv">$releasever</span>/
+<span class="nv">gpgcheck</span><span class="o">=</span><span class="m">0</span>
+<span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>yum<span class="w"> </span>makecache
+</code></pre></div></p>
+<p>查看可用版本
+<div class="highlight"><pre><span></span><code>yum<span class="w"> </span>list<span class="w"> </span>gitlab-ce<span class="w"> </span>--showduplicates
+</code></pre></div></p>
+<p>安装指定版本（不指定版本时默认最新版本 yum install gitlab-ce）
+<div class="highlight"><pre><span></span><code>yum<span class="w"> </span>install<span class="w"> </span>gitlab-ce-11.1.1
+</code></pre></div></p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/gitlab.png" /></p>
+<p>于/etc/gitlab/gitlab.rb配置文件处，修改你的GitLab外部访问地址</p>
+<p>默认GitLab外部访问地址是：external_url 'http://gitlab.example.com'</p>
+<p>需要将其改成访问你服务器的GitLab地址，由于我没有域名只有ip，我的修改为<code>external_url 'http://server_ip:10086'</code></p>
+<p>修改后刷新配置<code>gitlab-ctl reconfigure</code></p>
+<p>重新启动<code>gitlab-ctl restart</code></p>
+<p>在操作系统层面的防火墙放行你配置访问本地GitLab的端口</p>
+<p><code>sudo firewall-cmd --add-port=10086/tcp --permanent</code></p>
+<p><code>sudo firewall-cmd --reload</code></p>
+<p><code>sudo firewall-cmd --list-all</code></p>
+<p>由于我的服务器是阿里云的云服务器ECS，因此还需要在安全组规则添加网络层面的端口放行。</p>
+<p>查看GitLab应用root用户生成的默认密码</p>
+<p><code>cat /etc/gitlab/initial_root_password</code></p>
+<p>做好密码备份，该文件会在24小时后自动删除，如果你想修改root的密码，请参考https://docs.gitlab.com/ee/security/reset_user_password.html</p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/gitlab-login.png" /></p>
+<p>使用浏览器访问<code>server_ip:10086</code>，键入 用户 &amp; 密码 登录即可。</p>
+<p>停止Gitlab程序进程 <code>gitlab-ctl stop</code></p>
 
 
 
@@ -2731,14 +2725,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
-        <script src="../../javascripts/mermaid-init.js"></script>
+        <script src="../javascripts/mermaid-init.js"></script>
       
     
   </body>
