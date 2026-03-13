@@ -10,31 +10,31 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/devops/transactional-mq.html">
+        <link rel="canonical" href="https://ashe-wiki.github.io/lang/rust/stack%26heap.html">
       
       
-        <link rel="prev" href="../algo/index.html">
+        <link rel="prev" href="control-flow.html">
       
       
-        <link rel="next" href="cache.html">
+        <link rel="next" href="ownership.html">
       
       
         
       
       
-      <link rel="icon" href="../assets/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>transactional-mq - Ashe Wiki</title>
+        <title>Stack&heap - Ashe Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -89,7 +89,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../../index.html" title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              transactional-mq
+              Stack&heap
             
           </span>
         </div>
@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="../../index.html" class="md-tabs__link">
         
   
   
@@ -242,6 +242,8 @@
   
   
   
+    
+  
   
     
     
@@ -249,11 +251,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../lang/go/slice.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../go/slice.html" class="md-tabs__link">
           
   
   
@@ -283,7 +287,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../db/mysql/ix.html" class="md-tabs__link">
+        <a href="../../db/mysql/ix.html" class="md-tabs__link">
           
   
   
@@ -306,7 +310,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../algo/index.html" class="md-tabs__link">
+        <a href="../../algo/index.html" class="md-tabs__link">
           
   
   
@@ -322,13 +326,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="transactional-mq.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../devops/transactional-mq.html" class="md-tabs__link">
           
   
   
@@ -348,7 +350,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../other/index.html" class="md-tabs__link">
+        <a href="../../other/index.html" class="md-tabs__link">
           
   
   
@@ -382,7 +384,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../../index.html" title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -417,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -441,24 +443,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -476,7 +483,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -544,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/slice.html" class="md-nav__link">
+      <a href="../go/slice.html" class="md-nav__link">
         
   
   
@@ -572,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/map.html" class="md-nav__link">
+      <a href="../go/map.html" class="md-nav__link">
         
   
   
@@ -600,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/channel.html" class="md-nav__link">
+      <a href="../go/channel.html" class="md-nav__link">
         
   
   
@@ -628,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/defer.html" class="md-nav__link">
+      <a href="../go/defer.html" class="md-nav__link">
         
   
   
@@ -656,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/sync.html" class="md-nav__link">
+      <a href="../go/sync.html" class="md-nav__link">
         
   
   
@@ -684,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/generics.html" class="md-nav__link">
+      <a href="../go/generics.html" class="md-nav__link">
         
   
   
@@ -712,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/memory-escape.html" class="md-nav__link">
+      <a href="../go/memory-escape.html" class="md-nav__link">
         
   
   
@@ -740,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/memory-leak.html" class="md-nav__link">
+      <a href="../go/memory-leak.html" class="md-nav__link">
         
   
   
@@ -768,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/context.html" class="md-nav__link">
+      <a href="../go/context.html" class="md-nav__link">
         
   
   
@@ -796,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/gmp.html" class="md-nav__link">
+      <a href="../go/gmp.html" class="md-nav__link">
         
   
   
@@ -824,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/memory-allocator.html" class="md-nav__link">
+      <a href="../go/memory-allocator.html" class="md-nav__link">
         
   
   
@@ -910,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/meditation/2025-12-14-diary.html" class="md-nav__link">
+      <a href="../meditation/2025-12-14-diary.html" class="md-nav__link">
         
   
   
@@ -943,6 +950,8 @@
                 
   
   
+    
+  
   
   
     
@@ -953,11 +962,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -978,7 +987,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -996,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/environment.html" class="md-nav__link">
+      <a href="environment.html" class="md-nav__link">
         
   
   
@@ -1024,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/declare-variables.html" class="md-nav__link">
+      <a href="declare-variables.html" class="md-nav__link">
         
   
   
@@ -1052,7 +1061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/cargo.html" class="md-nav__link">
+      <a href="cargo.html" class="md-nav__link">
         
   
   
@@ -1080,7 +1089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/data-type.html" class="md-nav__link">
+      <a href="data-type.html" class="md-nav__link">
         
   
   
@@ -1108,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/function.html" class="md-nav__link">
+      <a href="function.html" class="md-nav__link">
         
   
   
@@ -1136,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/control-flow.html" class="md-nav__link">
+      <a href="control-flow.html" class="md-nav__link">
         
   
   
@@ -1161,10 +1170,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../lang/rust/stack%26heap.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="stack%26heap.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1180,6 +1196,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1192,7 +1209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/ownership.html" class="md-nav__link">
+      <a href="ownership.html" class="md-nav__link">
         
   
   
@@ -1220,7 +1237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/web.html" class="md-nav__link">
+      <a href="web.html" class="md-nav__link">
         
   
   
@@ -1306,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/markdown/grammar.html" class="md-nav__link">
+      <a href="../markdown/grammar.html" class="md-nav__link">
         
   
   
@@ -1449,7 +1466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/ix.html" class="md-nav__link">
+      <a href="../../db/mysql/ix.html" class="md-nav__link">
         
   
   
@@ -1477,7 +1494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/b%2Btree.html" class="md-nav__link">
+      <a href="../../db/mysql/b%2Btree.html" class="md-nav__link">
         
   
   
@@ -1505,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/covering-index.html" class="md-nav__link">
+      <a href="../../db/mysql/covering-index.html" class="md-nav__link">
         
   
   
@@ -1533,7 +1550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/index-failure.html" class="md-nav__link">
+      <a href="../../db/mysql/index-failure.html" class="md-nav__link">
         
   
   
@@ -1561,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/sql-flow.html" class="md-nav__link">
+      <a href="../../db/mysql/sql-flow.html" class="md-nav__link">
         
   
   
@@ -1589,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/dirty-read.html" class="md-nav__link">
+      <a href="../../db/mysql/dirty-read.html" class="md-nav__link">
         
   
   
@@ -1617,7 +1634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/mvcc.html" class="md-nav__link">
+      <a href="../../db/mysql/mvcc.html" class="md-nav__link">
         
   
   
@@ -1645,7 +1662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/join.html" class="md-nav__link">
+      <a href="../../db/mysql/join.html" class="md-nav__link">
         
   
   
@@ -1731,7 +1748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/struct.html" class="md-nav__link">
+      <a href="../../db/redis/struct.html" class="md-nav__link">
         
   
   
@@ -1759,7 +1776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/persistence-strategy.html" class="md-nav__link">
+      <a href="../../db/redis/persistence-strategy.html" class="md-nav__link">
         
   
   
@@ -1787,7 +1804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/eviction-policy.html" class="md-nav__link">
+      <a href="../../db/redis/eviction-policy.html" class="md-nav__link">
         
   
   
@@ -1815,7 +1832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/redis-cluster.html" class="md-nav__link">
+      <a href="../../db/redis/redis-cluster.html" class="md-nav__link">
         
   
   
@@ -1908,7 +1925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../algo/index.html" class="md-nav__link">
+      <a href="../../algo/index.html" class="md-nav__link">
         
   
   
@@ -1940,29 +1957,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -1980,7 +1992,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1995,17 +2007,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="transactional-mq.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../devops/transactional-mq.html" class="md-nav__link">
         
   
   
@@ -2021,7 +2026,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2034,7 +2038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cache.html" class="md-nav__link">
+      <a href="../../devops/cache.html" class="md-nav__link">
         
   
   
@@ -2062,7 +2066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mq-loss.html" class="md-nav__link">
+      <a href="../../devops/mq-loss.html" class="md-nav__link">
         
   
   
@@ -2090,7 +2094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="distributed-transaction.html" class="md-nav__link">
+      <a href="../../devops/distributed-transaction.html" class="md-nav__link">
         
   
   
@@ -2118,7 +2122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rate-limiting.html" class="md-nav__link">
+      <a href="../../devops/rate-limiting.html" class="md-nav__link">
         
   
   
@@ -2146,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="distributed-lock.html" class="md-nav__link">
+      <a href="../../devops/distributed-lock.html" class="md-nav__link">
         
   
   
@@ -2174,7 +2178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="workflow.html" class="md-nav__link">
+      <a href="../../devops/workflow.html" class="md-nav__link">
         
   
   
@@ -2259,7 +2263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../other/index.html" class="md-nav__link">
+      <a href="../../other/index.html" class="md-nav__link">
         
   
   
@@ -2328,7 +2332,7 @@
   
   
     <li class="md-path__item">
-      <a href="../index.html" class="md-path__link">
+      <a href="../../index.html" class="md-path__link">
         
   <span class="md-ellipsis">
     Home
@@ -2345,11 +2349,37 @@
   
     
     
+      
+  
+  
+    
+    
       <li class="md-path__item">
-        <a href="transactional-mq.html" class="md-path__link">
+        <a href="../go/slice.html" class="md-path__link">
           
   <span class="md-ellipsis">
-    DevOps
+    Lang
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="environment.html" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Rust
   </span>
 
         </a>
@@ -2368,7 +2398,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/devops/transactional-mq.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/lang/rust/stack&heap.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2376,18 +2406,16 @@
   
 
 
-  <h1>transactional-mq</h1>
+  <h1>Stack&heap</h1>
 
-<p>什么是事务消息</p>
-<ol>
-<li>发送 Half Message → Broker</li>
-<li>执行本地事务 → 返回 Commit / Rollback / Unknown
-   ├─ Commit → 消息对消费者可见
-   ├─ Rollback → 删除消息
-   └─ Unknown → 进入第3阶段</li>
-<li>Broker 定期回查事务状态 → 最终确定 Commit 或 Rollback</li>
-</ol>
-<p>事务消息选择放弃强一致性，保证最终一致性。以实现数据库写入和发送MQ的强绑定关系。</p>
+<p>Many programming languages don’t require you to think about the stack and the heap very often. 许多编程语言并不会要求你经常思考堆栈。But in a system programming language like Rust, whether a value is on the stack or the heap affects how the language behaves and why you have to make certain decisions. 但是对于Rust这样的系统级编程语言来说，值存储在栈或是堆中将直接影响语言的行为以及为什么必须做出某些确切的决定。Parts of ownership will be described in relation on the stack and the heap later in this chapter, so here is a brief explanation in preparation.由于Rust中的所有权与其存在关联，因此这是一个开胃菜（准备）的解释。</p>
+<p>Both the stack and the heap are parts of memory available to your code to use at runtime, but they are structured in different ways.栈与堆都是你代码在运行时所使用的内存。但是二者之间的结构存在一定不同之处。 The stack stores values in the order it gets them and removes the values in the opposite order. 栈空间存储值与释放值空间的顺序相反。This is referred to as last in, first out. 被称为后进先出。Think of a stack of plates: when you add more plates, you put them on top of the pile, and when you need a plate, you take one off the top.这里有一叠盘子，堆放时只能从最上方堆叠，拿取时只能从最上方移除。 Adding or removing plates from the middle or bottom wouldn’t work as well! 从中间或底部来堆叠或移除盘子都是不恰当的！Adding data is called pushing onto the stack, and removing data is called popping off the stack.添加数据称为入栈，移除数据称为出栈。 All data stored on the stack must have a known, fixed size. Data with an unknown size at compile time or a size that might change must be stored on the heap instead.所有栈区储存的数据必须是已知的、固定的内存大小。如果在编译时数据时未知的内存大小或者可能会变化的内存大小，那么该数据必须存储在堆区间。</p>
+<p><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/rust/stack%26heap.png" /></p>
+<p>The heap is less organized: when you put data on the heap, you request a certain amount of space. 堆区组织性较差，当你将数据储存在堆中，你需要请求一定量的内存空间。The memory allocator finds an empty spot in the heap that is big enough, mark it as being in use, and returns a pointer, which is the address of that location. 内存分配器会找到一块未被使用的、足够的内存区域，将其标记为使用中，并返回指针（这块内存区域的内存地址）。This process is called allocating on the heap and is sometimes abbreviated as just allocating(pushing values onto the stack is not considered allocating).这一过程被称为堆上分配，有时会简写为allocating（入栈不被视为allocating）。 Because the pointer to the heap is a known, fixed size, you can store the pointer on the stack, but when you want the actual data, you must follow the pointer.因为指针是已知的、固定的内存大小，你可以在栈区存储指针，如果你想获取实际数据，则必须通过其内存地址来获取。 Think of being seated at restaurant. When you enter, you state the number of people in your group, and the host finds an empty table that fits everyone and leads you there. If someone in your group comes late, they can ask where you’ve been seated to find you.试想一下餐厅的就座，当你进入餐厅，你会说明有多少人就餐，然后餐厅会安排一个（适用对应人数就餐的）空余桌子给你们并带领你们到该位置，如果你们一行人中有人来晚了，也可以根据就座的位置（内存地址）找到你们。</p>
+<p>Pushing to the stack is faster than allocating on the heap because the allocator never has to search for a place to store new data;入栈比堆上分配更快，因为内存分配器不需要寻找存储新数据的内存空间。 that location is always at the top of the stack. 其位置永远在栈区的最上方。Comparatively, allocating space on the heap requires more work because the allocator must first find a big enough space to hold the data and then perform bookkeeping to prepare for the next allocation.相较而言，堆上分配需要做更多工作，因为内存分配器需要先寻找一个空余的、足够的内存空间来储存数据，并记录，为下一次分配做准备。</p>
+<p>Accessing data in the heap is slower than accessing data on the stack because you have to follow a pointer to get there. 在堆中访问数据比在栈中访问数据更慢。Contemporary processors are faster if they jump around less in memory.对于现代处理器而言跳转的内存区域越小执行速度越快。 Continuing the analogy, consider a server at a restaurant taking orders from many tables. 继续类比，一名餐厅服务员给许多桌客人点餐。It’s most efficient to get all the orders at one table before moving on the next table.最有效率（快）的方式就是一桌接着一桌来点餐。 Taking an order from table A, then an order from table B, then one from table A again, and then one from B again would be a much slower process.若是点餐顺序从A到B再到A再到B，将会是更慢的过程。 By the same token, a processor can do its job better if it works on data that’s close to other data(as it is on the stack) rather than farther away(as it can be on the heap).同样道理，处理器在数据之间（内存距离）更近的条件下执行代码时会表现更好。</p>
+<p>When your code calls a function, the values passed into the function(including, potentially, pointers to data on the heap) and the function’s local variables get pushed onto the stack. When the function is over, those values get popped off the stack.当你的代码调用函数时，传递给函数的值（可能包括指向堆上数据的指针）和函数的局部变量入栈，当函数结束时，这些值出栈。</p>
+<p>Keeping track of what parts of code are using what data on the heap, minimizing the amount of duplicate data on the heap, and cleaning up unused data on the heap so you won’t run out of space are all problems that ownership addresses. 跟踪代码的哪些部分正在使用堆上的哪些数据，最大限度地减少堆上的重复数据量，以及清理堆上未使用的数据，这样就不会耗尽空间，这些都是所有权解决的问题。Once you understand ownership, you won’t need to think about the stack and the heap very often, but knowing that the main purpose of ownership is to manage heap data can help explain why it works the way it dose.一旦理解了所有权，您就不需要经常考虑堆栈和堆，但是知道所有权的主要目的是管理堆数据可以帮助解释为什么它会这样工作。</p>
 
 
 
@@ -2447,14 +2475,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
-        <script src="../javascripts/mermaid-init.js"></script>
+        <script src="../../javascripts/mermaid-init.js"></script>
       
     
   </body>

@@ -10,31 +10,31 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/devops/transactional-mq.html">
+        <link rel="canonical" href="https://ashe-wiki.github.io/lang/rust/declare-variables.html">
       
       
-        <link rel="prev" href="../algo/index.html">
+        <link rel="prev" href="environment.html">
       
       
-        <link rel="next" href="cache.html">
+        <link rel="next" href="cargo.html">
       
       
         
       
       
-      <link rel="icon" href="../assets/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>transactional-mq - Ashe Wiki</title>
+        <title>Declare-variables - Ashe Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -89,7 +89,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../../index.html" title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              transactional-mq
+              Declare-variables
             
           </span>
         </div>
@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="../../index.html" class="md-tabs__link">
         
   
   
@@ -242,6 +242,8 @@
   
   
   
+    
+  
   
     
     
@@ -249,11 +251,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../lang/go/slice.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../go/slice.html" class="md-tabs__link">
           
   
   
@@ -283,7 +287,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../db/mysql/ix.html" class="md-tabs__link">
+        <a href="../../db/mysql/ix.html" class="md-tabs__link">
           
   
   
@@ -306,7 +310,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../algo/index.html" class="md-tabs__link">
+        <a href="../../algo/index.html" class="md-tabs__link">
           
   
   
@@ -322,13 +326,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="transactional-mq.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../devops/transactional-mq.html" class="md-tabs__link">
           
   
   
@@ -348,7 +350,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../other/index.html" class="md-tabs__link">
+        <a href="../../other/index.html" class="md-tabs__link">
           
   
   
@@ -382,7 +384,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../../index.html" title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -417,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -441,24 +443,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -476,7 +483,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -544,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/slice.html" class="md-nav__link">
+      <a href="../go/slice.html" class="md-nav__link">
         
   
   
@@ -572,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/map.html" class="md-nav__link">
+      <a href="../go/map.html" class="md-nav__link">
         
   
   
@@ -600,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/channel.html" class="md-nav__link">
+      <a href="../go/channel.html" class="md-nav__link">
         
   
   
@@ -628,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/defer.html" class="md-nav__link">
+      <a href="../go/defer.html" class="md-nav__link">
         
   
   
@@ -656,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/sync.html" class="md-nav__link">
+      <a href="../go/sync.html" class="md-nav__link">
         
   
   
@@ -684,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/generics.html" class="md-nav__link">
+      <a href="../go/generics.html" class="md-nav__link">
         
   
   
@@ -712,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/memory-escape.html" class="md-nav__link">
+      <a href="../go/memory-escape.html" class="md-nav__link">
         
   
   
@@ -740,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/memory-leak.html" class="md-nav__link">
+      <a href="../go/memory-leak.html" class="md-nav__link">
         
   
   
@@ -768,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/context.html" class="md-nav__link">
+      <a href="../go/context.html" class="md-nav__link">
         
   
   
@@ -796,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/gmp.html" class="md-nav__link">
+      <a href="../go/gmp.html" class="md-nav__link">
         
   
   
@@ -824,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/memory-allocator.html" class="md-nav__link">
+      <a href="../go/memory-allocator.html" class="md-nav__link">
         
   
   
@@ -910,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/meditation/2025-12-14-diary.html" class="md-nav__link">
+      <a href="../meditation/2025-12-14-diary.html" class="md-nav__link">
         
   
   
@@ -943,6 +950,8 @@
                 
   
   
+    
+  
   
   
     
@@ -953,11 +962,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -978,7 +987,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -996,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/environment.html" class="md-nav__link">
+      <a href="environment.html" class="md-nav__link">
         
   
   
@@ -1021,10 +1030,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../lang/rust/declare-variables.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="declare-variables.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1040,6 +1056,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1052,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/cargo.html" class="md-nav__link">
+      <a href="cargo.html" class="md-nav__link">
         
   
   
@@ -1080,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/data-type.html" class="md-nav__link">
+      <a href="data-type.html" class="md-nav__link">
         
   
   
@@ -1108,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/function.html" class="md-nav__link">
+      <a href="function.html" class="md-nav__link">
         
   
   
@@ -1136,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/control-flow.html" class="md-nav__link">
+      <a href="control-flow.html" class="md-nav__link">
         
   
   
@@ -1164,7 +1181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/stack%26heap.html" class="md-nav__link">
+      <a href="stack%26heap.html" class="md-nav__link">
         
   
   
@@ -1192,7 +1209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/ownership.html" class="md-nav__link">
+      <a href="ownership.html" class="md-nav__link">
         
   
   
@@ -1220,7 +1237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/web.html" class="md-nav__link">
+      <a href="web.html" class="md-nav__link">
         
   
   
@@ -1306,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/markdown/grammar.html" class="md-nav__link">
+      <a href="../markdown/grammar.html" class="md-nav__link">
         
   
   
@@ -1449,7 +1466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/ix.html" class="md-nav__link">
+      <a href="../../db/mysql/ix.html" class="md-nav__link">
         
   
   
@@ -1477,7 +1494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/b%2Btree.html" class="md-nav__link">
+      <a href="../../db/mysql/b%2Btree.html" class="md-nav__link">
         
   
   
@@ -1505,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/covering-index.html" class="md-nav__link">
+      <a href="../../db/mysql/covering-index.html" class="md-nav__link">
         
   
   
@@ -1533,7 +1550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/index-failure.html" class="md-nav__link">
+      <a href="../../db/mysql/index-failure.html" class="md-nav__link">
         
   
   
@@ -1561,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/sql-flow.html" class="md-nav__link">
+      <a href="../../db/mysql/sql-flow.html" class="md-nav__link">
         
   
   
@@ -1589,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/dirty-read.html" class="md-nav__link">
+      <a href="../../db/mysql/dirty-read.html" class="md-nav__link">
         
   
   
@@ -1617,7 +1634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/mvcc.html" class="md-nav__link">
+      <a href="../../db/mysql/mvcc.html" class="md-nav__link">
         
   
   
@@ -1645,7 +1662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/join.html" class="md-nav__link">
+      <a href="../../db/mysql/join.html" class="md-nav__link">
         
   
   
@@ -1731,7 +1748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/struct.html" class="md-nav__link">
+      <a href="../../db/redis/struct.html" class="md-nav__link">
         
   
   
@@ -1759,7 +1776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/persistence-strategy.html" class="md-nav__link">
+      <a href="../../db/redis/persistence-strategy.html" class="md-nav__link">
         
   
   
@@ -1787,7 +1804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/eviction-policy.html" class="md-nav__link">
+      <a href="../../db/redis/eviction-policy.html" class="md-nav__link">
         
   
   
@@ -1815,7 +1832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/redis-cluster.html" class="md-nav__link">
+      <a href="../../db/redis/redis-cluster.html" class="md-nav__link">
         
   
   
@@ -1908,7 +1925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../algo/index.html" class="md-nav__link">
+      <a href="../../algo/index.html" class="md-nav__link">
         
   
   
@@ -1940,29 +1957,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -1980,7 +1992,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1995,17 +2007,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="transactional-mq.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../devops/transactional-mq.html" class="md-nav__link">
         
   
   
@@ -2021,7 +2026,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2034,7 +2038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cache.html" class="md-nav__link">
+      <a href="../../devops/cache.html" class="md-nav__link">
         
   
   
@@ -2062,7 +2066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mq-loss.html" class="md-nav__link">
+      <a href="../../devops/mq-loss.html" class="md-nav__link">
         
   
   
@@ -2090,7 +2094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="distributed-transaction.html" class="md-nav__link">
+      <a href="../../devops/distributed-transaction.html" class="md-nav__link">
         
   
   
@@ -2118,7 +2122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rate-limiting.html" class="md-nav__link">
+      <a href="../../devops/rate-limiting.html" class="md-nav__link">
         
   
   
@@ -2146,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="distributed-lock.html" class="md-nav__link">
+      <a href="../../devops/distributed-lock.html" class="md-nav__link">
         
   
   
@@ -2174,7 +2178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="workflow.html" class="md-nav__link">
+      <a href="../../devops/workflow.html" class="md-nav__link">
         
   
   
@@ -2259,7 +2263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../other/index.html" class="md-nav__link">
+      <a href="../../other/index.html" class="md-nav__link">
         
   
   
@@ -2328,7 +2332,7 @@
   
   
     <li class="md-path__item">
-      <a href="../index.html" class="md-path__link">
+      <a href="../../index.html" class="md-path__link">
         
   <span class="md-ellipsis">
     Home
@@ -2345,11 +2349,37 @@
   
     
     
+      
+  
+  
+    
+    
       <li class="md-path__item">
-        <a href="transactional-mq.html" class="md-path__link">
+        <a href="../go/slice.html" class="md-path__link">
           
   <span class="md-ellipsis">
-    DevOps
+    Lang
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="environment.html" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Rust
   </span>
 
         </a>
@@ -2368,7 +2398,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/devops/transactional-mq.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/lang/rust/declare-variables.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2376,18 +2406,55 @@
   
 
 
-  <h1>transactional-mq</h1>
+  <h1>Declare-variables</h1>
 
-<p>什么是事务消息</p>
-<ol>
-<li>发送 Half Message → Broker</li>
-<li>执行本地事务 → 返回 Commit / Rollback / Unknown
-   ├─ Commit → 消息对消费者可见
-   ├─ Rollback → 删除消息
-   └─ Unknown → 进入第3阶段</li>
-<li>Broker 定期回查事务状态 → 最终确定 Commit 或 Rollback</li>
-</ol>
-<p>事务消息选择放弃强一致性，保证最终一致性。以实现数据库写入和发送MQ的强绑定关系。</p>
+<p><div class="highlight"><pre><span></span><code>let mut guess = String::new();
+</code></pre></div>
+在Rust中，一般使用let关键字keyword声明变量，比如
+<div class="highlight"><pre><span></span><code>let apples = 5;
+</code></pre></div>
+这行代码声明了一个名为apples的变量，并绑定其变量值为5，在Rust中变量默认是不可变的immutable。意味着一旦给变量赋值后，其值不会发生改变。声明可变的变量，在变量名之前加mut，比如
+<div class="highlight"><pre><span></span><code>let apples = 5; // immutable
+let mut bananas = 5; // mutable
+</code></pre></div>
+::表明new是String类型的关联函数（associated function），关联函数是与类型相关联的，因此使用类型名称直接调用String::new()，它将创建一个新的、空的字符串实例。</p>
+<p>Rustaceans say that the first variable is shadowed by the second, which means that the second variable is what the compiler will see when you use the name of the variable两个相同变量名的场景，第一个变量会被第二个变量遮蔽，意味着编译器看到的变量值是第二个（相同变量名）变量的值.
+<div class="highlight"><pre><span></span><code>fn main() {
+    let x = 5;
+
+    let x = x + 1; // 6
+
+    {
+        let x = x * 2;
+        println!(&quot;The value of x in the inner scope is: {x}&quot;); // 12
+    }
+
+    println!(&quot;The value of x is: {x}&quot;); // 6
+}
+</code></pre></div></p>
+<p>常量constants 可以视为immutable（不可变）的变量，first，你不能对常量使用mut，因为它是默认带有mut的variable变量；second，声明常量的关键字是const而不是let，并且常量的类型必须被注释。</p>
+<p>声明常量的示例：
+<div class="highlight"><pre><span></span><code>// const 变量名: 类型 = 变量值;
+const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3; // Rust支持在runtime计算表达式的结果作为常量值
+</code></pre></div></p>
+<p>示例代码参考
+<div class="highlight"><pre><span></span><code>fn main() {
+    let x = 5;
+    println!(&quot;The value of x is {x}&quot;);
+
+    const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+    println!(&quot;The value of THREE_HOURS_IN_SECONDS is {THREE_HOURS_IN_SECONDS}&quot;);
+
+    const TWELVE: u32 = 12;
+    println!(&quot;The value of TWELVE is {TWELVE}&quot;);
+
+    let spaces = &quot;   &quot;;
+    println!(&quot;The spaces is {spaces}&quot;);
+
+    let spaces = spaces.len();
+    println!(&quot;The spaces is {spaces}&quot;);
+}
+</code></pre></div></p>
 
 
 
@@ -2447,14 +2514,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
-        <script src="../javascripts/mermaid-init.js"></script>
+        <script src="../../javascripts/mermaid-init.js"></script>
       
     
   </body>

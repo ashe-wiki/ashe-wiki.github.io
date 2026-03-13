@@ -10,13 +10,13 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/lang/rust/web.html">
+        <link rel="canonical" href="https://ashe-wiki.github.io/lang/rust/ownership.html">
       
       
-        <link rel="prev" href="ownership.html">
+        <link rel="prev" href="stack%26heap.html">
       
       
-        <link rel="next" href="../markdown/grammar.html">
+        <link rel="next" href="web.html">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Web - Ashe Wiki</title>
+        <title>Ownership - Ashe Wiki</title>
       
     
     
@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#variable-scope" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -114,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Web
+              Ownership
             
           </span>
         </div>
@@ -1198,10 +1203,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="ownership.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ownership
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ownership.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1217,6 +1247,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variable-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-string-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The String Type
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-and-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory and Allocation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-and-data-interacting-with-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables and Data Interacting with Move
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-and-data-interacting-with-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables and Data Interacting with Clone
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ownership-and-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ownership and Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-values-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Return Values and Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1226,17 +1351,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="web.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="web.html" class="md-nav__link">
         
   
   
@@ -1252,7 +1370,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2309,6 +2426,91 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variable-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-string-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The String Type
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-and-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory and Allocation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-and-data-interacting-with-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables and Data Interacting with Move
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-and-data-interacting-with-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables and Data Interacting with Clone
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ownership-and-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ownership and Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-values-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Return Values and Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2398,7 +2600,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/lang/rust/web.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/lang/rust/ownership.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2406,9 +2608,155 @@
   
 
 
-  <h1>Web</h1>
+  <h1>Ownership</h1>
 
-<p>Axum + SeaORM + mariadb</p>
+<p>First, let’s take a look at the ownership rules. Keep these rules in mind as we through the examples that illustrate them:</p>
+<blockquote>
+<p>Each value in Rust has an owner.
+There can only be one owner at a time.
+When the owner goes out of scope, the value will be dropped.</p>
+</blockquote>
+<h2 id="variable-scope">Variable Scope<a class="headerlink" href="#variable-scope" title="Permanent link">&para;</a></h2>
+<p>As a first example of ownership, we’ll look at the scope of some variables. A scope is the range within a program for which an item is valid. Take the following variable:
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">“</span><span class="n">hello</span><span class="err">”</span><span class="p">;</span>
+</code></pre></div></p>
+<p>The variable s refers to a string literal, where the value of the string is hardcoded into the text of our program. The variable is valid from the point at which it’s declared until the end of the current scope.
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">“</span><span class="n">hello</span><span class="err">”</span><span class="p">;</span><span class="w"> </span><span class="c1">// s is valid from this point forward</span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// this scope is now over, and s is no longer valid</span>
+</code></pre></div></p>
+<p>In other words, there are two important points in time here:</p>
+<ul>
+<li>When s comes into scope, it is valid.</li>
+<li>It remains valid util it goes out of scope.</li>
+</ul>
+<p>At this point, the relationship between scopes and when variables are valid is similar to that in other programming languages. Now we’ll build on top of this understanding by introducing the String type.</p>
+<h2 id="the-string-type">The String Type<a class="headerlink" href="#the-string-type" title="Permanent link">&para;</a></h2>
+<p>We’ll concentrate on the parts of String that relate to ownership. These aspects also apply to other complex data types, whether they are provided by the standard library or created by you.</p>
+<p>We’ve already seen string literals, where a string value is hardcoded into our program. String literals are convenient, but they aren’t suitable for every situation in which we want to use text. One reason is that they’re immutable. Another is that not every string value can be known when we write our code: for example, what if we want to take user input and store it? For these situations, Rust has a second string type, String. This type manages data allocated on the heap and as such is able to store an amount of text that is unknown to us at compile time. You can create a String from a string literal using the from function, like so:</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="err">“</span><span class="n">hello</span><span class="err">”</span><span class="p">);</span>
+</code></pre></div>
+The double colon :: operator allows us to namespace this particular from function under the String type rather than using some sort of name sring_from.</p>
+<p>This kind of string can be mutated:
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="err">“</span><span class="n">hello</span><span class="err">”</span><span class="p">);</span>
+
+<span class="w">      </span><span class="n">s</span><span class="p">.</span><span class="n">push_str</span><span class="p">(</span><span class="err">“</span><span class="p">,</span><span class="w"> </span><span class="n">world</span><span class="o">!</span><span class="err">”</span><span class="p">);</span>
+
+<span class="w">      </span><span class="fm">println!</span><span class="p">(</span><span class="err">“</span><span class="p">{}</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+</code></pre></div></p>
+<p>So, what’s the difference here? Why can String be mutated but literals cannot? The difference is in how these types deal with memory.</p>
+<h2 id="memory-and-allocation">Memory and Allocation<a class="headerlink" href="#memory-and-allocation" title="Permanent link">&para;</a></h2>
+<p>In the case of a string literal, we know the contents at compile time, so the text is hardcoded directly into the final executable. This is why string literals are fast and efficient. But these properties only come from the string literal’s immutability. Unfortunately, we can’t put a blob of memory into the binary for each piece of text whose size is unknown at compile time and whose size might change while running the program.</p>
+<p>With the String type, in order to support a mutable, growable piece of text, we need to allocate an amount of memory on the heap, unknown at compile time, to hold the contents. This means:</p>
+<ul>
+<li>The memory must be requested from the memory allocator at runtime.</li>
+<li>We need a way of returning this memory to the allocator when we’re done with our String.</li>
+</ul>
+<p>That first part is done by us: when we call String::from, its implementation requests the memory it needs. This is pretty much universal in programming languages.</p>
+<p>However, the second part is different. In languages with garbage collector(GC), the GC keeps track of and cleans up memory that isn’t being used anymore, and we don’t need to think about it. In most languages without a GC, it’s our responsibility to identify when memory is no longer being used and call code to explicitly free it, just as we did to request it. Doing this correctly has historically been a difficult programming problem. If we forget, we’ll waste memory. If we do it too early, we’ll have an invalid variable. If we do it twice, that’s a bug too. We need to pair exactly one allocate with exactly one free.</p>
+<p>Rust takes a different path: the memory is automatically return once the variable that owns it goes out of scope.</p>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">{</span>
+
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="err">“</span><span class="n">hello</span><span class="err">”</span><span class="p">);</span><span class="w"> </span><span class="c1">// s is valid from this point forward</span>
+
+<span class="w">      </span><span class="p">}</span><span class="w">  </span><span class="c1">// this scope is now over, and s is no longer valid</span>
+</code></pre></div>
+<p>There is a natural point at which we can return memory our String needs to the allocator: when s goes out of scope. When a variable goes out of scope, Rust calls a special function for us. This function is called drop, and it’s where the author of String can put the code to return the memory. Rust calls drop automatically at the closing curly bracket.</p>
+<p>This pattern has a profound impact on the way Rust code is written. It may seem simple right now, but the behavior of code can be unexpected in more complicated situations when we want to have multiple variables use the data we’ve allocated on the heap. Let’s explore some of those situations now.</p>
+<h2 id="variables-and-data-interacting-with-move">Variables and Data Interacting with Move<a class="headerlink" href="#variables-and-data-interacting-with-move" title="Permanent link">&para;</a></h2>
+<p>Multiple variables can interact with the same data in different ways in Rust. Let’s look at an example using an integer</p>
+<p><code>rust
+ let x = 5;
+ let y = x;</code></p>
+<p>We can probably guess what this is doing: “bind the value 5 to x; then make a copy of the value in x and bind it to y.” We now have two variables, x and y, and both equals 5. This is indeed what is happening, because integers are simple values with a known, fixed size, and these two 5 values are pushed onto the stack.</p>
+<p>Now let’s look at the String version:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="err">“</span><span class="n">hello</span><span class="err">”</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span>
+</code></pre></div>
+This looks very similar, so we might assume that the way it works would be the same: that is, the second line would make a copy of the value in s1 and bind it to s2. But this isn’t quite what happens.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/rust/ownership-f1.png" />
+Figure-1</p>
+<p>As shown in the above figure, a String is made up of three parts, shown on the left: a pointer to the memory that holds the contents of the string, a length, and a capacity. This group of data is stored on the stack. On the right is the memory on the heap that holds the contents.</p>
+<p>The length is how much memory, in bytes, the contents of the string are currently using. The capacity is the total amount of memory, in bytes, that the String has received from the allocator. The difference between length and capacity matters, but not in this context, so for now, it’s fine to ignore the capacity.</p>
+<p>When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the data representation in memory looks like this:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/rust/ownership-f2.png" />
+Figure-2</p>
+<p>Earlier, we said that when a variable goes out of scope, Rust automatically calls the drop function and cleans up the heap memory for that variable. But in the above figure shows both data pointers pointing to the same location. This is a problem: when s2 and s1 go out of scope, they will both try to free the same memory. This is known as a double free error and is one of the memory safety bugs we mentioned previously. Freeing memory twice can lead to memory corruption, which can potentially lead to security vulnerabilities.</p>
+<p>To ensure memory safety, after the line let s2 = s1;, Rust considers s1 as no longer valid. Therefore, Rust doesn’t need to free anything when s1 goes out of scope. Check out what happens when you try to use s1 after s2 is created; it won’t work:
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="err">“</span><span class="n">hello</span><span class="err">”</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span>
+<span class="fm">println!</span><span class="p">(</span><span class="err">“</span><span class="p">{},</span><span class="w"> </span><span class="n">world</span><span class="o">!</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">);</span>
+</code></pre></div>
+You’ll get an error.</p>
+<p>If you’ve heard the terms shallow copy and deep copy while working with other languages, the concept of copying the pointer, length, and capacity without coping the data probably sounds like making a shallow copy. But because Rust also invalidates the first variable, instead of being called a shallow copy, it’s known as a move. In this example, we would say that s1 was moved into s2. So, what actually happens is shown in the next figure:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/rust/ownership-f3.png" />
+Figure-3</p>
+<p>Representation in memory after s1 has been invalidated, that solves our problem! With only s2 valid, when it goes out of scope it alone will free the memory, and we’re done.</p>
+<p>In addition, there’s a design choice that’s implied by this: Rust will never automatically create “deep” copies of your data. Therefore, any automatic copying can be assumed to be inexpensive in terms of runtime performance.</p>
+<h2 id="variables-and-data-interacting-with-clone">Variables and Data Interacting with Clone<a class="headerlink" href="#variables-and-data-interacting-with-clone" title="Permanent link">&para;</a></h2>
+<p>If we do want to deeply copy the heap data of the String, not just stack data, we can use a common method called clone. Here’s an example of the clone method in action:</p>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="err">“</span><span class="n">hello</span><span class="err">”</span><span class="p">);</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="n">clone</span><span class="p">();</span>
+<span class="w">      </span><span class="fm">println!</span><span class="p">(</span><span class="err">“</span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
+</code></pre></div>
+<p>This works just fine and explicitly produces the behavior shown in Figure-3, where the heap data does get copied.</p>
+<p>When you see a call to clone, you know that some arbitrary code is being executed and that code may be expensive. It’s a visual indicator that something different is going on.</p>
+<h2 id="ownership-and-functions">Ownership and Functions<a class="headerlink" href="#ownership-and-functions" title="Permanent link">&para;</a></h2>
+<p>The mechanics of passing a value to a function are similar to those when assigning a value to a variable. Passing a variable to a function will move or copy, just as assignment does.</p>
+<div class="highlight"><pre><span></span><code><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="err">“</span><span class="n">hello</span><span class="err">”</span><span class="p">);</span><span class="w"> </span><span class="c1">// s comes into scope</span>
+<span class="w">      </span><span class="n">takes_ownership</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w"> </span><span class="c1">// s’s value moves into the function…</span>
+<span class="w">               </span><span class="c1">// …and so is no longer valid here</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// x comes into scope</span>
+<span class="w">      </span><span class="n">makes_copy</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// x would move into the function, but i32 is copy, so it’s okay to still</span>
+<span class="w">                             </span><span class="c1">// use x afterward</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// Here, x goes out scope, then s. But because s’s value was moved</span>
+
+
+<span class="k">fn</span><span class="w"> </span><span class="nf">takes_ownership</span><span class="p">(</span><span class="kt">str</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// str comes into scope</span>
+<span class="w">      </span><span class="fm">println!</span><span class="p">(</span><span class="err">“</span><span class="p">{}</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="kt">str</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// str goes out of scope and `drop` is called. The backing memory is freed.</span>
+
+
+<span class="k">fn</span><span class="w"> </span><span class="nf">makes_copy</span><span class="p">(</span><span class="n">integer</span><span class="p">:</span><span class="w"> </span><span class="kt">i32</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// integer comes into scope</span>
+<span class="w">      </span><span class="fm">println!</span><span class="p">(</span><span class="err">“</span><span class="p">{}</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="n">integer</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// Here, interger goes out of scope. Nothing special happens.</span>
+</code></pre></div>
+<p>If we tried to use s after the call to takes_ownership, Rust would throw a compile-time error. These static checks protect us from mistakes. Try adding code to main that uses s and x to see where you can use them and where the ownership rules prevent you from doing so.</p>
+<h2 id="return-values-and-scope">Return Values and Scope<a class="headerlink" href="#return-values-and-scope" title="Permanent link">&para;</a></h2>
+<p>Returning values can also transfer ownership.
+<div class="highlight"><pre><span></span><code><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gives_ownership</span><span class="p">();</span><span class="w"> </span><span class="c1">// gives_ownership moves its return value into s1</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="err">“</span><span class="n">hello</span><span class="err">”</span><span class="p">);</span><span class="w"> </span><span class="c1">// s2 comes into scope</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">takes_and_gives_back</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span><span class="w"> </span><span class="c1">// s2 is moved into takes_and_gives_back, which also moves its return value into s3</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// Here, s3 goes out of scope and is dropped. s2 was moved, so nothing happens. s1 goes out of scope and is dropped.</span>
+
+<span class="k">fn</span><span class="w"> </span><span class="nf">gives_ownership</span><span class="p">()</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// gives_ownership will move its return value into the function that calls it</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="kt">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="err">“</span><span class="n">yours</span><span class="err">”</span><span class="p">);</span><span class="w"> </span><span class="c1">// str comes into scope</span>
+<span class="w">      </span><span class="kt">str</span><span class="w"> </span><span class="c1">// str is returned and moves out to the calling function</span>
+<span class="p">}</span>
+
+<span class="k">fn</span><span class="w"> </span><span class="nf">takes_and_gives_back</span><span class="p">(</span><span class="kt">str</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// str comes into scope</span>
+<span class="w">      </span><span class="kt">str</span><span class="w"> </span><span class="c1">// str is returned and moves out to the calling function</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>The ownership of a variable follows the same pattern every time: assigning a value to another variable moves it. When a variable that includes data on the heap goes out scope, the value will be cleaned up by drop unless ownership of the data has been moved to another variable.</p>
+<p>While this works, taking ownership and then returning ownership with every function is a bit tedious. What if we want to let a function use a value but not take ownership? It’s quite annoying that anything we pass in also needs to be passed back if we want to use it again, in addition to any data resulting from the body of the function that we might to return as well.</p>
+<p>Rust does let us return multiple values using a tuple:</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="err">“</span><span class="n">hello</span><span class="err">”</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculate_length</span><span class="p">(</span><span class="n">s1</span><span class="p">);</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="err">“</span><span class="n">The</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="err">‘</span><span class="p">{}</span><span class="err">’</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="p">{}</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span><span class="w"> </span><span class="nf">calculate_length</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nb">String</span><span class="p">,</span><span class="w"> </span><span class="kt">usize</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">len</span><span class="p">();</span>
+<span class="w">      </span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+But this is too much ceremony and a lot of work for a concept that should be common. Luckily for us, Rust has a feature for using a value without transferring ownership, called references.</p>
 
 
 
