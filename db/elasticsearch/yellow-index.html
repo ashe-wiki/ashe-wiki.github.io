@@ -10,31 +10,31 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/devops/distributed-transaction.html">
+        <link rel="canonical" href="https://ashe-wiki.github.io/db/elasticsearch/yellow-index.html">
       
       
-        <link rel="prev" href="mq-loss.html">
+        <link rel="prev" href="install.html">
       
       
-        <link rel="next" href="rate-limiting.html">
+        <link rel="next" href="sb-es.html">
       
       
         
       
       
-      <link rel="icon" href="../assets/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>distributed-transaction - Ashe Wiki</title>
+        <title>索引为yellow的解决方案 - Ashe Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -89,7 +89,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../../index.html" title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              distributed-transaction
+              索引为yellow的解决方案
             
           </span>
         </div>
@@ -225,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="../../index.html" class="md-tabs__link">
         
   
   
@@ -253,7 +253,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../lang/go/slice.html" class="md-tabs__link">
+        <a href="../../lang/go/slice.html" class="md-tabs__link">
           
   
   
@@ -272,6 +272,8 @@
   
   
   
+    
+  
   
     
     
@@ -279,11 +281,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../db/mysql/ix.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../mysql/ix.html" class="md-tabs__link">
           
   
   
@@ -306,7 +310,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../algo/index.html" class="md-tabs__link">
+        <a href="../../algo/index.html" class="md-tabs__link">
           
   
   
@@ -322,13 +326,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="transactional-mq.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../devops/transactional-mq.html" class="md-tabs__link">
           
   
   
@@ -348,7 +350,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../other/index.html" class="md-tabs__link">
+        <a href="../../other/index.html" class="md-tabs__link">
           
   
   
@@ -382,7 +384,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../../index.html" title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -417,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -544,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/slice.html" class="md-nav__link">
+      <a href="../../lang/go/slice.html" class="md-nav__link">
         
   
   
@@ -572,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/map.html" class="md-nav__link">
+      <a href="../../lang/go/map.html" class="md-nav__link">
         
   
   
@@ -600,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/channel.html" class="md-nav__link">
+      <a href="../../lang/go/channel.html" class="md-nav__link">
         
   
   
@@ -628,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/defer.html" class="md-nav__link">
+      <a href="../../lang/go/defer.html" class="md-nav__link">
         
   
   
@@ -656,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/sync.html" class="md-nav__link">
+      <a href="../../lang/go/sync.html" class="md-nav__link">
         
   
   
@@ -684,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/generics.html" class="md-nav__link">
+      <a href="../../lang/go/generics.html" class="md-nav__link">
         
   
   
@@ -712,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/memory-escape.html" class="md-nav__link">
+      <a href="../../lang/go/memory-escape.html" class="md-nav__link">
         
   
   
@@ -740,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/memory-leak.html" class="md-nav__link">
+      <a href="../../lang/go/memory-leak.html" class="md-nav__link">
         
   
   
@@ -768,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/context.html" class="md-nav__link">
+      <a href="../../lang/go/context.html" class="md-nav__link">
         
   
   
@@ -796,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/gmp.html" class="md-nav__link">
+      <a href="../../lang/go/gmp.html" class="md-nav__link">
         
   
   
@@ -824,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/go/memory-allocator.html" class="md-nav__link">
+      <a href="../../lang/go/memory-allocator.html" class="md-nav__link">
         
   
   
@@ -910,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/meditation/2025-12-14-diary.html" class="md-nav__link">
+      <a href="../../lang/meditation/2025-12-14-diary.html" class="md-nav__link">
         
   
   
@@ -996,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/environment.html" class="md-nav__link">
+      <a href="../../lang/rust/environment.html" class="md-nav__link">
         
   
   
@@ -1024,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/declare-variables.html" class="md-nav__link">
+      <a href="../../lang/rust/declare-variables.html" class="md-nav__link">
         
   
   
@@ -1052,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/cargo.html" class="md-nav__link">
+      <a href="../../lang/rust/cargo.html" class="md-nav__link">
         
   
   
@@ -1080,7 +1082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/data-type.html" class="md-nav__link">
+      <a href="../../lang/rust/data-type.html" class="md-nav__link">
         
   
   
@@ -1108,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/function.html" class="md-nav__link">
+      <a href="../../lang/rust/function.html" class="md-nav__link">
         
   
   
@@ -1136,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/control-flow.html" class="md-nav__link">
+      <a href="../../lang/rust/control-flow.html" class="md-nav__link">
         
   
   
@@ -1164,7 +1166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/stack%26heap.html" class="md-nav__link">
+      <a href="../../lang/rust/stack%26heap.html" class="md-nav__link">
         
   
   
@@ -1192,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/ownership.html" class="md-nav__link">
+      <a href="../../lang/rust/ownership.html" class="md-nav__link">
         
   
   
@@ -1220,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/rust/web.html" class="md-nav__link">
+      <a href="../../lang/rust/web.html" class="md-nav__link">
         
   
   
@@ -1306,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lang/markdown/grammar.html" class="md-nav__link">
+      <a href="../../lang/markdown/grammar.html" class="md-nav__link">
         
   
   
@@ -1346,24 +1348,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -1381,7 +1388,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1449,7 +1456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/ix.html" class="md-nav__link">
+      <a href="../mysql/ix.html" class="md-nav__link">
         
   
   
@@ -1477,7 +1484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/b%2Btree.html" class="md-nav__link">
+      <a href="../mysql/b%2Btree.html" class="md-nav__link">
         
   
   
@@ -1505,7 +1512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/covering-index.html" class="md-nav__link">
+      <a href="../mysql/covering-index.html" class="md-nav__link">
         
   
   
@@ -1533,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/index-failure.html" class="md-nav__link">
+      <a href="../mysql/index-failure.html" class="md-nav__link">
         
   
   
@@ -1561,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/sql-flow.html" class="md-nav__link">
+      <a href="../mysql/sql-flow.html" class="md-nav__link">
         
   
   
@@ -1589,7 +1596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/dirty-read.html" class="md-nav__link">
+      <a href="../mysql/dirty-read.html" class="md-nav__link">
         
   
   
@@ -1617,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/mvcc.html" class="md-nav__link">
+      <a href="../mysql/mvcc.html" class="md-nav__link">
         
   
   
@@ -1645,7 +1652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/mysql/join.html" class="md-nav__link">
+      <a href="../mysql/join.html" class="md-nav__link">
         
   
   
@@ -1731,7 +1738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/struct.html" class="md-nav__link">
+      <a href="../redis/struct.html" class="md-nav__link">
         
   
   
@@ -1759,7 +1766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/persistence-strategy.html" class="md-nav__link">
+      <a href="../redis/persistence-strategy.html" class="md-nav__link">
         
   
   
@@ -1787,7 +1794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/eviction-policy.html" class="md-nav__link">
+      <a href="../redis/eviction-policy.html" class="md-nav__link">
         
   
   
@@ -1815,7 +1822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/redis/redis-cluster.html" class="md-nav__link">
+      <a href="../redis/redis-cluster.html" class="md-nav__link">
         
   
   
@@ -1848,6 +1855,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1858,11 +1867,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -1883,7 +1892,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1901,7 +1910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/elasticsearch/install.html" class="md-nav__link">
+      <a href="install.html" class="md-nav__link">
         
   
   
@@ -1926,10 +1935,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../db/elasticsearch/yellow-index.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="yellow-index.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1945,6 +1961,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1957,7 +1974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/elasticsearch/sb-es.html" class="md-nav__link">
+      <a href="sb-es.html" class="md-nav__link">
         
   
   
@@ -2050,7 +2067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../algo/index.html" class="md-nav__link">
+      <a href="../../algo/index.html" class="md-nav__link">
         
   
   
@@ -2082,29 +2099,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -2122,7 +2134,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2140,7 +2152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="transactional-mq.html" class="md-nav__link">
+      <a href="../../devops/transactional-mq.html" class="md-nav__link">
         
   
   
@@ -2168,7 +2180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cache.html" class="md-nav__link">
+      <a href="../../devops/cache.html" class="md-nav__link">
         
   
   
@@ -2196,7 +2208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mq-loss.html" class="md-nav__link">
+      <a href="../../devops/mq-loss.html" class="md-nav__link">
         
   
   
@@ -2221,17 +2233,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="distributed-transaction.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../devops/distributed-transaction.html" class="md-nav__link">
         
   
   
@@ -2247,7 +2252,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2260,7 +2264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rate-limiting.html" class="md-nav__link">
+      <a href="../../devops/rate-limiting.html" class="md-nav__link">
         
   
   
@@ -2288,7 +2292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="distributed-lock.html" class="md-nav__link">
+      <a href="../../devops/distributed-lock.html" class="md-nav__link">
         
   
   
@@ -2316,7 +2320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="workflow.html" class="md-nav__link">
+      <a href="../../devops/workflow.html" class="md-nav__link">
         
   
   
@@ -2401,7 +2405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../other/index.html" class="md-nav__link">
+      <a href="../../other/index.html" class="md-nav__link">
         
   
   
@@ -2470,7 +2474,7 @@
   
   
     <li class="md-path__item">
-      <a href="../index.html" class="md-path__link">
+      <a href="../../index.html" class="md-path__link">
         
   <span class="md-ellipsis">
     Home
@@ -2487,11 +2491,37 @@
   
     
     
+      
+  
+  
+    
+    
       <li class="md-path__item">
-        <a href="transactional-mq.html" class="md-path__link">
+        <a href="../mysql/ix.html" class="md-path__link">
           
   <span class="md-ellipsis">
-    DevOps
+    Db
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="install.html" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Elasticsearch
   </span>
 
         </a>
@@ -2510,7 +2540,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/devops/distributed-transaction.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/db/elasticsearch/yellow-index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2518,60 +2548,74 @@
   
 
 
-  <h1>distributed-transaction</h1>
+  <h1>索引为yellow的解决方案</h1>
 
-<p>分布式事务的TCC方案：</p>
-<table>
-<thead>
-<tr>
-<th>阶段</th>
-<th>核心动作</th>
-<th>业务目标</th>
-<th>隔离性处理</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Try (尝试)</td>
-<td>前置校验和资源预留（冻结）。</td>
-<td>确保所有参与者都有能力执行，并锁定或冻结未来所需的资源。</td>
-<td>业务级锁定，而非数据库锁，事务隔离性弱，但效率高。</td>
-</tr>
-<tr>
-<td>Confirm (确认)</td>
-<td>正式提交/执行。</td>
-<td>在 Try 成功的基础上，将预留的资源转为正式消耗或提交。</td>
-<td>必须保证成功且幂等。</td>
-</tr>
-<tr>
-<td>Cancel (取消)</td>
-<td>资源补偿/回滚。</td>
-<td>释放 Try 阶段预留的资源（如解冻资金、释放库存），将数据恢复到事务前的状态。</td>
-<td>必须保证成功且幂等。</td>
-</tr>
-</tbody>
-</table>
-<p>简而言之，就是分布式事务的TCC方案分为try, confirm, cancle三个顺序，尝试根据业务ID来加减量，预冻结（try），若成功则提交事务（confirm）,否则根据冻结的量回滚（cancel）  </p>
 <blockquote>
-<p>try阶段来处理逻辑层面的分布式事务。Try 阶段是同步的、可反悔的；Confirm/Cancel 阶段是异步的、不可反悔的。  </p>
+<p>在Elasticsearch中，索引的健康状态（health status）反映了索引的分片分配情况和集群的整体健康状况。这些状态可以帮助您快速了解索引和集群的运行情况。以下是Elasticsearch中索引的三种健康状态及其意义：</p>
+<ol>
+<li>
+<p>green（绿色）
+含义：所有主分片（primary shards）和副本分片（replica shards）都已成功分配到集群中的节点（node）上。
+特点：
+集群中的所有数据都是完全可用的。
+所有主分片和副本分片都已成功分配。
+集群处于最佳状态，具有最高的冗余和容错能力。</p>
+</li>
+<li>
+<p>yellow（黄色）
+含义：所有主分片都已成功分配，但至少有一个副本分片未被分配。
+特点：
+集群中的所有数据都是可读写的，但不是所有的副本分片都已分配。
+这种状态通常是由于集群中的节点数量不足，无法满足副本分片的分配要求。
+虽然数据是安全的，但容错能力降低，因为某些数据只有主分片而没有副本分片。</p>
+</li>
+<li>
+<p>red（红色）
+含义：至少有一个主分片未被分配。
+特点：
+集群中的部分数据不可用，可能导致搜索结果不完整或写入操作失败。
+主分片未分配的原因可能是节点故障、网络问题或配置错误。
+这种状态下，集群的稳定性和数据完整性受到严重影响，需要立即采取措施进行修复。</p>
+</li>
+</ol>
 </blockquote>
-<p>比如扣减金额（A服务）&amp; 扣减库存（B服务）这样的一个场景，先尝试（预）扣减金额和库存，任何一方发生异常（Try失败），那么就根据冻结的记录来回滚（Cancel），Try成功了则Confirm完成数据的持久化（任何一方失败都需要重试或人工干预至成功）  </p>
-<blockquote>
-<p>Confirm 和 Cancel 接口必须具备业务幂等性（比如说订单的状态），以确保在重试机制下，重复调用不会导致重复扣减金额等意外情况。</p>
-</blockquote>
+<p>以上说明中存在一些术语——主分片（primary shards）和副本分片（replica shards），对于Elasticsearch集群而言，每个索引（index）的数据会被分成主分片（primary shards）和副本分片（replica shards），并且分布在不同的节点上。</p>
+<p>也就是说，Elasticsearch希望数据的主分片和副本分片具有高可用性，当某一节点故障时，其节点上数据A的主分片失效，其他节点（数据A）的副本分片仍然可以正常使用。</p>
 <hr />
-<p>分布式事务的Saga方案（读作 /ˈsɑːɡə/）：</p>
-<p>简而言之，Saga方案就是分为正常流程，补偿流程。在正常流程中任意一个地方发生错误，则基于错误的case来发一个具体的MQ补偿（业务逻辑错误通常回滚，系统逻辑错误通常重试）  </p>
-<p>正常流程（T）跳转至补偿流程(C)的判断依据：<br />
-可重试错误（瞬时系统故障） --&gt; 重试（向前推进）。<br />
-不可重试错误（业务逻辑/持久系统故障） --&gt; 启动补偿（向后撤销）。  </p>
-<blockquote>
-<p>补偿流程必须按逆序执行，来保证逻辑的正确。  </p>
-</blockquote>
+<p><em>例子：</em>
+<em>在3个节点的集群环境下，假设您创建了一个索引，配置为3个主分片和1个副本分片：</em></p>
+<p><em>主分片：P0, P1, P2</em>
+<em>副本分片：R0, R1, R2</em>
+<em>这些分片可能会被分配如下：</em></p>
+<p><em>节点1：P0, R1</em>
+<em>节点2：P1, R2</em>
+<em>节点3：P2, R0</em></p>
+<p><em>注：副本分片是对主分片而言的，因此当存在3个主分片，每个主分片都会有自己的1个副本分片，共计3个副本分片。</em></p>
 <hr />
-<p>在实践中，架构师的选择倾向如下：</p>
-<p>首选 Saga： 对于绝大多数非强金融核心的业务（如订单创建、物流、积分变动），Saga 是更受欢迎的选择，因为它能带来更好的解耦性和吞吐量。<br />
-关键场景使用 TCC： 只有当流程中涉及到核心资金账户的扣减，且对数据隔离性要求达到最高级别时，才会考虑使用 TCC。  </p>
+<p>由此可知，当Elasticsearch上index的健康状态为yellow时，说明至少有一个副本分片未被分配（这种情况下，数据仍然可以正常使用，但是失去了高可用性的保障）</p>
+<p>理解以上概念后，现在处理问题（我的Elasticsearch集群单节点是安装在本地Windows主机上的）：</p>
+<p>查看index列表</p>
+<p>https://localhost:9200/_cat/indices</p>
+<p><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/yellow-index-1.png" /></p>
+<p>可以看到除new_index以外，其他index都是yellow状态，为啥会出现这些区别呢？</p>
+<p>因为products，users这两个index在创建索引的时候没有显式指定主分片数和副本分片数，Elasticsearch默认分配了1个主分片和1个副本分片，但是我的Elasticsearch只有一个节点，根据其分配算法，主分片和副本分片不应该在一个节点，因此副本分片分配节点时失败。</p>
+<p>my_index是在创建时，显式指定了主分片数为3，副本分片数为1，给1个副本分片分配节点时失败。</p>
+<p>new_index在创建时，显式指定了主分片数为1，副本分片数为0，因此这个index的健康状态是green。</p>
+<p>cat_index在创建是，显式指定了主分片数为1，副本分片数为1，给1个副本分片分配节点时失败。</p>
+<p><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/yellow-index-2.png" /></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;elastic:your_password&quot;</span><span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span><span class="s2">&quot;https://127.0.0.1:9200/cat_index&quot;</span><span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;{\&quot;settings\&quot;:{\&quot;number_of_shards\&quot;:1,\&quot;number_of_replicas\&quot;:1}}&quot;</span>
+</code></pre></div>
+<p>现在我准备修改my_index和cat_index的副本分片数为0，使得其健康状态恢复成green</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;elastic:your_password&quot;</span><span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span><span class="s2">&quot;https://localhost:9200/my_index/_settings&quot;</span><span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;{ \&quot;index\&quot;: { \&quot;number_of_replicas\&quot;: 0 }}&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;elastic:your_password&quot;</span><span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span><span class="s2">&quot;https://localhost:9200/cat_index/_settings&quot;</span><span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;{ \&quot;index\&quot;: { \&quot;number_of_replicas\&quot;: 0 }}&quot;</span>
+</code></pre></div>
+<p><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/yellow-index-3.png" /></p>
+<p>现在我把所有index的副本分片数都修改为0后（所有index的健康状态都已经为green），再检查Elasticsearch集群的健康状态</p>
+<p>https://localhost:9200/_cluster/health</p>
+<p><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/yellow-index-4.png" /></p>
+<p>总结：在创建索引的时候，其配置的主分片数和副本分片数，要与你使用的Elasticsearch集群的节点数契合。</p>
+<p>参考：<a href="https://www.cnblogs.com/chenjw-note/articles/10956057.html">elasticsearch 未分配分片unassigned导致集群为Yellow状态修复</a></p>
 
 
 
@@ -2631,14 +2675,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
-        <script src="../javascripts/mermaid-init.js"></script>
+        <script src="../../javascripts/mermaid-init.js"></script>
       
     
   </body>
