@@ -2236,11 +2236,13 @@
     StorageEngine --&gt;|6. 读写数据 磁盘/内存| Executor
     Executor --&gt;|7. 返回结果集| Connector
     Connector --&gt;|8. 返回结果| Client</code></pre>
-<p>理解这个流程对于 SQL 调优 至关重要：
-- 连接慢？检查网络或连接池。
-- 语法错？检查 SQL 写法。
-- 执行慢但索引没走对？检查 优化器（统计信息是否准确，EXPLAIN 分析）。
-- 执行慢且走了索引但还是慢？检查 存储引擎（磁盘 I/O、Buffer Pool 命中率、锁竞争）。</p>
+<p>理解这个流程对于 SQL 调优 至关重要：</p>
+<ul>
+<li>连接慢？检查网络或连接池。</li>
+<li>语法错？检查 SQL 写法。</li>
+<li>执行慢但索引没走对？检查 优化器（统计信息是否准确，EXPLAIN 分析）。</li>
+<li>执行慢且走了索引但还是慢？检查 存储引擎（磁盘 I/O、Buffer Pool 命中率、锁竞争）。</li>
+</ul>
 
 
 
