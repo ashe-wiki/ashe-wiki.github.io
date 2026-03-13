@@ -2882,8 +2882,8 @@ Correct<span class="w"> </span>the<span class="w"> </span>classpath<span class="
 报错翻译：大意是指正在调用一个不存在的method，这个method对应的class在我的本地maven仓库的xxx路径，并提到了elasticsearch-rest-client的版本，给出的建议是纠正该client的唯一性&amp;兼容性……</p>
 <p>我Google了一下报错内容，在Elasticsearch官网中找到了一个类似的issue，官方给出的回答是elasticsearch-rest-client版本不对，但是那个issue最后并未被发起者确认解决问题，而是在一段时间后自动关闭了。</p>
 <h2 id="_3">依赖分析<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/sb-es-3.png" />
-发现官方推荐的依赖中集成的elasticsearch-rest-client版本是6.4.3而非8.15.3</p>
+<p><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/sb-es-3.png" /></p>
+<p>发现官方推荐的依赖中集成的elasticsearch-rest-client版本是6.4.3而非8.15.3</p>
 <p>因此尝试手动添加elasticsearch-rest-client8.15.3版本的依赖
 <div class="highlight"><pre><span></span><code><span class="w">        </span>&lt;dependency&gt;
 <span class="w">            </span>&lt;groupId&gt;org.elasticsearch.client&lt;/groupId&gt;
