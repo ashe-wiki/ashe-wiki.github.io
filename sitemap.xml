@@ -9,11 +9,71 @@
          <lastmod>2026-03-13</lastmod>
     </url>
     <url>
-         <loc>https://ashe-wiki.github.io/db/mysql/index.html</loc>
+         <loc>https://ashe-wiki.github.io/db/mysql/b%2Btree.html</loc>
          <lastmod>2026-03-13</lastmod>
     </url>
     <url>
-         <loc>https://ashe-wiki.github.io/devops/index.html</loc>
+         <loc>https://ashe-wiki.github.io/db/mysql/covering-index.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/db/mysql/dirty-read.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/db/mysql/index-failure.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/db/mysql/ix.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/db/mysql/join.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/db/mysql/mvcc.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/db/mysql/sql-flow.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/db/redis/eviction-policy.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/db/redis/persistence-strategy.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/db/redis/struct.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/devops/cache.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/devops/distributed-lock.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/devops/distributed-transaction.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/devops/mq-loss.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/devops/rate-limiting.html</loc>
+         <lastmod>2026-03-13</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/devops/transactional-mq.html</loc>
          <lastmod>2026-03-13</lastmod>
     </url>
     <url>
