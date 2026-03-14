@@ -1500,17 +1500,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#shortcut" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Shortcut
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2858,17 +2847,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#shortcut" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Shortcut
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2963,7 +2941,7 @@
   <h1>Grammar</h1>
 
 <h2 id="init">Init<a class="headerlink" href="#init" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># 设置你的名字 (伪装成大佬)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># 设置你的名字</span>
 git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"Your Name"</span>
 
 <span class="c1"># 设置你的邮箱 (必须和 GitHub/Gitee 账号一致，否则没绿点)</span>
@@ -2971,6 +2949,15 @@ git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"
 
 <span class="c1"># 查看配置有没有设对</span>
 git<span class="w"> </span>config<span class="w"> </span>--list
+
+<span class="c1"># 快捷键映射</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.st<span class="w"> </span>status
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.co<span class="w"> </span>checkout
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.br<span class="w"> </span>branch
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.ci<span class="w"> </span>commit
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.last<span class="w"> </span><span class="s2">"log -1 HEAD"</span>
+-<span class="w"> </span>git<span class="w"> </span>st<span class="w"> </span>代替<span class="w"> </span>git<span class="w"> </span>status
+-<span class="w"> </span>git<span class="w"> </span>co<span class="w"> </span>代替<span class="w"> </span>git<span class="w"> </span>checkout
 </code></pre></div>
 <h2 id="undo">Undo<a class="headerlink" href="#undo" title="Permanent link">¶</a></h2>
 <ol>
@@ -3024,17 +3011,6 @@ git<span class="w"> </span>rebase<span class="w"> </span>main
 <p>把别的分支上的某一次特定提交合过来
 </p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>cherry-pick<span class="w"> </span>&lt;commit-hash&gt;
 </code></pre></div><p></p>
-<h2 id="shortcut">Shortcut<a class="headerlink" href="#shortcut" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.st<span class="w"> </span>status
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.co<span class="w"> </span>checkout
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.br<span class="w"> </span>branch
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.ci<span class="w"> </span>commit
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.last<span class="w"> </span><span class="s2">"log -1 HEAD"</span>
-</code></pre></div>
-<ul>
-<li>git st 代替 git status</li>
-<li>git co 代替 git checkout</li>
-</ul>
 
 
 
