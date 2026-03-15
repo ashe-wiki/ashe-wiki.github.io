@@ -5,10 +5,6 @@
          <lastmod>2026-03-15</lastmod>
     </url>
     <url>
-         <loc>https://ashe-wiki.github.io/algo/index.html</loc>
-         <lastmod>2026-03-15</lastmod>
-    </url>
-    <url>
          <loc>https://ashe-wiki.github.io/db/index.html</loc>
          <lastmod>2026-03-15</lastmod>
     </url>
@@ -129,6 +125,14 @@
          <lastmod>2026-03-15</lastmod>
     </url>
     <url>
+         <loc>https://ashe-wiki.github.io/lang/algo/todo.html</loc>
+         <lastmod>2026-03-15</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/lang/dp/todo.html</loc>
+         <lastmod>2026-03-15</lastmod>
+    </url>
+    <url>
          <loc>https://ashe-wiki.github.io/lang/git/grammar.html</loc>
          <lastmod>2026-03-15</lastmod>
     </url>
@@ -222,6 +226,18 @@
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/other/index.html</loc>
+         <lastmod>2026-03-15</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/systems/index.html</loc>
+         <lastmod>2026-03-15</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/systems/net/todo.html</loc>
+         <lastmod>2026-03-15</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/systems/os/todo.html</loc>
          <lastmod>2026-03-15</lastmod>
     </url>
 </urlset>
