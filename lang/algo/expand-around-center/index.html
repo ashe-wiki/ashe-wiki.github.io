@@ -7,31 +7,31 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/devops/distributed-transaction/">
+        <link rel="canonical" href="https://ashe-wiki.github.io/lang/algo/expand-around-center/">
       
       
-        <link rel="prev" href="../mq-loss/">
+        <link rel="prev" href="../two-pointer/">
       
       
-        <link rel="next" href="../rate-limiting/">
+        <link rel="next" href="../../../db/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="icon" href="../../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>Distributed-transaction - Ashe Wiki</title>
+        <title>Expand Around Center Algorithm - Ashe Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -50,13 +50,13 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -84,6 +84,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#longest-palindromic-substring" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +99,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../../.." title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -119,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Distributed-transaction
+              Expand Around Center Algorithm
             
           </span>
         </div>
@@ -230,7 +235,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -247,11 +252,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../lang/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -273,7 +280,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../db/" class="md-tabs__link">
+        <a href="../../../db/" class="md-tabs__link">
           
   
   
@@ -291,13 +298,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../devops/" class="md-tabs__link">
           
   
   
@@ -319,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../systems/" class="md-tabs__link">
+        <a href="../../../systems/" class="md-tabs__link">
           
   
   
@@ -341,7 +346,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../other/" class="md-tabs__link">
+        <a href="../../../other/" class="md-tabs__link">
           
   
   
@@ -377,7 +382,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../../.." title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -412,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -436,6 +441,8 @@
       
   
   
+    
+  
   
   
     
@@ -461,18 +468,21 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../lang/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -490,13 +500,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -590,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/go/slice/" class="md-nav__link">
+      <a href="../../go/slice/" class="md-nav__link">
         
   
   
@@ -618,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/go/map/" class="md-nav__link">
+      <a href="../../go/map/" class="md-nav__link">
         
   
   
@@ -646,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/go/channel/" class="md-nav__link">
+      <a href="../../go/channel/" class="md-nav__link">
         
   
   
@@ -674,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/go/defer/" class="md-nav__link">
+      <a href="../../go/defer/" class="md-nav__link">
         
   
   
@@ -702,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/go/sync/" class="md-nav__link">
+      <a href="../../go/sync/" class="md-nav__link">
         
   
   
@@ -730,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/go/generics/" class="md-nav__link">
+      <a href="../../go/generics/" class="md-nav__link">
         
   
   
@@ -758,7 +768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/go/memory-escape/" class="md-nav__link">
+      <a href="../../go/memory-escape/" class="md-nav__link">
         
   
   
@@ -786,7 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/go/memory-leak/" class="md-nav__link">
+      <a href="../../go/memory-leak/" class="md-nav__link">
         
   
   
@@ -814,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/go/context/" class="md-nav__link">
+      <a href="../../go/context/" class="md-nav__link">
         
   
   
@@ -842,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/go/gmp/" class="md-nav__link">
+      <a href="../../go/gmp/" class="md-nav__link">
         
   
   
@@ -870,7 +880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/go/memory-allocator/" class="md-nav__link">
+      <a href="../../go/memory-allocator/" class="md-nav__link">
         
   
   
@@ -976,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/rust/environment/" class="md-nav__link">
+      <a href="../../rust/environment/" class="md-nav__link">
         
   
   
@@ -1004,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/rust/declare-variables/" class="md-nav__link">
+      <a href="../../rust/declare-variables/" class="md-nav__link">
         
   
   
@@ -1032,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/rust/cargo/" class="md-nav__link">
+      <a href="../../rust/cargo/" class="md-nav__link">
         
   
   
@@ -1060,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/rust/data-type/" class="md-nav__link">
+      <a href="../../rust/data-type/" class="md-nav__link">
         
   
   
@@ -1088,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/rust/function/" class="md-nav__link">
+      <a href="../../rust/function/" class="md-nav__link">
         
   
   
@@ -1116,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/rust/control-flow/" class="md-nav__link">
+      <a href="../../rust/control-flow/" class="md-nav__link">
         
   
   
@@ -1144,7 +1154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/rust/stack%26heap/" class="md-nav__link">
+      <a href="../../rust/stack%26heap/" class="md-nav__link">
         
   
   
@@ -1172,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/rust/ownership/" class="md-nav__link">
+      <a href="../../rust/ownership/" class="md-nav__link">
         
   
   
@@ -1200,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/rust/web/" class="md-nav__link">
+      <a href="../../rust/web/" class="md-nav__link">
         
   
   
@@ -1290,7 +1300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/markdown/grammar/" class="md-nav__link">
+      <a href="../../markdown/grammar/" class="md-nav__link">
         
   
   
@@ -1380,7 +1390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/git/grammar/" class="md-nav__link">
+      <a href="../../git/grammar/" class="md-nav__link">
         
   
   
@@ -1470,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/dp/todo/" class="md-nav__link">
+      <a href="../../dp/todo/" class="md-nav__link">
         
   
   
@@ -1503,8 +1513,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1521,11 +1533,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked="">
         
           
           <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
@@ -1546,7 +1558,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1564,7 +1576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/algo/todo/" class="md-nav__link">
+      <a href="../todo/" class="md-nav__link">
         
   
   
@@ -1592,7 +1604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/algo/two-pointer/" class="md-nav__link">
+      <a href="../two-pointer/" class="md-nav__link">
         
   
   
@@ -1617,10 +1629,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../lang/algo/expand-around-center/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expand Around Center Algorithm
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1636,6 +1673,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#longest-palindromic-substring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Longest Palindromic Substring
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1690,7 +1756,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../db/" class="md-nav__link ">
+            <a href="../../../db/" class="md-nav__link ">
               
   
   
@@ -1802,7 +1868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/ix/" class="md-nav__link">
+      <a href="../../../db/mysql/ix/" class="md-nav__link">
         
   
   
@@ -1830,7 +1896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/b%2Btree/" class="md-nav__link">
+      <a href="../../../db/mysql/b%2Btree/" class="md-nav__link">
         
   
   
@@ -1858,7 +1924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/covering-index/" class="md-nav__link">
+      <a href="../../../db/mysql/covering-index/" class="md-nav__link">
         
   
   
@@ -1886,7 +1952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/index-failure/" class="md-nav__link">
+      <a href="../../../db/mysql/index-failure/" class="md-nav__link">
         
   
   
@@ -1914,7 +1980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/sql-flow/" class="md-nav__link">
+      <a href="../../../db/mysql/sql-flow/" class="md-nav__link">
         
   
   
@@ -1942,7 +2008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/dirty-read/" class="md-nav__link">
+      <a href="../../../db/mysql/dirty-read/" class="md-nav__link">
         
   
   
@@ -1970,7 +2036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/mvcc/" class="md-nav__link">
+      <a href="../../../db/mysql/mvcc/" class="md-nav__link">
         
   
   
@@ -1998,7 +2064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/mysql/join/" class="md-nav__link">
+      <a href="../../../db/mysql/join/" class="md-nav__link">
         
   
   
@@ -2094,7 +2160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/redis/struct/" class="md-nav__link">
+      <a href="../../../db/redis/struct/" class="md-nav__link">
         
   
   
@@ -2122,7 +2188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/redis/persistence-strategy/" class="md-nav__link">
+      <a href="../../../db/redis/persistence-strategy/" class="md-nav__link">
         
   
   
@@ -2150,7 +2216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/redis/eviction-policy/" class="md-nav__link">
+      <a href="../../../db/redis/eviction-policy/" class="md-nav__link">
         
   
   
@@ -2178,7 +2244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/redis/redis-cluster/" class="md-nav__link">
+      <a href="../../../db/redis/redis-cluster/" class="md-nav__link">
         
   
   
@@ -2278,7 +2344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/install/" class="md-nav__link">
+      <a href="../../../db/elasticsearch/install/" class="md-nav__link">
         
   
   
@@ -2306,7 +2372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/getting-started/" class="md-nav__link">
+      <a href="../../../db/elasticsearch/getting-started/" class="md-nav__link">
         
   
   
@@ -2334,7 +2400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/yellow-index/" class="md-nav__link">
+      <a href="../../../db/elasticsearch/yellow-index/" class="md-nav__link">
         
   
   
@@ -2362,7 +2428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/sb-es/" class="md-nav__link">
+      <a href="../../../db/elasticsearch/sb-es/" class="md-nav__link">
         
   
   
@@ -2390,7 +2456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/kibana/" class="md-nav__link">
+      <a href="../../../db/elasticsearch/kibana/" class="md-nav__link">
         
   
   
@@ -2418,7 +2484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/elasticsearch/elk/" class="md-nav__link">
+      <a href="../../../db/elasticsearch/elk/" class="md-nav__link">
         
   
   
@@ -2458,8 +2524,6 @@
       
   
   
-    
-  
   
   
     
@@ -2491,21 +2555,18 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../devops/" class="md-nav__link ">
               
   
   
@@ -2523,13 +2584,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2549,7 +2610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transactional-mq/" class="md-nav__link">
+      <a href="../../../devops/transactional-mq/" class="md-nav__link">
         
   
   
@@ -2577,7 +2638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cache/" class="md-nav__link">
+      <a href="../../../devops/cache/" class="md-nav__link">
         
   
   
@@ -2605,7 +2666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mq-loss/" class="md-nav__link">
+      <a href="../../../devops/mq-loss/" class="md-nav__link">
         
   
   
@@ -2630,17 +2691,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../devops/distributed-transaction/" class="md-nav__link">
         
   
   
@@ -2656,7 +2710,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2669,7 +2722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rate-limiting/" class="md-nav__link">
+      <a href="../../../devops/rate-limiting/" class="md-nav__link">
         
   
   
@@ -2697,7 +2750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../distributed-lock/" class="md-nav__link">
+      <a href="../../../devops/distributed-lock/" class="md-nav__link">
         
   
   
@@ -2725,7 +2778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflow/" class="md-nav__link">
+      <a href="../../../devops/workflow/" class="md-nav__link">
         
   
   
@@ -2753,7 +2806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gitlab/" class="md-nav__link">
+      <a href="../../../devops/gitlab/" class="md-nav__link">
         
   
   
@@ -2781,7 +2834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gitlab-ci/" class="md-nav__link">
+      <a href="../../../devops/gitlab-ci/" class="md-nav__link">
         
   
   
@@ -2841,7 +2894,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../systems/" class="md-nav__link ">
+            <a href="../../../systems/" class="md-nav__link ">
               
   
   
@@ -2939,7 +2992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/os/todo/" class="md-nav__link">
+      <a href="../../../systems/os/todo/" class="md-nav__link">
         
   
   
@@ -3029,7 +3082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/net/todo/" class="md-nav__link">
+      <a href="../../../systems/net/todo/" class="md-nav__link">
         
   
   
@@ -3093,7 +3146,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../other/" class="md-nav__link ">
+            <a href="../../../other/" class="md-nav__link ">
               
   
   
@@ -3150,6 +3203,25 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#longest-palindromic-substring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Longest Palindromic Substring
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3173,7 +3245,7 @@
   
   
     <li class="md-path__item">
-      <a href="../.." class="md-path__link">
+      <a href="../../.." class="md-path__link">
         
   <span class="md-ellipsis">
     Home
@@ -3191,10 +3263,28 @@
     
     
       <li class="md-path__item">
-        <a href="../" class="md-path__link">
+        <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
-    DevOps
+    Lang
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../todo/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Algo
   </span>
 
         </a>
@@ -3213,7 +3303,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/devops/distributed-transaction.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/lang/algo/expand-around-center.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -3221,60 +3311,41 @@
   
 
 
-  <h1>Distributed-transaction</h1>
+  <h1>Expand Around Center Algorithm</h1>
 
-<p>分布式事务的TCC方案：</p>
-<table>
-<thead>
-<tr>
-<th>阶段</th>
-<th>核心动作</th>
-<th>业务目标</th>
-<th>隔离性处理</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Try (尝试)</td>
-<td>前置校验和资源预留（冻结）。</td>
-<td>确保所有参与者都有能力执行，并锁定或冻结未来所需的资源。</td>
-<td>业务级锁定，而非数据库锁，事务隔离性弱，但效率高。</td>
-</tr>
-<tr>
-<td>Confirm (确认)</td>
-<td>正式提交/执行。</td>
-<td>在 Try 成功的基础上，将预留的资源转为正式消耗或提交。</td>
-<td>必须保证成功且幂等。</td>
-</tr>
-<tr>
-<td>Cancel (取消)</td>
-<td>资源补偿/回滚。</td>
-<td>释放 Try 阶段预留的资源（如解冻资金、释放库存），将数据恢复到事务前的状态。</td>
-<td>必须保证成功且幂等。</td>
-</tr>
-</tbody>
-</table>
-<p>简而言之，就是分布式事务的TCC方案分为try, confirm, cancle三个顺序，尝试根据业务ID来加减量，预冻结（try），若成功则提交事务（confirm）,否则根据冻结的量回滚（cancel）  </p>
-<blockquote>
-<p>try阶段来处理逻辑层面的分布式事务。Try 阶段是同步的、可反悔的；Confirm/Cancel 阶段是异步的、不可反悔的。  </p>
-</blockquote>
-<p>比如扣减金额（A服务）&amp; 扣减库存（B服务）这样的一个场景，先尝试（预）扣减金额和库存，任何一方发生异常（Try失败），那么就根据冻结的记录来回滚（Cancel），Try成功了则Confirm完成数据的持久化（任何一方失败都需要重试或人工干预至成功）  </p>
-<blockquote>
-<p>Confirm 和 Cancel 接口必须具备业务幂等性（比如说订单的状态），以确保在重试机制下，重复调用不会导致重复扣减金额等意外情况。</p>
-</blockquote>
-<hr>
-<p>分布式事务的Saga方案（读作 /ˈsɑːɡə/）：</p>
-<p>简而言之，Saga方案就是分为正常流程，补偿流程。在正常流程中任意一个地方发生错误，则基于错误的case来发一个具体的MQ补偿（业务逻辑错误通常回滚，系统逻辑错误通常重试）  </p>
-<p>正常流程（T）跳转至补偿流程(C)的判断依据：<br>
-可重试错误（瞬时系统故障） --&gt; 重试（向前推进）。<br>
-不可重试错误（业务逻辑/持久系统故障） --&gt; 启动补偿（向后撤销）。  </p>
-<blockquote>
-<p>补偿流程必须按逆序执行，来保证逻辑的正确。  </p>
-</blockquote>
-<hr>
-<p>在实践中，架构师的选择倾向如下：</p>
-<p>首选 Saga： 对于绝大多数非强金融核心的业务（如订单创建、物流、积分变动），Saga 是更受欢迎的选择，因为它能带来更好的解耦性和吞吐量。<br>
-关键场景使用 TCC： 只有当流程中涉及到核心资金账户的扣减，且对数据隔离性要求达到最高级别时，才会考虑使用 TCC。  </p>
+<p>中心扩展算法（expand around center algorithm）:</p>
+<p>The algorithm expands around each potential center (character or gap) to find the longest palindromic substring.</p>
+<h2 id="longest-palindromic-substring">Longest Palindromic Substring<a class="headerlink" href="#longest-palindromic-substring" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>Given a string s, find the longest substring which is a palindrome. If there are multiple answers, then find the first appearing substring.
+
+
+Input: s = "forgeeksskeegfor"
+Output: "geeksskeeg"
+Explanation: The longest substring that reads the same forward and backward is "geeksskeeg". Other palindromes like "kssk" or "eeksskee" are shorter.
+
+Input: s = "Geeks"
+Output: "ee"
+Explanation: The substring "ee" is the longest palindromic part in "Geeks". All others are shorter single characters.
+
+Input: s = "abc"
+Output: "a"
+Explanation: No multi-letter palindromes exist. So the first character "a" is returned as the longest palindromic substring.
+</code></pre></div>
+<p>思路：遍历整个字符串，在任意index处取[0, index]的（回文）中心，以左右指针从中心向两侧扩展，并以此校验是否符合回文规则</p>
+<p>tip1:</p>
+<p>index值为奇数或偶数，需要两个case来取（回文）中心，进而决定左右指针的索引位置，这里可以通过对2取余的方式统一成一个case来简化代码</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="kt">int</span>
+<span class="nx">left</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span>
+<span class="nx">right</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="o">%</span><span class="mi">2</span>
+<span class="c1">// 当i=4 left=2, right=2（偶数，左右指针重合）; i=5, left=2 right=3（奇数，左右指针相邻）</span>
+</code></pre></div>
+<p>tip2:</p>
+<p>字符串长度（假设n）遍历只能保证奇数长度回文被覆盖，但偶数长度回文的中心可能在字符间隙中，如果不遍历 2n-1，就可能漏掉最长回文，比如abb最长回文是bb，但是以n=3去取回文中心时，中心点落在了index=1处，[left] != [right]，n&gt;3已经结束遍历，那么就无法得出正确结果。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/algorithm/char-gap.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/algorithm/char-gap.png"></a></p>
+<p>为了避免这种场景，我们需要保证回文中心始终落在字符间隙，而不是落在字符，因此把字符间隙视（抽象）作一个单位
+那么aba奇数长度拥有偶数个间隙，abba偶数长度拥有奇数个间隙
+n长度的字符串总共单位即2*n-1</p>
+<p><a href="https://github.com/ashe-c0de/lang-lab/blob/main/golang/algorithm/expand-around-center.go">Go代码示例</a></p>
 
 
 
@@ -3362,14 +3433,14 @@ document.addEventListener("DOMContentLoaded", updateGiscusTheme);
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["header.autohide", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["header.autohide", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
-        <script src="../../javascripts/mermaid-init.js"></script>
+        <script src="../../../javascripts/mermaid-init.js"></script>
       
     
   
