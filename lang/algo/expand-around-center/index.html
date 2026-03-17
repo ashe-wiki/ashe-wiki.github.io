@@ -3340,11 +3340,12 @@ Explanation: No multi-letter palindromes exist. So the first character "a" is re
 <span class="c1">// 当i=4 left=2, right=2（偶数，左右指针重合）; i=5, left=2 right=3（奇数，左右指针相邻）</span>
 </code></pre></div>
 <p>tip2:</p>
-<p>字符串长度（假设n）遍历只能保证奇数长度回文被覆盖，但偶数长度回文的中心可能在字符间隙中，如果不遍历 2n-1，就可能漏掉最长回文，比如abb最长回文是bb，但是以n=3去取回文中心时，中心点落在了index=1处，[left] != [right]，n&gt;3已经结束遍历，那么就无法得出正确结果。</p>
+<p>字符串长度（假设n）遍历只能保证奇数长度回文被覆盖，但偶数长度回文的中心可能在字符间隙中，如果不遍历 2n-1，就可能漏掉最长回文，比如abb最长回文是bb，遍历至i=2,left=1,right=1,pstr=b;left--,right++，[left] != [right]，return，那么就无法得出正确结果。</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/algorithm/char-gap.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/algorithm/char-gap.png"></a></p>
-<p>为了避免这种场景，我们需要保证回文中心始终落在字符间隙，而不是落在字符，因此把字符间隙视（抽象）作一个单位<br>
-那么aba奇数长度拥有偶数个间隙，abba偶数长度拥有奇数个间隙<br>
-n长度的字符串总共单位即2*n-1</p>
+<p>为了避免这种场景，我们需要保证回文中心始终落在字符间隙，而不是落在字符，因此把字符间隙视（抽象）作一个单位
+那么aba奇数长度拥有偶数个间隙，abba偶数长度拥有奇数个间隙
+n长度的字符串总共单位即2*n-1<br>
+比如abb，就成了a|b|b，当遍历至i=4,left=2,right=2,pstr=bb;left--,right++,break.得到最长回文子串bb。（取回文中心参考点时，用的2n-1的长度，在字符串上取字符仍然用n）</p>
 <p><a href="https://github.com/ashe-c0de/lang-lab/blob/main/golang/algorithm/expand-around-center.go">Go代码示例</a></p>
 
 
