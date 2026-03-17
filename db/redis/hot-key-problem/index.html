@@ -3459,18 +3459,18 @@
 <p>Redis的热Key是指在短时间内被大量请求频繁访问的某个或某些Key，相比其他Key接收更多流量，造成（节点）负载分布不均</p>
 </blockquote>
 <h2 id="impact-of-hot-keys">Impact of Hot Keys<a class="headerlink" href="#impact-of-hot-keys" title="Permanent link">¶</a></h2>
-<p><strong>Single-node bottleneck</strong> - One Redis node handles all requests
-<strong>Increased latency</strong> - Queue buildup for hot key operations
-<strong>Network saturation</strong> - Large values amplify bandwidth issues
-<strong>Cluster imbalance</strong> - Hot key's slot receives disproportionate load
-<strong>Cascading failures</strong> - Hot key node failure affects many requests</p>
+<p><strong>Single-node bottleneck</strong> - One Redis node handles all requests</p>
+<p><strong>Increased latency</strong> - Queue buildup for hot key operations</p>
+<p><strong>Network saturation</strong> - Large values amplify bandwidth issues</p>
+<p><strong>Cluster imbalance</strong> - Hot key's slot receives disproportionate load</p>
+<p><strong>Cascading failures</strong> - Hot key node failure affects many requests</p>
 <h2 id="how-to-solve-the-hot-key-problem">How to Solve the Hot Key Problem<a class="headerlink" href="#how-to-solve-the-hot-key-problem" title="Permanent link">¶</a></h2>
-<p><strong>Detection</strong> - Monitor access patterns to identify hot keys early
-<strong>Local Caching</strong> - Reduce Redis load with client-side caching
-<strong>Key Splitting</strong> - Distribute load across multiple physical keys
-<strong>Read Replicas</strong> - Route hot key reads to replicas
-<strong>Probabilistic Expiration</strong> - Prevent cache stampede with early refresh
-<strong>Cluster Awareness</strong> - Distribute across slots in Redis Cluster</p>
+<p><strong>Detection</strong> - Monitor access patterns to identify hot keys early</p>
+<p><strong>Local Caching</strong> - Reduce Redis load with client-side caching</p>
+<p><strong>Key Splitting</strong> - Distribute load across multiple physical keys</p>
+<p><strong>Read Replicas</strong> - Route hot key reads to replicas</p>
+<p><strong>Probabilistic Expiration</strong> - Prevent cache stampede with early refresh</p>
+<p><strong>Cluster Awareness</strong> - Distribute across slots in Redis Cluster</p>
 
 
 
