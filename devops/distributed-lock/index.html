@@ -84,6 +84,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2816,6 +2821,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed-lock
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2832,6 +2855,56 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分布式锁的核心机制：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何实现可重入锁？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何实现自动续约？
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3270,6 +3343,47 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分布式锁的核心机制：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何实现可重入锁？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何实现自动续约？
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3343,27 +3457,17 @@
 
   <h1>Distributed-lock</h1>
 
-<p>分布式锁的核心机制：</p>
+<h2 id="_1">分布式锁的核心机制：<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <ul>
 <li>NX (Not Exists)：仅在 Key 不存在时才设置成功。这保证了只有一个请求能拿到锁。</li>
 <li>PX (Expiration)：设置过期时间（如 30,000 毫秒）。防止某个请求挂掉后，锁永远不释放导致“死锁”。</li>
 <li>unique_value：每个请求生成的随机唯一 ID。释放锁时需校验该值，防止“误删”他人的锁。</li>
 </ul>
-<p>如何实现可重入锁？</p>
-<p>假设A函数内部在调用其他服务的B函数（也有锁），若无法支持可重入锁，则会造成死锁。
-通常的实现方式是将 Redis 的数据结构从 String 改为 Hash：
-Key: 锁的名称（如 order_lock_123）。
-Field: 请求的唯一标识（如 UUID + ThreadID）。
-Value: 重入计数器（整数，初始为 1）。</p>
-<p>执行逻辑：
-尝试加锁：
-如果 Key 不存在：直接加锁，设置 Field 为当前线程，Value = 1。
-如果 Key 已存在：
-判断 Field 是否为当前线程。
-如果是：Value 自增 1（hincrby），加锁成功。
-如果不是：加锁失败，进入等待/重试。</p>
-<p>如何实现自动续约？</p>
-<p>为了保证请求的行为执行完毕，有一个后台定时任务自动续约（延长key的过期时间），当行为执行完会调用unlock删除key，确保行为执行完成再释放锁。</p>
+<h2 id="_2">如何实现可重入锁？<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>todo</p>
+<h2 id="_3">如何实现自动续约？<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>为了保证请求的行为执行完毕，启一个协程去自动续约（延长key的过期时间），当行为执行完会调用unlock删除key（并通过context去cancel该协程避免无限续约），确保行为执行完成再释放锁。</p>
+<p><a href="https://github.com/ashe-c0de/lang-lab/blob/main/golang/devops/distributed-lock.go">Go代码示例</a></p>
 
 
 
