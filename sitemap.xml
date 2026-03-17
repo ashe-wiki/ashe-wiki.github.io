@@ -65,7 +65,15 @@
          <lastmod>2026-03-17</lastmod>
     </url>
     <url>
+         <loc>https://ashe-wiki.github.io/db/redis/big-key-problem/</loc>
+         <lastmod>2026-03-17</lastmod>
+    </url>
+    <url>
          <loc>https://ashe-wiki.github.io/db/redis/eviction-policy/</loc>
+         <lastmod>2026-03-17</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/db/redis/hot-key-problem/</loc>
          <lastmod>2026-03-17</lastmod>
     </url>
     <url>

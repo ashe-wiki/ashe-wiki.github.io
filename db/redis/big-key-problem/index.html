@@ -7,13 +7,13 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/db/redis/eviction-policy/">
+        <link rel="canonical" href="https://ashe-wiki.github.io/db/redis/big-key-problem/">
       
       
-        <link rel="prev" href="../persistence-strategy/">
+        <link rel="prev" href="../struct/">
       
       
-        <link rel="next" href="../redis-cluster/">
+        <link rel="next" href="../hot-key-problem/">
       
       
         
@@ -24,7 +24,7 @@
     
     
       
-        <title>eviction-policy - Ashe Wiki</title>
+        <title>big key problem - Ashe Wiki</title>
       
     
     
@@ -84,6 +84,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#impacts-of-big-keys" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -119,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              eviction-policy
+              big key problem
             
           </span>
         </div>
@@ -2190,10 +2195,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../big-key-problem/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    big key problem
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2209,6 +2239,96 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#impacts-of-big-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impacts of Big Keys
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-identify-big-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Identify Big Keys
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Identify Big Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scan-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SCAN Command
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bigkeys-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bigkeys Parameter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis-rdb-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redis RDB Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-solve-the-big-key-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Solve the Big Key Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2274,17 +2394,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../eviction-policy/" class="md-nav__link">
         
   
   
@@ -2300,7 +2413,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -3272,6 +3384,86 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#impacts-of-big-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impacts of Big Keys
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-identify-big-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Identify Big Keys
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Identify Big Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scan-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SCAN Command
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bigkeys-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bigkeys Parameter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis-rdb-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redis RDB Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-solve-the-big-key-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Solve the Big Key Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3353,7 +3545,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/db/redis/eviction-policy.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/db/redis/big-key-problem.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -3361,97 +3553,37 @@
   
 
 
-  <h1>eviction-policy</h1>
+  <h1>big key problem</h1>
 
-<p>Redis 的淘汰策略（Eviction Policy）是指当 Redis 内存使用量达到配置的上限（maxmemory）时，如何选择哪些数据删除，以便为新写入的数据腾出空间。</p>
 <blockquote>
-<p>如果未配置 maxmemory（默认情况），Redis 会尝试使用所有可用内存，直到操作系统杀死进程（Out Of Memory）。因此，生产环境必须配置 maxmemory 并选择合适的淘汰策略。</p>
+<p>The Redis big key problem refers to a scenario where a key corresponds to a value that occupies a large amount of memory, leading to performance degradation, insufficient memory, data imbalance, and master-slave synchronization delays in Redis.</p>
 </blockquote>
-<table>
-<thead>
-<tr>
-<th>maxmemory-policy策略</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>noeviction</strong></td>
-<td>不淘汰数据，内存满时写操作直接返回错误（默认策略）。</td>
-</tr>
-<tr>
-<td><strong>volatile-lru</strong></td>
-<td>从 <strong>设置了过期时间的 key</strong> 中，淘汰 <strong>最近最少使用（LRU）</strong> 的 key。</td>
-</tr>
-<tr>
-<td><strong>allkeys-lru</strong></td>
-<td>从 <strong>所有 key</strong> 中，淘汰 <strong>最近最少使用（LRU）</strong> 的 key。(最常用)</td>
-</tr>
-<tr>
-<td><strong>volatile-lfu</strong></td>
-<td>从 <strong>设置了过期时间的 key</strong> 中，淘汰 <strong>使用频率最低（LFU）</strong> 的 key。</td>
-</tr>
-<tr>
-<td><strong>allkeys-lfu</strong></td>
-<td>从 <strong>所有 key</strong> 中，淘汰 <strong>使用频率最低（LFU）</strong> 的 key。</td>
-</tr>
-<tr>
-<td><strong>volatile-random</strong></td>
-<td>从 <strong>设置了过期时间的 key</strong> 中随机淘汰。</td>
-</tr>
-<tr>
-<td><strong>allkeys-random</strong></td>
-<td>从 <strong>所有 key</strong> 中随机淘汰。</td>
-</tr>
-<tr>
-<td><strong>volatile-ttl</strong></td>
-<td>从 <strong>设置了过期时间的 key</strong> 中淘汰 <strong>剩余 TTL 最短</strong> 的 key。</td>
-</tr>
-</tbody>
-</table>
-<p>可以按 两维度 理解：</p>
-<p>1️⃣ 淘汰范围</p>
-<p>volatile-*：只在 有过期时间的 key 中淘汰</p>
-<p>allkeys-*：在 所有 key 中淘汰</p>
-<p>2️⃣ 淘汰算法</p>
-<p>lru：最近最少使用 （Least Recently Used）</p>
-<p>lfu：使用频率最低 (Least Frequently Used)</p>
-<p>random：随机</p>
-<p>ttl：TTL 最短</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">配置状态</th>
-<th style="text-align: left;">maxmemory</th>
-<th style="text-align: left;">maxmemory-policy</th>
-<th style="text-align: left;">内存满时的表现</th>
-<th style="text-align: left;">谁触发的？</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">默认情况</td>
-<td style="text-align: left;">未设置 (0)</td>
-<td style="text-align: left;">(不生效)</td>
-<td style="text-align: left;">进程被操作系统杀死 (OOM)</td>
-<td style="text-align: left;">操作系统 (Kernel)</td>
-</tr>
-<tr>
-<td style="text-align: left;">受控情况</td>
-<td style="text-align: left;">已设置 (如 2G)</td>
-<td style="text-align: left;">noeviction (默认)</td>
-<td style="text-align: left;">写操作返回错误，进程存活</td>
-<td style="text-align: left;">Redis 自身</td>
-</tr>
-<tr>
-<td style="text-align: left;">受控情况</td>
-<td style="text-align: left;">已设置 (如 2G)</td>
-<td style="text-align: left;">allkeys-lru</td>
-<td style="text-align: left;">自动删除旧数据，写入成功，进程存活</td>
-<td style="text-align: left;">Redis 自身</td>
-</tr>
-</tbody>
-</table>
+<p>Typically, a key with a string-type value exceeding 1MB in size or a collection-type key containing more than 10,000 elements is considered a big key.</p>
+<h2 id="impacts-of-big-keys">Impacts of Big Keys<a class="headerlink" href="#impacts-of-big-keys" title="Permanent link">¶</a></h2>
+<p><strong>Excessive Memory Usage</strong>: Big keys consume a significant amount of memory, potentially leading to memory shortages and triggering eviction policies. In extreme cases, this could result in memory exhaustion, causing Redis instances to crash and affecting system stability.</p>
+<p><strong>Performance Degradation</strong>: Big keys occupy large amounts of memory, increasing memory fragmentation and impacting Redis performance. Operations on big keys—such as reads, writes, and deletions—consume more CPU time and memory resources, further reducing system performance.</p>
+<p><strong>Blocking Other Operations</strong>: Certain operations on big keys can block Redis instances. For example, executing the DEL command to delete a big key may render the Redis instance unresponsive to other client requests for a period of time, affecting response time and throughput.</p>
+<p><strong>Network Congestion</strong>: Retrieving big keys generates large amounts of network traffic, potentially saturating machine or local network bandwidth and impacting other services. For instance, if a big key is 1MB in size and accessed 1,000 times per second, it generates 1,000MB (1GB) of traffic.</p>
+<p><strong>Master-Slave Synchronization Delays</strong>: In Redis instances configured with master-slave synchronization, big keys can cause synchronization delays. Since big keys consume substantial memory, transferring them during synchronization results in increased network latency, affecting data consistency.</p>
+<p><strong>Data Skew</strong>: In Redis cluster mode, if one data shard consumes significantly more memory than others, it prevents balanced memory usage across shards. Additionally, reaching the maxmemory threshold defined in Redis may cause critical keys to be evicted, potentially leading to memory overflow.</p>
+<h2 id="how-to-identify-big-keys">How to Identify Big Keys<a class="headerlink" href="#how-to-identify-big-keys" title="Permanent link">¶</a></h2>
+<h3 id="scan-command">SCAN Command<a class="headerlink" href="#scan-command" title="Permanent link">¶</a></h3>
+<p>By using the Redis SCAN command, all keys in the database can be gradually traversed. In combination with other commands (such as STRLEN, LLEN, SCARD, and HLEN), big keys can be identified. The advantage of SCAN is that it allows traversal without blocking the Redis instance.</p>
+<h3 id="bigkeys-parameter">bigkeys Parameter<a class="headerlink" href="#bigkeys-parameter" title="Permanent link">¶</a></h3>
+<p>Using the redis-cli client, you can scan for the largest key in each data type by running the following command:
+</p><div class="highlight"><pre><span></span><code>redis-cli<span class="w"> </span>-h<span class="w"> </span><span class="m">127</span>.0.0.1<span class="w"> </span>-p<span class="w"> </span><span class="m">6379</span><span class="w"> </span>--bigkeys
+</code></pre></div><p></p>
+<h3 id="redis-rdb-tools">Redis RDB Tools<a class="headerlink" href="#redis-rdb-tools" title="Permanent link">¶</a></h3>
+<p>The open-source Redis RDB Tools can analyze RDB files to scan for big keys. For example, the following command outputs the top three keys that occupy more than 1KB of memory:
+</p><div class="highlight"><pre><span></span><code>rdb<span class="w"> </span>--command<span class="w"> </span>memory<span class="w"> </span>--bytes<span class="w"> </span><span class="m">1024</span><span class="w"> </span>--largest<span class="w"> </span><span class="m">3</span><span class="w"> </span>dump.rdb
+</code></pre></div><p></p>
+<h2 id="how-to-solve-the-big-key-problem">How to Solve the Big Key Problem<a class="headerlink" href="#how-to-solve-the-big-key-problem" title="Permanent link">¶</a></h2>
+<p><strong>Split into Multiple Smaller Keys</strong>: The simplest approach is to reduce the size of individual keys. Multiple keys can be read using MGET in batch operations.</p>
+<p><strong>Data Compression</strong>: When using the String type, applying compression algorithms can reduce value size. Alternatively, using the Hash type can help, as Redis stores small hash values efficiently using a compressed list data structure.</p>
+<p><strong>Set Reasonable Expiration Times</strong>: Assign expiration times to each key to ensure data is automatically cleared upon expiration, preventing long-term accumulation into big keys.
+Enable Memory Eviction Policies: Activate Redis memory eviction strategies, such as Least Recently Used (LRU), so that the least-used data is automatically evicted when memory runs low, preventing big keys from occupying memory indefinitely.</p>
+<p><strong>Data Sharding</strong>: Implement Redis Cluster to distribute data across multiple Redis instances, reducing the burden on any single instance and mitigating the big key problem.</p>
+<p><strong>Deleting Big Keys</strong>: Use the UNLINK command to delete big keys asynchronously. Unlike DEL, UNLINK removes keys in the background, preventing Redis instances from being blocked.</p>
 
 
 
