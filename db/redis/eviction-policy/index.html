@@ -3538,19 +3538,19 @@
 </tr>
 <tr>
 <td><strong>volatile-lru</strong></td>
-<td>从 <strong>设置了过期时间的 key</strong> 中，淘汰 <strong>最近最少使用（LRU）</strong> 的 key。</td>
+<td>从 <strong>设置了过期时间的 key</strong> 中，淘汰 <strong>最近使用最少（LRU）</strong> 的 key。</td>
 </tr>
 <tr>
 <td><strong>allkeys-lru</strong></td>
-<td>从 <strong>所有 key</strong> 中，淘汰 <strong>最近最少使用（LRU）</strong> 的 key。(最常用)</td>
+<td>从 <strong>所有 key</strong> 中，淘汰 <strong>最近使用最少（LRU）</strong> 的 key。(最常用)</td>
 </tr>
 <tr>
 <td><strong>volatile-lfu</strong></td>
-<td>从 <strong>设置了过期时间的 key</strong> 中，淘汰 <strong>使用频率最低（LFU）</strong> 的 key。</td>
+<td>从 <strong>设置了过期时间的 key</strong> 中，淘汰 <strong>频率使用最低（LFU）</strong> 的 key。</td>
 </tr>
 <tr>
 <td><strong>allkeys-lfu</strong></td>
-<td>从 <strong>所有 key</strong> 中，淘汰 <strong>使用频率最低（LFU）</strong> 的 key。</td>
+<td>从 <strong>所有 key</strong> 中，淘汰 <strong>频率使用最低（LFU）</strong> 的 key。</td>
 </tr>
 <tr>
 <td><strong>volatile-random</strong></td>
@@ -3571,8 +3571,8 @@
 <p>volatile-*：只在 有过期时间的 key 中淘汰</p>
 <p>allkeys-*：在 所有 key 中淘汰</p>
 <p>2️⃣ 淘汰算法</p>
-<p>lru：最近最少使用 （Least Recently Used）</p>
-<p>lfu：使用频率最低 (Least Frequently Used)</p>
+<p>lru：最近使用最少 （Least Recently Used）</p>
+<p>lfu：频率使用最低 (Least Frequently Used)</p>
 <p>random：随机</p>
 <p>ttl：TTL 最短</p>
 <table>
