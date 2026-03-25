@@ -7,13 +7,13 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/lang/algo/sliding-window/">
+        <link rel="canonical" href="https://ashe-wiki.github.io/lang/dsa/two-pointer/">
       
       
-        <link rel="prev" href="../manacher/">
+        <link rel="prev" href="../big-o/">
       
       
-        <link rel="next" href="../../../db/">
+        <link rel="next" href="../expand-around-center/">
       
       
         
@@ -24,7 +24,7 @@
     
     
       
-        <title>Sliding Window Algorithm - Ashe Wiki</title>
+        <title>Two Pointer Algorithm - Ashe Wiki</title>
       
     
     
@@ -45,8 +45,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
-        <style>:root{--md-text-font:"Roboto Slab";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#longest-substring-without-repeating-characters" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sliding Window Algorithm
+              Two Pointer Algorithm
             
           </span>
         </div>
@@ -286,29 +286,7 @@
   
     
   
-  Db
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../devops/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  DevOps
+  Database
 
         </a>
       </li>
@@ -331,6 +309,28 @@
     
   
   Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../devops/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  DevOps
 
         </a>
       </li>
@@ -1453,7 +1453,7 @@
   <span class="md-ellipsis">
     
   
-    Dp
+    Design Pattern
   
 
     
@@ -1469,7 +1469,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Dp
+    Design Pattern
   
 
           </label>
@@ -1581,7 +1581,7 @@
   <span class="md-ellipsis">
     
   
-    Algo
+    Data Structures and Algorithms
   
 
     
@@ -1597,7 +1597,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Algo
+    Data Structures and Algorithms
   
 
           </label>
@@ -1610,14 +1610,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../todo/" class="md-nav__link">
+      <a href="../big-o/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TODO
+    Introduction to Big O Notation
   
 
     
@@ -1635,10 +1635,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../two-pointer/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Two Pointer Algorithm
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1654,6 +1679,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        判断一个字符串是否为回文字符串
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1719,35 +1773,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Sliding Window Algorithm
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../sliding-window/" class="md-nav__link">
         
   
   
@@ -1763,35 +1792,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#longest-substring-without-repeating-characters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Longest Substring Without Repeating Characters
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1853,7 +1853,7 @@
   <span class="md-ellipsis">
     
   
-    Db
+    Database
   
 
     
@@ -1875,7 +1875,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Db
+    Database
   
 
           </label>
@@ -2687,6 +2687,262 @@
       
         
       
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../systems/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systems
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/os/todo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TODO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Net
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Net
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/net/todo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TODO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2712,7 +2968,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <div class="md-nav__link md-nav__container">
@@ -2734,14 +2990,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3027,262 +3283,6 @@
       
         
       
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../systems/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Systems
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Systems
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
-        
-          
-          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    OS
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    OS
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../systems/os/todo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TODO
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3">
-        
-          
-          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Net
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Net
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../systems/net/todo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TODO
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
     
     
     
@@ -3487,10 +3487,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#longest-substring-without-repeating-characters" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Longest Substring Without Repeating Characters
+        判断一个字符串是否为回文字符串
       
     </span>
   </a>
@@ -3558,10 +3558,10 @@
     
     
       <li class="md-path__item">
-        <a href="../todo/" class="md-path__link">
+        <a href="../big-o/" class="md-path__link">
           
   <span class="md-ellipsis">
-    Algo
+    Data Structures and Algorithms
   </span>
 
         </a>
@@ -3580,7 +3580,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/lang/algo/sliding-window.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/lang/dsa/two-pointer.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -3588,28 +3588,21 @@
   
 
 
-  <h1>Sliding Window Algorithm</h1>
+  <h1>Two Pointer Algorithm</h1>
 
-<p>滑动窗口算法（sliding window algorithm）:</p>
-<p>滑动窗口的核心就是，右指针给窗口扩容，直至抵达扩容限制条件或抵达边界；左指针则是给窗口缩容，以释放限制条件的约束，保证窗口继续向边界移动。</p>
-<h2 id="longest-substring-without-repeating-characters">Longest Substring Without Repeating Characters<a class="headerlink" href="#longest-substring-without-repeating-characters" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>Given a string s having lowercase characters, find the length of the longest substring without repeating characters. 
-
-Input: s = "geeksforgeeks"
-Output: 7 
-Explanation: The longest substrings without repeating characters are "eksforg” and "ksforge", with lengths of 7.
-
-Input: s = "aaa"
-Output: 1
-Explanation: The longest substring without repeating characters is "a"
-
-Input: s = "abcdefabcbb"
-Output: 6
-Explanation: The longest substring without repeating characters is "abcdef".
-</code></pre></div>
+<p>双指针算法（Two Pointer Algorithm）：</p>
+<p>两个指针，分别从数组或链表的头部和尾部开始向中间移动，常可以用来解决数组或链表问题中的多种问题。其中包括：判断是否存在满足某条件的两个数、寻找满足某条件的连续子序列、判断一个字符串是否为回文串以及将一个数组或链表按照某种方式重新排序等。</p>
+<h2 id="_1">判断一个字符串是否为回文字符串<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>思路：</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/go/two-pointer.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/go/two-pointer.png"></a></p>
+<p>根据左右指针往中心方向遍历每个字符，并依次判断字符是否相等（不符合则return false），当left &gt;= right时结束遍历即可，最后return true。</p>
 <p>tip1:</p>
-<p>使用双指针模拟滑动窗口的左右边界，right指针扩容（窗口），遇到每个字符都往hashmap存储（key字符，value对应索引，重复字符的索引会被覆盖），当遇到重复字符的时候，将当前索引+1赋值给left指针缩容（窗口）。每次遍历记录窗口长度的最大值（res = right - left + 1）。遍历结束后，即可得出符合窗口规则的最大长度。</p>
-<p><a href="https://github.com/ashe-c0de/lang-lab/blob/main/golang/algorithm/slide-window.go">Go代码示例</a></p>
+<p>遍历字符的时候，考虑比如中文、表情这样的字符会占据多个字节（byte）。</p>
+<p>tip2:</p>
+<p>字符串长度的奇偶变化是否存在影响？当为偶数长度，那么左右指针不会重叠，会在相临时结束（不影响）；当为奇数长度，（最后一次）取的字符为中心字符两侧的字符，不影响。</p>
+<p>tip3:</p>
+<p>字符串为空字符串的情况、字符串为一个字符的情况。根据回文字符串的定义，从左至右看与从右至左看字符顺序一样，那么这两个case，都可认为是回文字符串。</p>
+<p><a href="https://github.com/ashe-c0de/lang-lab/blob/main/golang/algorithm/two-pointers.go">Go代码示例</a></p>
 
 
 
