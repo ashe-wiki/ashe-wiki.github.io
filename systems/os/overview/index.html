@@ -84,6 +84,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#os" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2808,6 +2813,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2824,6 +2847,45 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#os" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OS的功能：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kernel的组成
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3489,6 +3551,36 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#os" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OS的功能：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kernel的组成
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3581,8 +3673,8 @@
   <h1>Overview</h1>
 
 <p>OS一般指操作系统。 操作系统（Operating System，缩写：OS）是一组主管并控制计算机操作、运用和运行硬件、软件资源和提供公共服务来组织用户交互的相互关联的系统软件程序。</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://imgur.com/a/Fy8aRVH" data-desc-position="bottom"><img alt="" src="https://imgur.com/a/Fy8aRVH"></a></p>
-<p>OS的功能：</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/systmes/os.png" data-desc-position="bottom"><img alt="pic" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/systmes/os.png"></a></p>
+<h2 id="os">OS的功能：<a class="headerlink" href="#os" title="Permanent link">¶</a></h2>
 <ol>
 <li>管理应用程序（安装、运行、关闭、卸载）</li>
 <li>为应用程序提供服务（IO、声频/视频输出、网络等）</li>
@@ -3593,13 +3685,15 @@
 <li>面向应用软件的接口——shell</li>
 <li>面向操作系统内部管理硬件资源的接口——kernel</li>
 </ul>
-<p>Kernel——OS内部组件</p>
+<h2 id="kernel">Kernel的组成<a class="headerlink" href="#kernel" title="Permanent link">¶</a></h2>
 <ul>
-<li>cpu调度器</li>
-<li>物理内存管理</li>
-<li>虚拟内存管理</li>
-<li>文件系统管理</li>
-<li>中断处理与设备驱动</li>
+<li>CPU调度器 (CPU Scheduler)</li>
+<li>物理内存管理 (Physical Memory Management)</li>
+<li>虚拟内存管理 (Virtual Memory Management)</li>
+<li>文件系统管理 (File System Management)</li>
+<li>中断处理与设备驱动 (Interrupt Handling &amp; Device Drivers)</li>
+<li>网络协议栈 (Network Stack)</li>
+<li>系统调用接口 (System Call Interface)</li>
 </ul>
 <p>Kernel的特征：</p>
 <ul>
