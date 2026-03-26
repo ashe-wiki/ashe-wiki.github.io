@@ -3647,6 +3647,9 @@ Input: nums = [1,1,1], k = 2</p>
 <p>Example 2:
 Input: nums = [1,2,3], k = 3</p>
 <p>Output: 2 </p>
+<p>经由上面对prefix sum的推演，我们已知</p>
+<p><code>当前前缀和 - 历史前缀和 = 中间这段子数组的和</code></p>
+<p>那么当前问题：子数组和为k的总数，就是用一个数据结构（哈希表）记录所有前缀和。如果历史前缀和=当前前缀和-k，那么中间这段子数组的和必然等于k(累加该case的次数res)，遍历数组结束后res的值即为答案。</p>
 <p><a href="https://github.com/ashe-c0de/lang-lab/blob/main/golang/algorithm/prefix-sum.go">Go代码示例</a></p>
 
 
