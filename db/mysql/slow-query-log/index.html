@@ -3767,7 +3767,7 @@
 <span class="k">SET</span><span class="w"> </span><span class="k">GLOBAL</span><span class="w"> </span><span class="n">log_queries_not_using_indexes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'ON'</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="2">2、永久开启（修改配置文件）<a class="headerlink" href="#2" title="Permanent link">¶</a></h3>
-<p>编辑 my.cnf，在 [mysqld] 下添加：</p>
+<p>编辑<code>my.cnf</code> (Linux) ，在 [mysqld] 下添加：</p>
 <div class="highlight"><pre><span></span><code>[mysqld]
 slow_query_log = 1
 slow_query_log_file = /var/log/mysql/mysql-slow.log  # 确保目录有写权限
