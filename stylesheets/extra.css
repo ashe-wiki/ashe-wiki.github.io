@@ -1,0 +1,4 @@
+/* 只隐藏一级 section 标题 */
+.md-sidebar--primary > .md-sidebar__scrollwrap > .md-nav > .md-nav__title {
+  display: none;
+}
