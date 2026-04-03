@@ -1459,6 +1459,18 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verify-your-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        verify your config
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="verify your config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#undo" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1468,8 +1480,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#stash" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1479,8 +1491,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#rebase" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1490,8 +1502,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#cherry-pick" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1499,6 +1511,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3722,6 +3739,18 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verify-your-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        verify your config
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="verify your config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#undo" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3731,8 +3760,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#stash" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3742,8 +3771,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#rebase" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3753,8 +3782,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#cherry-pick" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3762,6 +3791,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3856,17 +3890,12 @@
   
 
 
-  <h1>Grammar</h1>
-
 <h2 id="init">Init<a class="headerlink" href="#init" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># 设置你的名字</span>
 git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"Your Name"</span>
 
 <span class="c1"># 设置你的邮箱 (必须和 GitHub/Gitee 账号一致，否则没绿点)</span>
 git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"your.email@example.com"</span>
-
-<span class="c1"># 查看配置有没有设对</span>
-git<span class="w"> </span>config<span class="w"> </span>--list
 
 <span class="c1"># 快捷键映射</span>
 git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.st<span class="w"> </span>status
@@ -3878,6 +3907,8 @@ git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"
 -<span class="w"> </span>git<span class="w"> </span>st<span class="w"> </span>代替<span class="w"> </span>git<span class="w"> </span>status
 -<span class="w"> </span>git<span class="w"> </span>co<span class="w"> </span>代替<span class="w"> </span>git<span class="w"> </span>checkout
 </code></pre></div>
+<h1 id="verify-your-config">verify your config<a class="headerlink" href="#verify-your-config" title="Permanent link">¶</a></h1>
+<p>git config --list</p>
 <h2 id="undo">Undo<a class="headerlink" href="#undo" title="Permanent link">¶</a></h2>
 <ol>
 <li>撤销工作区的修改 (还没 add)
