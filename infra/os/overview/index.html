@@ -7,13 +7,13 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/systems/net/rpc/">
+        <link rel="canonical" href="https://ashe-wiki.github.io/infra/os/overview/">
       
       
-        <link rel="prev" href="../il/">
+        <link rel="prev" href="../../">
       
       
-        <link rel="next" href="../../../devops/">
+        <link rel="next" href="../execution/">
       
       
         
@@ -24,7 +24,7 @@
     
     
       
-        <title>RPC vs REST - Ashe Wiki</title>
+        <title>Overview - Ashe Wiki</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rpc-vs-rest" class="md-skip">
+        <a href="#os" class="md-skip">
           Skip to content
         </a>
       
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RPC vs REST
+              Overview
             
           </span>
         </div>
@@ -308,7 +308,7 @@
   
     
   
-  Systems
+  Infrastructure
 
         </a>
       </li>
@@ -2688,6 +2688,8 @@
       
         
       
+        
+      
     
     
     
@@ -2713,7 +2715,7 @@
   <span class="md-ellipsis">
     
   
-    Systems
+    Infrastructure
   
 
     
@@ -2735,7 +2737,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Systems
+    Infrastructure
   
 
           </label>
@@ -2747,8 +2749,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2765,11 +2769,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked="">
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -2790,7 +2794,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2805,10 +2809,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../os/overview/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2824,6 +2853,46 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#os" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OS的功能：
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kernel的组成
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2836,7 +2905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../os/execution/" class="md-nav__link">
+      <a href="../execution/" class="md-nav__link">
         
   
   
@@ -2864,7 +2933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../os/less/" class="md-nav__link">
+      <a href="../less/" class="md-nav__link">
         
   
   
@@ -2897,10 +2966,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -2917,11 +2984,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -2942,7 +3009,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2960,7 +3027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../net/overview/" class="md-nav__link">
         
   
   
@@ -2988,7 +3055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../il/" class="md-nav__link">
+      <a href="../../net/il/" class="md-nav__link">
         
   
   
@@ -3013,35 +3080,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    RPC vs REST
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../net/rpc/" class="md-nav__link">
         
   
   
@@ -3057,68 +3099,96 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
       
         
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
   
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#rpc-vs-rest" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚔️ RPC vs REST 对比
-      
-    </span>
-  </a>
+    <li class="md-nav__item">
+      <a href="../../hw/touchpad/" class="md-nav__link">
+        
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏗️ 架构选型建议
-      
-    </span>
-  </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rpc-rest" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 RPC 比 REST 快的主要原因
-      
-    </span>
-  </a>
+  <span class="md-ellipsis">
+    
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rpc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚖️ RPC 的优缺点权衡
-      
-    </span>
-  </a>
+    Touchpad
   
-</li>
-      
-    </ul>
+
+    
+  </span>
   
-</nav>
-      
+  
+
+      </a>
     </li>
   
 
@@ -3700,10 +3770,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#rpc-vs-rest" class="md-nav__link">
+  <a href="#os" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚔️ RPC vs REST 对比
+        OS的功能：
       
     </span>
   </a>
@@ -3711,32 +3781,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#kernel" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏗️ 架构选型建议
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rpc-rest" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 RPC 比 REST 快的主要原因
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rpc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚖️ RPC 的优缺点权衡
+        Kernel的组成
       
     </span>
   </a>
@@ -3789,7 +3837,7 @@
         <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
-    Systems
+    Infrastructure
   </span>
 
         </a>
@@ -3804,10 +3852,10 @@
     
     
       <li class="md-path__item">
-        <a href="../overview/" class="md-path__link">
+        <a href="./" class="md-path__link">
           
   <span class="md-ellipsis">
-    Net
+    OS
   </span>
 
         </a>
@@ -3826,7 +3874,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/systems/net/rpc.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/infra/os/overview.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -3834,77 +3882,38 @@
   
 
 
-  <h1>RPC vs REST</h1>
+  <h1>Overview</h1>
 
-<h3 id="rpc-vs-rest">⚔️ RPC vs REST 对比<a class="headerlink" href="#rpc-vs-rest" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">对比维度</th>
-<th style="text-align: left;">RPC</th>
-<th style="text-align: left;">REST</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>架构风格</strong></td>
-<td style="text-align: left;">面向过程</td>
-<td style="text-align: left;">面向资源</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>通讯协议</strong></td>
-<td style="text-align: left;">HTTP/2 或自定义协议</td>
-<td style="text-align: left;">HTTP/1</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>数据格式</strong></td>
-<td style="text-align: left;">Protocol Buffers、MessagePack 等二进制序列化格式（也支持 JSON, XML 等格式）</td>
-<td style="text-align: left;">JSON, XML 等格式</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>相关 Framework</strong></td>
-<td style="text-align: left;">gRPC、Dubbo、Thrift 等</td>
-<td style="text-align: left;">HttpClient、RestTemplate 等</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>使用场景</strong></td>
-<td style="text-align: left;">微服务内部，注重性能和效率，对服务调用的实时性和低延迟要求高</td>
-<td style="text-align: left;">对外提供的 API，方便不同客户端（如 Web 应用、移动应用）接入</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="_1">🏗️ 架构选型建议<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<p>在微服务架构中，通常采用混合模式：</p>
+<p>OS一般指操作系统。 操作系统（Operating System，缩写：OS）是一组主管并控制计算机操作、运用和运行硬件、软件资源和提供公共服务来组织用户交互的相互关联的系统软件程序。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/systmes/os.png" data-desc-position="bottom"><img alt="pic" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/systmes/os.png"></a></p>
+<h2 id="os">OS的功能：<a class="headerlink" href="#os" title="Permanent link">¶</a></h2>
+<ol>
+<li>管理应用程序生命周期（安装、运行、调度、卸载）</li>
+<li>提供硬件抽象与服务接口（文件I/O、多媒体处理、网络通信）</li>
+<li>资源分配（分配cpu、分配内存、管理外设）</li>
+</ol>
+<p>对于OS而言，有两个层面的功能接口：</p>
 <ul>
-<li><strong>内部服务间：</strong> 使用 <strong>RPC</strong> 可提高系统整体性能。</li>
-<li><strong>对外提供服务：</strong> 使用 <strong>RESTful API</strong> 能让更多类型的客户端轻松接入，提升系统的开放性和扩展性。</li>
+<li>面向应用软件的接口——shell</li>
+<li>面向操作系统内部管理硬件资源的接口——kernel</li>
 </ul>
-<hr>
-<h3 id="rpc-rest">🚀 RPC 比 REST 快的主要原因<a class="headerlink" href="#rpc-rest" title="Permanent link">¶</a></h3>
-<p>RPC（特别是基于 HTTP/2 的 gRPC）之所以高性能，主要归功于以下几点：</p>
+<h2 id="kernel">Kernel的组成<a class="headerlink" href="#kernel" title="Permanent link">¶</a></h2>
 <ul>
-<li>✅ <strong>二进制数据格式：</strong> 比 JSON 更紧凑，序列化/反序列化速度更快。</li>
-<li>✅ <strong>多路复用：</strong> 单个连接可以并发处理多个请求，减少连接开销。</li>
-<li>✅ <strong>直接调用方法：</strong> 减少了协议层面的冗余开销。</li>
-<li>✅ <strong>连接复用：</strong> 减少 TCP 握手和请求时延。</li>
-<li>✅ <strong>支持流式通信：</strong> 适用于大数据传输和实时双向通信。</li>
+<li>CPU调度器 (CPU Scheduler)</li>
+<li>物理内存管理 (Physical Memory Management)</li>
+<li>虚拟内存管理 (Virtual Memory Management)</li>
+<li>文件系统管理 (File System Management)</li>
+<li>中断处理与设备驱动 (Interrupt Handling &amp; Device Drivers)</li>
+<li>网络协议栈 (Network Stack)</li>
+<li>系统调用接口 (System Call Interface)</li>
 </ul>
-<hr>
-<h3 id="rpc">⚖️ RPC 的优缺点权衡<a class="headerlink" href="#rpc" title="Permanent link">¶</a></h3>
-<p>虽然 RPC 性能卓越，但也存在一定的门槛：</p>
-<p><strong>缺点：</strong></p>
+<p>Kernel的特征：</p>
 <ul>
-<li>❌ <strong>调试难度大：</strong> 不像 REST 可以直接用浏览器或简单的 curl 命令访问，通常需要专门的工具或代码。</li>
-<li>❌ <strong>协议复杂：</strong> 往往需要代码生成器（如 <code>.proto</code> 文件），不如 REST 直接使用 HTTP 语义简单直观。</li>
+<li>并发</li>
+<li>共享</li>
+<li>异步</li>
+<li>虚拟</li>
 </ul>
-<p><strong>总结建议：</strong></p>
-<blockquote>
-<ul>
-<li>如果追求<strong>高性能、低延迟、实时通信</strong>，<strong>RPC</strong>（特别是 gRPC）通常是更好的选择。</li>
-<li>如果追求<strong>简单、跨语言兼容性好、易于调试</strong>，<strong>REST</strong> 可能更适合。</li>
-</ul>
-</blockquote>
 
 
 
