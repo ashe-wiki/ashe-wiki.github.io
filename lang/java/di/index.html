@@ -4253,7 +4253,7 @@
 </code></pre></div><p></p>
 <p>那么业务层与数据库层就解耦了，在任何Service操作任何Repository的行为，已经从逻辑层面避免了循环依赖的可能性。</p>
 <p>除此之外，依赖注入的方式在不同的project中也是千奇百怪，常见的有构造器注入、<code>@Autowired</code>注入、<code>@Resource</code>注入、<code>@RequiredArgsConstructor</code>注入。</p>
-<p>当一个类中需要注入很多依赖时，建议使用<code>@RequiredArgsConstructor</code>来简化代码（使用<code>@Resource</code>结合<code>@Lazy``@Qualifier</code>应对特殊情况）。</p>
+<p>当一个类中需要注入很多依赖时，建议使用<code>@RequiredArgsConstructor</code>来简化代码（使用<code>@Resource</code>结合<code>@Lazy</code>、<code>@Qualifier</code>应对特殊情况）。</p>
 <blockquote>
 <p>构造器注入是 Spring 中最推荐的依赖注入方式，通过构造器注入，可以强制要求在创建类的实例时提供所有必需的依赖项，从而确保类的实例始终处于一个有效状态。这也使得依赖项的传递变得明确和类型安全。如果可能的话，尽量使用构造器注入。</p>
 </blockquote>
