@@ -7,13 +7,13 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/lang/go/memory-allocator/">
+        <link rel="canonical" href="https://ashe-wiki.github.io/lang/java/lambda/">
       
       
-        <link rel="prev" href="../gmp/">
+        <link rel="prev" href="../../go/memory-allocator/">
       
       
-        <link rel="next" href="../../java/lambda/">
+        <link rel="next" href="../../rust/environment/">
       
       
         
@@ -24,7 +24,7 @@
     
     
       
-        <title>memory-allocator - Ashe Wiki</title>
+        <title>Lambda表达式 - Ashe Wiki</title>
       
     
     
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              memory-allocator
+              Lambda表达式
             
           </span>
         </div>
@@ -542,10 +542,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -578,11 +576,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -603,7 +601,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -621,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slice/" class="md-nav__link">
+      <a href="../../go/slice/" class="md-nav__link">
         
   
   
@@ -649,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../map/" class="md-nav__link">
+      <a href="../../go/map/" class="md-nav__link">
         
   
   
@@ -677,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../channel/" class="md-nav__link">
+      <a href="../../go/channel/" class="md-nav__link">
         
   
   
@@ -705,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../defer/" class="md-nav__link">
+      <a href="../../go/defer/" class="md-nav__link">
         
   
   
@@ -733,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sync/" class="md-nav__link">
+      <a href="../../go/sync/" class="md-nav__link">
         
   
   
@@ -761,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../generics/" class="md-nav__link">
+      <a href="../../go/generics/" class="md-nav__link">
         
   
   
@@ -789,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../memory-escape/" class="md-nav__link">
+      <a href="../../go/memory-escape/" class="md-nav__link">
         
   
   
@@ -817,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../memory-leak/" class="md-nav__link">
+      <a href="../../go/memory-leak/" class="md-nav__link">
         
   
   
@@ -845,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../context/" class="md-nav__link">
+      <a href="../../go/context/" class="md-nav__link">
         
   
   
@@ -873,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gmp/" class="md-nav__link">
+      <a href="../../go/gmp/" class="md-nav__link">
         
   
   
@@ -898,17 +896,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../go/memory-allocator/" class="md-nav__link">
         
   
   
@@ -924,7 +915,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -942,8 +932,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -956,11 +948,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked="">
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -981,7 +973,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -996,10 +988,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../java/lambda/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1015,6 +1014,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -4098,10 +4098,10 @@
     
     
       <li class="md-path__item">
-        <a href="../slice/" class="md-path__link">
+        <a href="./" class="md-path__link">
           
   <span class="md-ellipsis">
-    Go
+    Java
   </span>
 
         </a>
@@ -4120,7 +4120,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/lang/go/memory-allocator.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/lang/java/lambda.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -4128,70 +4128,39 @@
   
 
 
-  <h1>memory-allocator</h1>
+  <h1>Lambda表达式</h1>
 
-<blockquote>
-<p>当我们在讨论go的内存分配器（Memory Allocator）的时候，其内存特指堆内存（Heap）</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code>为什么<span class="w"> </span>Go<span class="w"> </span>需要自己的内存分配器？
-<span class="m">1</span>️⃣<span class="w"> </span>系统调用成本高
-直接使用操作系统的<span class="w"> </span>malloc/free，每次分配都进入内核。
-
-<span class="m">2</span>️⃣<span class="w"> </span>锁竞争严重
-多线程同时分配内存会竞争锁。
-
-<span class="m">3</span>️⃣<span class="w"> </span>性能不可控
-
-因此go的内存分配器目的是为了：减少锁竞争、提高分配速度、降低内存碎片、配合<span class="w"> </span>GC<span class="w"> </span>高效工作。
+<div class="highlight"><pre><span></span><code><span class="c1">// 函数式接口</span>
+<span class="nd">@FunctionalInterface</span><span class="w"> </span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">MyInterface</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">();</span><span class="w"> </span>
+<span class="p">}</span>
 </code></pre></div>
-<p>Go 的堆内存管理采用经典的 三级缓存结构，从快到慢依次为：
-- mcache（线程本地缓存）
-- mcentral （全局中间层）
-- mheap（真正的堆）</p>
-<p>Go 内存分配器采用 mcache → mcentral → mheap 的三级结构，通过 P 私有缓存 + size class + span 批量分配，在高并发 goroutine 环境下实现低锁竞争的高效内存分配。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">组件</th>
-<th style="text-align: left;">归属</th>
-<th style="text-align: left;">锁机制</th>
-<th style="text-align: left;">作用</th>
-<th style="text-align: left;">访问速度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">mcache</td>
-<td style="text-align: left;">每个 P (逻辑处理器) 独占</td>
-<td style="text-align: left;">无锁 (Lock-free)</td>
-<td style="text-align: left;">存储常用小对象的空闲链表。P 上的 G 分配内存时首选这里。</td>
-<td style="text-align: left;">⚡️ 极速</td>
-</tr>
-<tr>
-<td style="text-align: left;">mcentral</td>
-<td style="text-align: left;">全局共享 (按规格分类)</td>
-<td style="text-align: left;">加锁 (Mutex)</td>
-<td style="text-align: left;">当 mcache 缺货时，从这里获取一批同规格的内存块填充 mcache。</td>
-<td style="text-align: left;">🚗 中速</td>
-</tr>
-<tr>
-<td style="text-align: left;">mheap</td>
-<td style="text-align: left;">全局共享</td>
-<td style="text-align: left;">加锁 (Mutex)</td>
-<td style="text-align: left;">管理所有的大页内存。当 mcentral 也没货时，从这里分配大的 span。</td>
-<td style="text-align: left;">🐢 慢速</td>
-</tr>
-</tbody>
-</table>
-<p>小对象：mcache → (miss) → mcentral → (miss) → mheap<br>
-大对象：(判断 size &gt; 32KB) → 直接 mheap (跳过 mcache 链表查找和 mcentral)</p>
-<p>因此当应用的GC频率过高的时候，我们可以从以下角度去优化：</p>
-<ul>
-<li>预分配容量：make([]T, 0, cap) 或 make(map, cap)。避免切片/Map 动态扩容触发多次内存重新分配和数据拷贝。</li>
-<li>使用 sync.Pool：对于频繁创建和销毁的对象（如 buffer、临时结构体），使用 sync.Pool 复用。这能直接减少向 mcache/mcentral 的申请次数，显著降低 GC 压力。</li>
-<li>避免内存逃逸：尽量让对象分配在栈上（栈分配无需经过上述复杂的堆分配流程，且函数返回即自动释放，无 GC 成本）。使用 go build -gcflags="-m" 查看逃逸分析。</li>
-<li>注意大对象：频繁分配 &gt;32KB 的大对象会直接冲击 mheap，增加锁竞争和 GC 负担，尽量复用或池化。</li>
-</ul>
+<p>当函数式接口MyInterface充当了某个方法的参数时，使用此方法有以下几种方式</p>
+<ol>
+<li>
+<p>新建一个类，实现此接口然后重写其抽象方法，然后创建这个类的对象，并调用该方法</p>
+</li>
+<li>
+<p>匿名内部类，重写抽象方法</p>
+</li>
+<li>
+<p>lamda表达式实现接口的抽象方法</p>
+</li>
+</ol>
+<p>Lambda表达式可以看作是一种简化的匿名函数，通过Lambda表达式可以直接定义接口的实例，而无需显式地编写新的类来实现接口。在运行时（Runtime），JVM会根据Lambda表达式来实例化一个接口的对象，并使用该对象重写的方法。</p>
+<blockquote>
+<p><em>Lambda表达式仅仅是写代码形式上的简化，而非代码执行上的简化</em></p>
+</blockquote>
+<p>Lambda表达式的展现形式</p>
+<p><code>抽象方法的参数 -&gt; 抽象方法的方法体)</code></p>
+<p>通过Lambda表达式可以省略：创建实现接口的类，实例化对象，使用对象调用抽象方法等一系列繁琐的写法，让编程人员关注重写的抽象方法即可，简而言之——使用接口抽象方法的缩写。</p>
+<p>延展性总结</p>
+<blockquote>
+<p>Lambda 表达式的实例是在 JVM (Java 虚拟机) 运行时自动生成（JVM 会动态地生成一个实现相应函数式接口的类，并创建该类的实例）</p>
+<p>由此我们可以更加深刻地理解interface与class的区别，interface的实例意义是工具人，生命周期很短，即用即丢，关注的是其抽象方法的具体行为。</p>
+<p>class的实例意义则根据其定义决定，生命周期可长可短，通常我们不仅关注其行为（方法），更关注其属性（成员变量）。</p>
+</blockquote>
 
 
 
