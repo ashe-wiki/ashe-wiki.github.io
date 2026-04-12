@@ -2,346 +2,358 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ashe-wiki.github.io/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/elasticsearch/elk/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/elasticsearch/getting-started/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/elasticsearch/install/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/elasticsearch/kibana/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/elasticsearch/sb-es/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/elasticsearch/yellow-index/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/mysql/b%2Btree/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/mysql/covering-index/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/mysql/dirty-read/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/mysql/index-failure/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/mysql/ix/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/mysql/join/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/mysql/mvcc/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/mysql/slow-query-log/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/mysql/sql-flow/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/redis/big-key-problem/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/redis/eviction-policy/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/redis/hot-key-problem/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/redis/persistence-strategy/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/redis/redis-cluster/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/db/redis/struct/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/devops/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/devops/cache/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/devops/distributed-lock/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/devops/distributed-transaction/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/devops/gitlab-ci/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/devops/gitlab/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/devops/mq-loss/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/devops/rate-limiting/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/devops/transactional-mq/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/devops/workflow/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/infra/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/infra/hw/touchpad/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/infra/net/il/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/infra/net/overview/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/infra/net/rpc/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/infra/os/execution/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/infra/os/less/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/infra/os/overview/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/ix/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/ix/agents/opencode/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/ix/llm/todo/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/ix/protocols/todo/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/dp/singleton/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/dp/todo/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/dsa/big-o/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/dsa/expand-around-center/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/dsa/manacher/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/dsa/prefix-sum/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/dsa/sliding-window/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/dsa/two-pointer/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/git/grammar/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/go/channel/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/go/context/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/go/defer/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/go/generics/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/go/gmp/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/go/map/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/go/memory-allocator/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/go/memory-escape/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/go/memory-leak/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/go/slice/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/go/sync/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/java/di/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/java/env/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/java/jvm-memory-structure/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/java/lambda/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/java/mvc/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/markdown/grammar/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/meditation/2025-12-14-diary/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/lang/python/env/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/lang/python/input-output/</loc>
+         <lastmod>2026-04-12</lastmod>
+    </url>
+    <url>
+         <loc>https://ashe-wiki.github.io/lang/python/variables/</loc>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/rust/cargo/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/rust/control-flow/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/rust/data-type/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/rust/declare-variables/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/rust/environment/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/rust/function/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/rust/ownership/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/rust/stack%26heap/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/lang/rust/web/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/other/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/other/tools/nvim/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/other/tools/scoop/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
     <url>
          <loc>https://ashe-wiki.github.io/other/tools/ssh-gui/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-12</lastmod>
     </url>
 </urlset>
