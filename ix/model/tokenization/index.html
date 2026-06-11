@@ -10,6 +10,10 @@
         <link rel="canonical" href="https://ashe-wiki.github.io/ix/model/tokenization/">
       
       
+        <link rel="prev" href="../transformer/">
+      
+      
+        <link rel="next" href="../../protocols/todo/">
       
       
         
@@ -20,7 +24,7 @@
     
     
       
-        <title>Tokenization: A Comprehensive Guide - Ashe Wiki</title>
+        <title>tokenization - Ashe Wiki</title>
       
     
     
@@ -120,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tokenization: A Comprehensive Guide
+              tokenization
             
           </span>
         </div>
@@ -314,10 +318,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../" class="md-tabs__link">
           
   
@@ -3763,6 +3769,8 @@
       
   
   
+    
+  
   
   
     
@@ -3782,14 +3790,17 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
         
           
           <div class="md-nav__link md-nav__container">
@@ -3811,13 +3822,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3834,10 +3845,14 @@
                 
   
   
+    
   
   
+  
     
     
+      
+        
       
         
       
@@ -3848,11 +3863,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked="">
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -3873,7 +3888,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3907,6 +3922,286 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tokenization
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tokenization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-tokenization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What is Tokenization?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-tokenization-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Tokenization Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-token-vs-word" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Token vs. Word
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-why-not-use-words-directly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Why Not Use Words Directly?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Why Not Use Words Directly?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#huge-vocabulary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ Huge Vocabulary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#out-of-vocabulary-oov-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ Out-of-Vocabulary (OOV) Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-types-of-tokenization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Types of Tokenization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-popular-tokenization-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Popular Tokenization Algorithms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Popular Tokenization Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bpe-byte-pair-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 BPE (Byte Pair Encoding)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wordpiece" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 WordPiece
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sentencepiece" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 SentencePiece
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-tokenization-in-llm-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Tokenization in LLM Training
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-context-window-token-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Context Window &amp; Token Count
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Context Window &amp; Token Count">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-case-chinese-tokenization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special Case: Chinese Tokenization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-why-token-count-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Why Token Count Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-tokenization-and-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Tokenization and Prompt Engineering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4889,6 +5184,64 @@
 
   
 
+
+  <nav class="md-path" aria-label="Navigation">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Intelligence
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../transformer/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Models
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
 
               
               <article class="md-content__inner md-typeset">
