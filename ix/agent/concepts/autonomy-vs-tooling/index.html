@@ -7,31 +7,31 @@
         <meta name="author" content="Ashe">
       
       
-        <link rel="canonical" href="https://ashe-wiki.github.io/ix/agent/agent-loop/">
+        <link rel="canonical" href="https://ashe-wiki.github.io/ix/agent/concepts/autonomy-vs-tooling/">
       
       
-        <link rel="prev" href="../overview/">
+        <link rel="prev" href="../agent-loop/">
       
       
-        <link rel="next" href="../autonomy-vs-tooling/">
+        <link rel="next" href="../bounded-context/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="icon" href="../../../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>agent-loop - Ashe Wiki</title>
+        <title>Autonomy vs Tooling - Ashe Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -50,13 +50,13 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#agent-loop" class="md-skip">
+        <a href="#autonomy-vs-tooling-in-agents" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../../../.." title="Ashe Wiki" class="md-header__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              agent-loop
+              Autonomy vs Tooling
             
           </span>
         </div>
@@ -235,7 +235,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
   
@@ -256,7 +256,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../lang/" class="md-tabs__link">
+        <a href="../../../../lang/" class="md-tabs__link">
           
   
   
@@ -278,7 +278,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../db/" class="md-tabs__link">
+        <a href="../../../../db/" class="md-tabs__link">
           
   
   
@@ -300,7 +300,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../infra/" class="md-tabs__link">
+        <a href="../../../../infra/" class="md-tabs__link">
           
   
   
@@ -324,7 +324,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+        <a href="../../../" class="md-tabs__link">
           
   
   
@@ -346,7 +346,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../devops/" class="md-tabs__link">
+        <a href="../../../../devops/" class="md-tabs__link">
           
   
   
@@ -368,7 +368,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../other/" class="md-tabs__link">
+        <a href="../../../../other/" class="md-tabs__link">
           
   
   
@@ -404,7 +404,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
+    <a href="../../../.." title="Ashe Wiki" class="md-nav__button md-logo" aria-label="Ashe Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -439,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -505,7 +505,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../lang/" class="md-nav__link ">
+            <a href="../../../../lang/" class="md-nav__link ">
               
   
   
@@ -623,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/go/slice/" class="md-nav__link">
+      <a href="../../../../lang/go/slice/" class="md-nav__link">
         
   
   
@@ -651,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/go/map/" class="md-nav__link">
+      <a href="../../../../lang/go/map/" class="md-nav__link">
         
   
   
@@ -679,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/go/channel/" class="md-nav__link">
+      <a href="../../../../lang/go/channel/" class="md-nav__link">
         
   
   
@@ -707,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/go/defer/" class="md-nav__link">
+      <a href="../../../../lang/go/defer/" class="md-nav__link">
         
   
   
@@ -735,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/go/sync/" class="md-nav__link">
+      <a href="../../../../lang/go/sync/" class="md-nav__link">
         
   
   
@@ -763,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/go/generics/" class="md-nav__link">
+      <a href="../../../../lang/go/generics/" class="md-nav__link">
         
   
   
@@ -791,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/go/memory-escape/" class="md-nav__link">
+      <a href="../../../../lang/go/memory-escape/" class="md-nav__link">
         
   
   
@@ -819,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/go/memory-leak/" class="md-nav__link">
+      <a href="../../../../lang/go/memory-leak/" class="md-nav__link">
         
   
   
@@ -847,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/go/context/" class="md-nav__link">
+      <a href="../../../../lang/go/context/" class="md-nav__link">
         
   
   
@@ -875,7 +875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/go/gmp/" class="md-nav__link">
+      <a href="../../../../lang/go/gmp/" class="md-nav__link">
         
   
   
@@ -903,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/go/memory-allocator/" class="md-nav__link">
+      <a href="../../../../lang/go/memory-allocator/" class="md-nav__link">
         
   
   
@@ -1001,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/java/env/" class="md-nav__link">
+      <a href="../../../../lang/java/env/" class="md-nav__link">
         
   
   
@@ -1029,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/java/jvm-memory-structure/" class="md-nav__link">
+      <a href="../../../../lang/java/jvm-memory-structure/" class="md-nav__link">
         
   
   
@@ -1057,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/java/lambda/" class="md-nav__link">
+      <a href="../../../../lang/java/lambda/" class="md-nav__link">
         
   
   
@@ -1085,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/java/mvc/" class="md-nav__link">
+      <a href="../../../../lang/java/mvc/" class="md-nav__link">
         
   
   
@@ -1113,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/java/di/" class="md-nav__link">
+      <a href="../../../../lang/java/di/" class="md-nav__link">
         
   
   
@@ -1207,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/python/env/" class="md-nav__link">
+      <a href="../../../../lang/python/env/" class="md-nav__link">
         
   
   
@@ -1235,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/python/input-output/" class="md-nav__link">
+      <a href="../../../../lang/python/input-output/" class="md-nav__link">
         
   
   
@@ -1263,7 +1263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/python/variables/" class="md-nav__link">
+      <a href="../../../../lang/python/variables/" class="md-nav__link">
         
   
   
@@ -1369,7 +1369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/rust/environment/" class="md-nav__link">
+      <a href="../../../../lang/rust/environment/" class="md-nav__link">
         
   
   
@@ -1397,7 +1397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/rust/declare-variables/" class="md-nav__link">
+      <a href="../../../../lang/rust/declare-variables/" class="md-nav__link">
         
   
   
@@ -1425,7 +1425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/rust/cargo/" class="md-nav__link">
+      <a href="../../../../lang/rust/cargo/" class="md-nav__link">
         
   
   
@@ -1453,7 +1453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/rust/data-type/" class="md-nav__link">
+      <a href="../../../../lang/rust/data-type/" class="md-nav__link">
         
   
   
@@ -1481,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/rust/function/" class="md-nav__link">
+      <a href="../../../../lang/rust/function/" class="md-nav__link">
         
   
   
@@ -1509,7 +1509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/rust/control-flow/" class="md-nav__link">
+      <a href="../../../../lang/rust/control-flow/" class="md-nav__link">
         
   
   
@@ -1537,7 +1537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/rust/stack%26heap/" class="md-nav__link">
+      <a href="../../../../lang/rust/stack%26heap/" class="md-nav__link">
         
   
   
@@ -1565,7 +1565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/rust/ownership/" class="md-nav__link">
+      <a href="../../../../lang/rust/ownership/" class="md-nav__link">
         
   
   
@@ -1593,7 +1593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/rust/web/" class="md-nav__link">
+      <a href="../../../../lang/rust/web/" class="md-nav__link">
         
   
   
@@ -1683,7 +1683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/markdown/grammar/" class="md-nav__link">
+      <a href="../../../../lang/markdown/grammar/" class="md-nav__link">
         
   
   
@@ -1777,7 +1777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/git/grammar/" class="md-nav__link">
+      <a href="../../../../lang/git/grammar/" class="md-nav__link">
         
   
   
@@ -1805,7 +1805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/git/tag/" class="md-nav__link">
+      <a href="../../../../lang/git/tag/" class="md-nav__link">
         
   
   
@@ -1833,7 +1833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/git/storage-model/" class="md-nav__link">
+      <a href="../../../../lang/git/storage-model/" class="md-nav__link">
         
   
   
@@ -1925,7 +1925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/docker/grammar/" class="md-nav__link">
+      <a href="../../../../lang/docker/grammar/" class="md-nav__link">
         
   
   
@@ -1953,7 +1953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/docker/setup-guide/" class="md-nav__link">
+      <a href="../../../../lang/docker/setup-guide/" class="md-nav__link">
         
   
   
@@ -2045,7 +2045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/dp/todo/" class="md-nav__link">
+      <a href="../../../../lang/dp/todo/" class="md-nav__link">
         
   
   
@@ -2073,7 +2073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/dp/singleton/" class="md-nav__link">
+      <a href="../../../../lang/dp/singleton/" class="md-nav__link">
         
   
   
@@ -2173,7 +2173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/dsa/big-o/" class="md-nav__link">
+      <a href="../../../../lang/dsa/big-o/" class="md-nav__link">
         
   
   
@@ -2201,7 +2201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/dsa/two-pointer/" class="md-nav__link">
+      <a href="../../../../lang/dsa/two-pointer/" class="md-nav__link">
         
   
   
@@ -2229,7 +2229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/dsa/expand-around-center/" class="md-nav__link">
+      <a href="../../../../lang/dsa/expand-around-center/" class="md-nav__link">
         
   
   
@@ -2257,7 +2257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/dsa/manacher/" class="md-nav__link">
+      <a href="../../../../lang/dsa/manacher/" class="md-nav__link">
         
   
   
@@ -2285,7 +2285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/dsa/sliding-window/" class="md-nav__link">
+      <a href="../../../../lang/dsa/sliding-window/" class="md-nav__link">
         
   
   
@@ -2313,7 +2313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lang/dsa/prefix-sum/" class="md-nav__link">
+      <a href="../../../../lang/dsa/prefix-sum/" class="md-nav__link">
         
   
   
@@ -2383,7 +2383,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../db/" class="md-nav__link ">
+            <a href="../../../../db/" class="md-nav__link ">
               
   
   
@@ -2497,7 +2497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/mysql/ix/" class="md-nav__link">
+      <a href="../../../../db/mysql/ix/" class="md-nav__link">
         
   
   
@@ -2525,7 +2525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/mysql/b%2Btree/" class="md-nav__link">
+      <a href="../../../../db/mysql/b%2Btree/" class="md-nav__link">
         
   
   
@@ -2553,7 +2553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/mysql/covering-index/" class="md-nav__link">
+      <a href="../../../../db/mysql/covering-index/" class="md-nav__link">
         
   
   
@@ -2581,7 +2581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/mysql/index-failure/" class="md-nav__link">
+      <a href="../../../../db/mysql/index-failure/" class="md-nav__link">
         
   
   
@@ -2609,7 +2609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/mysql/sql-flow/" class="md-nav__link">
+      <a href="../../../../db/mysql/sql-flow/" class="md-nav__link">
         
   
   
@@ -2637,7 +2637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/mysql/dirty-read/" class="md-nav__link">
+      <a href="../../../../db/mysql/dirty-read/" class="md-nav__link">
         
   
   
@@ -2665,7 +2665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/mysql/mvcc/" class="md-nav__link">
+      <a href="../../../../db/mysql/mvcc/" class="md-nav__link">
         
   
   
@@ -2693,7 +2693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/mysql/join/" class="md-nav__link">
+      <a href="../../../../db/mysql/join/" class="md-nav__link">
         
   
   
@@ -2721,7 +2721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/mysql/slow-query-log/" class="md-nav__link">
+      <a href="../../../../db/mysql/slow-query-log/" class="md-nav__link">
         
   
   
@@ -2821,7 +2821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/redis/struct/" class="md-nav__link">
+      <a href="../../../../db/redis/struct/" class="md-nav__link">
         
   
   
@@ -2849,7 +2849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/redis/big-key-problem/" class="md-nav__link">
+      <a href="../../../../db/redis/big-key-problem/" class="md-nav__link">
         
   
   
@@ -2877,7 +2877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/redis/hot-key-problem/" class="md-nav__link">
+      <a href="../../../../db/redis/hot-key-problem/" class="md-nav__link">
         
   
   
@@ -2905,7 +2905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/redis/persistence-strategy/" class="md-nav__link">
+      <a href="../../../../db/redis/persistence-strategy/" class="md-nav__link">
         
   
   
@@ -2933,7 +2933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/redis/eviction-policy/" class="md-nav__link">
+      <a href="../../../../db/redis/eviction-policy/" class="md-nav__link">
         
   
   
@@ -2961,7 +2961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/redis/redis-cluster/" class="md-nav__link">
+      <a href="../../../../db/redis/redis-cluster/" class="md-nav__link">
         
   
   
@@ -3061,7 +3061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/elasticsearch/install/" class="md-nav__link">
+      <a href="../../../../db/elasticsearch/install/" class="md-nav__link">
         
   
   
@@ -3089,7 +3089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/elasticsearch/getting-started/" class="md-nav__link">
+      <a href="../../../../db/elasticsearch/getting-started/" class="md-nav__link">
         
   
   
@@ -3117,7 +3117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/elasticsearch/yellow-index/" class="md-nav__link">
+      <a href="../../../../db/elasticsearch/yellow-index/" class="md-nav__link">
         
   
   
@@ -3145,7 +3145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/elasticsearch/sb-es/" class="md-nav__link">
+      <a href="../../../../db/elasticsearch/sb-es/" class="md-nav__link">
         
   
   
@@ -3173,7 +3173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/elasticsearch/kibana/" class="md-nav__link">
+      <a href="../../../../db/elasticsearch/kibana/" class="md-nav__link">
         
   
   
@@ -3201,7 +3201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/elasticsearch/elk/" class="md-nav__link">
+      <a href="../../../../db/elasticsearch/elk/" class="md-nav__link">
         
   
   
@@ -3271,7 +3271,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../infra/" class="md-nav__link ">
+            <a href="../../../../infra/" class="md-nav__link ">
               
   
   
@@ -3377,7 +3377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/os/overview/" class="md-nav__link">
+      <a href="../../../../infra/os/overview/" class="md-nav__link">
         
   
   
@@ -3405,7 +3405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/os/execution/" class="md-nav__link">
+      <a href="../../../../infra/os/execution/" class="md-nav__link">
         
   
   
@@ -3433,7 +3433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/os/less/" class="md-nav__link">
+      <a href="../../../../infra/os/less/" class="md-nav__link">
         
   
   
@@ -3461,7 +3461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/os/vim/" class="md-nav__link">
+      <a href="../../../../infra/os/vim/" class="md-nav__link">
         
   
   
@@ -3489,7 +3489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/os/grep/" class="md-nav__link">
+      <a href="../../../../infra/os/grep/" class="md-nav__link">
         
   
   
@@ -3583,7 +3583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/net/overview/" class="md-nav__link">
+      <a href="../../../../infra/net/overview/" class="md-nav__link">
         
   
   
@@ -3611,7 +3611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/net/il/" class="md-nav__link">
+      <a href="../../../../infra/net/il/" class="md-nav__link">
         
   
   
@@ -3639,7 +3639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/net/rpc/" class="md-nav__link">
+      <a href="../../../../infra/net/rpc/" class="md-nav__link">
         
   
   
@@ -3729,7 +3729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/hw/touchpad/" class="md-nav__link">
+      <a href="../../../../infra/hw/touchpad/" class="md-nav__link">
         
   
   
@@ -3804,7 +3804,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   
@@ -3904,7 +3904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../model/transformer/" class="md-nav__link">
+      <a href="../../../model/transformer/" class="md-nav__link">
         
   
   
@@ -3932,7 +3932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../model/tokenization/" class="md-nav__link">
+      <a href="../../../model/tokenization/" class="md-nav__link">
         
   
   
@@ -3965,17 +3965,77 @@
                 
   
   
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../protocols/todo/" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Protocols
+    Overview
   
 
     
@@ -4006,10 +4066,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -4021,17 +4077,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" checked="">
         
           
-          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Agents
+    Concepts
   
 
     
@@ -4042,12 +4098,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3_2">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Agents
+    Concepts
   
 
           </label>
@@ -4060,14 +4116,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../agent-loop/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    overview
+    Agent Loop
   
 
     
@@ -4104,7 +4160,7 @@
   <span class="md-ellipsis">
     
   
-    agent-loop
+    Autonomy vs Tooling
   
 
     
@@ -4122,7 +4178,7 @@
   <span class="md-ellipsis">
     
   
-    agent-loop
+    Autonomy vs Tooling
   
 
     
@@ -4148,10 +4204,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#core-idea" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introduction
+        Core Idea
       
     </span>
   </a>
@@ -4159,22 +4215,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-vs-agent" class="md-nav__link">
+  <a href="#what-is-autonomy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM vs Agent
+        What is Autonomy?
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="LLM vs Agent">
+    <nav class="md-nav" aria-label="What is Autonomy?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#llm" class="md-nav__link">
+  <a href="#low-autonomy-system" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM
+        Low autonomy system
       
     </span>
   </a>
@@ -4182,10 +4238,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#agent" class="md-nav__link">
+  <a href="#high-autonomy-system" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Agent
+        High autonomy system
       
     </span>
   </a>
@@ -4198,55 +4254,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-basic-agent-loop" class="md-nav__link">
+  <a href="#the-balance-problem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The Basic Agent Loop
+        The Balance Problem
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-observation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Observation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-reasoning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Reasoning
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-planning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Planning
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 3: Planning">
+    <nav class="md-nav" aria-label="The Balance Problem">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#reactive" class="md-nav__link">
+  <a href="#case-1-high-tooling-low-autonomy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reactive
+        Case 1: High Tooling, Low Autonomy
       
     </span>
   </a>
@@ -4254,10 +4277,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#structured" class="md-nav__link">
+  <a href="#case-2-high-autonomy-low-tooling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Structured
+        Case 2: High Autonomy, Low Tooling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-3-balanced-system-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 3: Balanced System (Agent)
       
     </span>
   </a>
@@ -4270,10 +4304,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-action" class="md-nav__link">
+  <a href="#tool-use-is-not-enough" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Action
+        Tool Use is Not Enough
       
     </span>
   </a>
@@ -4281,13 +4315,124 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-feedback" class="md-nav__link">
+  <a href="#autonomy-spectrum" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Feedback
+        Autonomy Spectrum
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Autonomy Spectrum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-0-no-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 0: No Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-1-tool-enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1: Tool-Enabled
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-2-tool-assisted-autonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2: Tool-Assisted Autonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-3-autonomous-tool-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3: Autonomous Tool Use
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-4-full-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 4: Full Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-expands-the-action-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tooling Expands the Action Space
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autonomy-defines-control-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autonomy Defines Control Flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autonomy Defines Control Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#without-autonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Without autonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-autonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        With autonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4300,47 +4445,14 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-research-agent" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example: Research Agent
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-the-loop-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why the Loop Matters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-agent-loop-variations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common Agent Loop Variations
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common Agent Loop Variations">
+    <nav class="md-nav" aria-label="Example: Coding Agent">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ooda-loop" class="md-nav__link">
+  <a href="#tooling-only-system" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OODA Loop
+        Tooling only system
       
     </span>
   </a>
@@ -4348,32 +4460,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#react" class="md-nav__link">
+  <a href="#autonomous-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ReAct
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plan-and-execute" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Plan-and-Execute
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reflection-loop" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reflection Loop
+        Autonomous agent
       
     </span>
   </a>
@@ -4386,10 +4476,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modern-agent-runtime" class="md-nav__link">
+  <a href="#why-this-distinction-matters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modern Agent Runtime
+        Why This Distinction Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-misunderstandings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Misunderstandings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Misunderstandings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#misunderstanding-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Misunderstanding 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misunderstanding-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Misunderstanding 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misunderstanding-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Misunderstanding 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Principle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-architecture-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Architecture View
       
     </span>
   </a>
@@ -4423,34 +4585,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../autonomy-vs-tooling/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    autonomy-vs-tooling
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../bounded-context/" class="md-nav__link">
         
   
@@ -4458,35 +4592,7 @@
   <span class="md-ellipsis">
     
   
-    bounded-context
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../opencode/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    opencode
+    Bounded Context
   
 
     
@@ -4503,6 +4609,132 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3">
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cases/opencode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../protocols/todo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocols
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -4561,7 +4793,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../devops/" class="md-nav__link ">
+            <a href="../../../../devops/" class="md-nav__link ">
               
   
   
@@ -4605,7 +4837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../devops/transactional-mq/" class="md-nav__link">
+      <a href="../../../../devops/transactional-mq/" class="md-nav__link">
         
   
   
@@ -4633,7 +4865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../devops/cache/" class="md-nav__link">
+      <a href="../../../../devops/cache/" class="md-nav__link">
         
   
   
@@ -4661,7 +4893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../devops/mq-loss/" class="md-nav__link">
+      <a href="../../../../devops/mq-loss/" class="md-nav__link">
         
   
   
@@ -4689,7 +4921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../devops/distributed-transaction/" class="md-nav__link">
+      <a href="../../../../devops/distributed-transaction/" class="md-nav__link">
         
   
   
@@ -4717,7 +4949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../devops/rate-limiting/" class="md-nav__link">
+      <a href="../../../../devops/rate-limiting/" class="md-nav__link">
         
   
   
@@ -4745,7 +4977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../devops/distributed-lock/" class="md-nav__link">
+      <a href="../../../../devops/distributed-lock/" class="md-nav__link">
         
   
   
@@ -4773,7 +5005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../devops/workflow/" class="md-nav__link">
+      <a href="../../../../devops/workflow/" class="md-nav__link">
         
   
   
@@ -4801,7 +5033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../devops/gitlab/" class="md-nav__link">
+      <a href="../../../../devops/gitlab/" class="md-nav__link">
         
   
   
@@ -4829,7 +5061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../devops/gitlab-ci/" class="md-nav__link">
+      <a href="../../../../devops/gitlab-ci/" class="md-nav__link">
         
   
   
@@ -4889,7 +5121,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../other/" class="md-nav__link ">
+            <a href="../../../../other/" class="md-nav__link ">
               
   
   
@@ -4991,7 +5223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../other/tools/nvim/" class="md-nav__link">
+      <a href="../../../../other/tools/nvim/" class="md-nav__link">
         
   
   
@@ -5019,7 +5251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../other/tools/scoop/" class="md-nav__link">
+      <a href="../../../../other/tools/scoop/" class="md-nav__link">
         
   
   
@@ -5047,7 +5279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../other/tools/ssh-gui/" class="md-nav__link">
+      <a href="../../../../other/tools/ssh-gui/" class="md-nav__link">
         
   
   
@@ -5083,7 +5315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../other/structural-symbols/" class="md-nav__link">
+      <a href="../../../../other/structural-symbols/" class="md-nav__link">
         
   
   
@@ -5138,10 +5370,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#core-idea" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introduction
+        Core Idea
       
     </span>
   </a>
@@ -5149,22 +5381,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-vs-agent" class="md-nav__link">
+  <a href="#what-is-autonomy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM vs Agent
+        What is Autonomy?
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="LLM vs Agent">
+    <nav class="md-nav" aria-label="What is Autonomy?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#llm" class="md-nav__link">
+  <a href="#low-autonomy-system" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM
+        Low autonomy system
       
     </span>
   </a>
@@ -5172,10 +5404,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#agent" class="md-nav__link">
+  <a href="#high-autonomy-system" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Agent
+        High autonomy system
       
     </span>
   </a>
@@ -5188,55 +5420,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-basic-agent-loop" class="md-nav__link">
+  <a href="#the-balance-problem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The Basic Agent Loop
+        The Balance Problem
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-observation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Observation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-reasoning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Reasoning
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-planning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Planning
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 3: Planning">
+    <nav class="md-nav" aria-label="The Balance Problem">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#reactive" class="md-nav__link">
+  <a href="#case-1-high-tooling-low-autonomy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reactive
+        Case 1: High Tooling, Low Autonomy
       
     </span>
   </a>
@@ -5244,10 +5443,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#structured" class="md-nav__link">
+  <a href="#case-2-high-autonomy-low-tooling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Structured
+        Case 2: High Autonomy, Low Tooling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-3-balanced-system-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 3: Balanced System (Agent)
       
     </span>
   </a>
@@ -5260,10 +5470,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-action" class="md-nav__link">
+  <a href="#tool-use-is-not-enough" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Action
+        Tool Use is Not Enough
       
     </span>
   </a>
@@ -5271,13 +5481,124 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-feedback" class="md-nav__link">
+  <a href="#autonomy-spectrum" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Feedback
+        Autonomy Spectrum
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Autonomy Spectrum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-0-no-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 0: No Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-1-tool-enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1: Tool-Enabled
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-2-tool-assisted-autonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2: Tool-Assisted Autonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-3-autonomous-tool-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3: Autonomous Tool Use
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-4-full-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 4: Full Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-expands-the-action-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tooling Expands the Action Space
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autonomy-defines-control-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autonomy Defines Control Flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autonomy Defines Control Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#without-autonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Without autonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-autonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        With autonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5290,47 +5611,14 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-research-agent" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example: Research Agent
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-the-loop-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why the Loop Matters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-agent-loop-variations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common Agent Loop Variations
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common Agent Loop Variations">
+    <nav class="md-nav" aria-label="Example: Coding Agent">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ooda-loop" class="md-nav__link">
+  <a href="#tooling-only-system" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OODA Loop
+        Tooling only system
       
     </span>
   </a>
@@ -5338,32 +5626,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#react" class="md-nav__link">
+  <a href="#autonomous-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ReAct
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plan-and-execute" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Plan-and-Execute
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reflection-loop" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reflection Loop
+        Autonomous agent
       
     </span>
   </a>
@@ -5376,10 +5642,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modern-agent-runtime" class="md-nav__link">
+  <a href="#why-this-distinction-matters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modern Agent Runtime
+        Why This Distinction Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-misunderstandings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Misunderstandings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Misunderstandings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#misunderstanding-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Misunderstanding 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misunderstanding-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Misunderstanding 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misunderstanding-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Misunderstanding 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Principle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-architecture-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Architecture View
       
     </span>
   </a>
@@ -5422,7 +5760,7 @@
   
   
     <li class="md-path__item">
-      <a href="../../.." class="md-path__link">
+      <a href="../../../.." class="md-path__link">
         
   <span class="md-ellipsis">
     Home
@@ -5440,7 +5778,7 @@
     
     
       <li class="md-path__item">
-        <a href="../../" class="md-path__link">
+        <a href="../../../" class="md-path__link">
           
   <span class="md-ellipsis">
     Intelligence
@@ -5458,10 +5796,28 @@
     
     
       <li class="md-path__item">
-        <a href="../overview/" class="md-path__link">
+        <a href="../../overview/" class="md-path__link">
           
   <span class="md-ellipsis">
     Agents
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../agent-loop/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Concepts
   </span>
 
         </a>
@@ -5480,7 +5836,7 @@
 
 
   
-    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/ix/agent/agent-loop.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/ashe-c0de/ashe-wiki/edit/v1/docs/ix/agent/concepts/autonomy-vs-tooling.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -5488,340 +5844,264 @@
   
 
 
-<h1 id="agent-loop">Agent Loop<a class="headerlink" href="#agent-loop" title="Permanent link">¶</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
-<p>The core characteristic of an Agent is not tool usage, memory, or planning.</p>
-<p>The defining characteristic of an Agent is the ability to operate in a continuous loop.</p>
-<p>Unlike a traditional LLM that generates a single response, an Agent repeatedly:</p>
-<ol>
-<li>Observes the environment</li>
-<li>Reasons about the current state</li>
-<li>Decides what to do next</li>
-<li>Executes an action</li>
-<li>Evaluates the result</li>
-</ol>
-<p>This process continues until the goal is achieved.</p>
-<hr>
-<h2 id="llm-vs-agent">LLM vs Agent<a class="headerlink" href="#llm-vs-agent" title="Permanent link">¶</a></h2>
-<h3 id="llm">LLM<a class="headerlink" href="#llm" title="Permanent link">¶</a></h3>
-<p>A traditional LLM interaction is usually a single step.</p>
-<div class="highlight"><pre><span></span><code>User Input
-     ↓
-    LLM
-     ↓
- Response
+<h1 id="autonomy-vs-tooling-in-agents">Autonomy vs Tooling in Agents<a class="headerlink" href="#autonomy-vs-tooling-in-agents" title="Permanent link">¶</a></h1>
+<h2 id="core-idea">Core Idea<a class="headerlink" href="#core-idea" title="Permanent link">¶</a></h2>
+<p>One of the most important tensions in agent design is:</p>
+<div class="highlight"><pre><span></span><code>Autonomy ⇄ Tooling
 </code></pre></div>
+<p>An Agent is not defined only by how many tools it has, but by how independently it can decide to use them.</p>
+<p>Too much tooling without autonomy → just a workflow system<br>
+Too much autonomy without tooling → a hallucinating chatbot</p>
+<hr>
+<h2 id="what-is-autonomy">What is Autonomy?<a class="headerlink" href="#what-is-autonomy" title="Permanent link">¶</a></h2>
+<p>Autonomy means:</p>
+<blockquote>
+<p>The ability of an Agent to decide what to do next without explicit step-by-step instructions.</p>
+</blockquote>
+<h3 id="low-autonomy-system">Low autonomy system<a class="headerlink" href="#low-autonomy-system" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>User:
+Step 1: search
+Step 2: summarize
+Step 3: write report
+</code></pre></div>
+<p>System follows instructions.</p>
+<hr>
+<h3 id="high-autonomy-system">High autonomy system<a class="headerlink" href="#high-autonomy-system" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>User:
+Write a market report on AI coding agents.
+</code></pre></div>
+<p>Agent decides:</p>
+<ul>
+<li>what to search</li>
+<li>what to read</li>
+<li>what to ignore</li>
+<li>when to stop</li>
+<li>how to structure output
+<div class="highlight"><pre><span></span><code>The user provides the goal, not the steps.
+
+---
+
+## What is Tooling?
+
+Tooling is:
+
+&gt; The ability of an Agent to interact with external systems.
+
+Examples:
+
+- Web search
+- File system
+- Code execution
+- APIs
+- Databases
+- Browsers
+- Terminal commands
+
+Tooling expands the **action space** of an Agent.
+
+---
+
+## The Key Insight
+
+Tooling does NOT create intelligence.
+
+It only expands capability.
+
+```text
+LLM + Tools ≠ Agent
+</code></pre></div></li>
+</ul>
+<p>Without autonomy, tools are just:</p>
+<div class="highlight"><pre><span></span><code>predefined functions in a script
+</code></pre></div>
+<hr>
+<h2 id="the-balance-problem">The Balance Problem<a class="headerlink" href="#the-balance-problem" title="Permanent link">¶</a></h2>
+<p>Agent design is a balancing problem:</p>
+<h3 id="case-1-high-tooling-low-autonomy">Case 1: High Tooling, Low Autonomy<a class="headerlink" href="#case-1-high-tooling-low-autonomy" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>- Many tools
+- Fixed workflow
+- No decision making
+</code></pre></div>
+<p>This becomes:</p>
+<div class="highlight"><pre><span></span><code>Workflow Engine
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>Step 1 → Step 2 → Step 3
+</code></pre></div>
+<p>Even if LLM is inside, it is still orchestrated.</p>
+<hr>
+<h3 id="case-2-high-autonomy-low-tooling">Case 2: High Autonomy, Low Tooling<a class="headerlink" href="#case-2-high-autonomy-low-tooling" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>- Strong reasoning
+- No external actions
+</code></pre></div>
+<p>This becomes:</p>
+<div class="highlight"><pre><span></span><code>Chatbot
+</code></pre></div>
+<p>It can think, but cannot act.</p>
+<hr>
+<h3 id="case-3-balanced-system-agent">Case 3: Balanced System (Agent)<a class="headerlink" href="#case-3-balanced-system-agent" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>- Can decide what to do
+- Can use tools freely
+- Can revise plan based on results
+</code></pre></div>
+<p>This is a true Agent.</p>
+<hr>
+<h2 id="tool-use-is-not-enough">Tool Use is Not Enough<a class="headerlink" href="#tool-use-is-not-enough" title="Permanent link">¶</a></h2>
+<p>Many systems claim to be agents because they support tool calling.</p>
+<p>But tool usage alone is insufficient.</p>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code>User:
-What is the capital of France?
-
-LLM:
-Paris.
+Call API A → then API B → then summarize
 </code></pre></div>
-<p>The execution ends immediately after the response is generated.</p>
+<p>This is still a workflow.</p>
+<p>No autonomy exists.</p>
 <hr>
-<h3 id="agent">Agent<a class="headerlink" href="#agent" title="Permanent link">¶</a></h3>
-<p>An Agent continuously interacts with its environment.</p>
-<div class="highlight"><pre><span></span><code>Goal
-  ↓
-Observe
-  ↓
-Reason
-  ↓
-Act
-  ↓
-Observe
-  ↓
-Reason
-  ↓
-Act
-</code></pre></div>
-<p>The process stops only when:</p>
-<div class="highlight"><pre><span></span><code>Goal Achieved
-</code></pre></div>
-<p>or</p>
-<div class="highlight"><pre><span></span><code>Task Aborted
+<h2 id="autonomy-spectrum">Autonomy Spectrum<a class="headerlink" href="#autonomy-spectrum" title="Permanent link">¶</a></h2>
+<p>We can define a spectrum:</p>
+<h3 id="level-0-no-tools">Level 0: No Tools<a class="headerlink" href="#level-0-no-tools" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>LLM only
 </code></pre></div>
 <hr>
-<h2 id="the-basic-agent-loop">The Basic Agent Loop<a class="headerlink" href="#the-basic-agent-loop" title="Permanent link">¶</a></h2>
-<p>Most Agent systems can be represented as:</p>
-<div class="highlight"><pre><span></span><code>Observe
-   ↓
-Think
-   ↓
-Act
-   ↓
-Observe
+<h3 id="level-1-tool-enabled">Level 1: Tool-Enabled<a class="headerlink" href="#level-1-tool-enabled" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>LLM can call tools
+but user decides when
 </code></pre></div>
-<p>A more detailed version:</p>
-<div class="highlight"><pre><span></span><code>Observation
-     ↓
-Reasoning
-     ↓
-Planning
-     ↓
-Action
-     ↓
-Environment
-     ↓
-Observation
-</code></pre></div>
-<p>This cycle forms the foundation of modern Agent systems.</p>
 <hr>
-<h2 id="step-1-observation">Step 1: Observation<a class="headerlink" href="#step-1-observation" title="Permanent link">¶</a></h2>
-<p>The Agent gathers information about the current state.</p>
-<p>Sources may include:</p>
-<ul>
-<li>User requests</li>
-<li>Files</li>
-<li>Databases</li>
-<li>APIs</li>
-<li>Web pages</li>
-<li>Tool outputs</li>
-</ul>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code>Goal:
-Fix a failing unit test
+<h3 id="level-2-tool-assisted-autonomy">Level 2: Tool-Assisted Autonomy<a class="headerlink" href="#level-2-tool-assisted-autonomy" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>LLM suggests tool usage
+user approves
 </code></pre></div>
-<p>Observation:</p>
-<div class="highlight"><pre><span></span><code>Test suite reports:
-
-testCreateUser failed
-</code></pre></div>
-<p>The Agent now has context for decision making.</p>
 <hr>
-<h2 id="step-2-reasoning">Step 2: Reasoning<a class="headerlink" href="#step-2-reasoning" title="Permanent link">¶</a></h2>
-<p>The Agent analyzes available information.</p>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code>The test is failing because
-the expected value differs
-from the actual value.
+<h3 id="level-3-autonomous-tool-use">Level 3: Autonomous Tool Use<a class="headerlink" href="#level-3-autonomous-tool-use" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>LLM decides when to use tools
+but within constraints
 </code></pre></div>
-<p>Reasoning is usually performed by an LLM.</p>
-<p>The output is not yet an action.</p>
-<p>It is a decision about what should happen next.</p>
 <hr>
-<h2 id="step-3-planning">Step 3: Planning<a class="headerlink" href="#step-3-planning" title="Permanent link">¶</a></h2>
-<p>The Agent determines the next step.</p>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code>1. Open source file
-2. Locate implementation
-3. Compare logic
-4. Modify code
-5. Run tests
+<h3 id="level-4-full-agent">Level 4: Full Agent<a class="headerlink" href="#level-4-full-agent" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>LLM decides:
+- what tools to use
+- in what order
+- how many iterations
+- when to stop
 </code></pre></div>
-<p>Planning can be:</p>
-<h3 id="reactive">Reactive<a class="headerlink" href="#reactive" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code>One step at a time
-</code></pre></div>
-<p>or</p>
-<h3 id="structured">Structured<a class="headerlink" href="#structured" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code>Generate complete plan first
-</code></pre></div>
-<p>Different Agent architectures choose different approaches.</p>
 <hr>
-<h2 id="step-4-action">Step 4: Action<a class="headerlink" href="#step-4-action" title="Permanent link">¶</a></h2>
-<p>The Agent executes a task.</p>
-<p>Examples:</p>
-<div class="highlight"><pre><span></span><code>Read file
+<h2 id="tooling-expands-the-action-space">Tooling Expands the Action Space<a class="headerlink" href="#tooling-expands-the-action-space" title="Permanent link">¶</a></h2>
+<p>Without tools:</p>
+<div class="highlight"><pre><span></span><code>Action space = text generation only
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>Search web
+<p>With tools:</p>
+<div class="highlight"><pre><span></span><code>Action space =
+  text +
+  search +
+  code execution +
+  file operations +
+  API calls
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>Call API
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Execute code
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Write file
-</code></pre></div>
-<p>Actions allow the Agent to interact with the outside world.</p>
-<p>Without actions, an Agent becomes a chatbot.</p>
+<p>But:</p>
+<blockquote>
+<p>Action space alone does not imply intelligence.</p>
+</blockquote>
 <hr>
-<h2 id="step-5-feedback">Step 5: Feedback<a class="headerlink" href="#step-5-feedback" title="Permanent link">¶</a></h2>
-<p>Every action produces a result.</p>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code>Run tests
+<h2 id="autonomy-defines-control-flow">Autonomy Defines Control Flow<a class="headerlink" href="#autonomy-defines-control-flow" title="Permanent link">¶</a></h2>
+<h3 id="without-autonomy">Without autonomy<a class="headerlink" href="#without-autonomy" title="Permanent link">¶</a></h3>
+<p>Control flow is external:</p>
+<div class="highlight"><pre><span></span><code>User / system defines steps
 </code></pre></div>
-<p>Output:</p>
-<div class="highlight"><pre><span></span><code>3 tests passed
-1 test failed
+<h3 id="with-autonomy">With autonomy<a class="headerlink" href="#with-autonomy" title="Permanent link">¶</a></h3>
+<p>Control flow is internal:</p>
+<div class="highlight"><pre><span></span><code>Agent decides next step
 </code></pre></div>
-<p>The Agent receives new information and enters the next iteration.</p>
-<div class="highlight"><pre><span></span><code>Observation
-</code></pre></div>
-<p>The loop continues.</p>
+<p>This is the real distinction.</p>
 <hr>
 <h2 id="example-coding-agent">Example: Coding Agent<a class="headerlink" href="#example-coding-agent" title="Permanent link">¶</a></h2>
-<p>Goal:</p>
-<div class="highlight"><pre><span></span><code>Fix failing test
+<h3 id="tooling-only-system">Tooling only system<a class="headerlink" href="#tooling-only-system" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>User:
+1. open file
+2. edit line 10
+3. run tests
 </code></pre></div>
-<p>Loop execution:</p>
-<div class="highlight"><pre><span></span><code>Observe:
-Read test failure
+<p>System executes instructions.</p>
+<hr>
+<h3 id="autonomous-agent">Autonomous agent<a class="headerlink" href="#autonomous-agent" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>User:
+Fix the failing test
 </code></pre></div>
-<p>↓</p>
-<div class="highlight"><pre><span></span><code>Reason:
-Identify likely bug
-</code></pre></div>
-<p>↓</p>
-<div class="highlight"><pre><span></span><code>Act:
-Open source file
-</code></pre></div>
-<p>↓</p>
-<div class="highlight"><pre><span></span><code>Observe:
-Review implementation
-</code></pre></div>
-<p>↓</p>
-<div class="highlight"><pre><span></span><code>Reason:
-Find incorrect logic
-</code></pre></div>
-<p>↓</p>
-<div class="highlight"><pre><span></span><code>Act:
-Modify code
-</code></pre></div>
-<p>↓</p>
-<div class="highlight"><pre><span></span><code>Act:
-Run tests
-</code></pre></div>
-<p>↓</p>
-<div class="highlight"><pre><span></span><code>Observe:
-All tests pass
-</code></pre></div>
-<p>↓</p>
-<div class="highlight"><pre><span></span><code>Goal Achieved
+<p>Agent decides:</p>
+<div class="highlight"><pre><span></span><code>read code
+→ locate bug
+→ modify file
+→ run tests
+→ iterate
 </code></pre></div>
 <hr>
-<h2 id="example-research-agent">Example: Research Agent<a class="headerlink" href="#example-research-agent" title="Permanent link">¶</a></h2>
-<p>Goal:</p>
-<div class="highlight"><pre><span></span><code>Create report about AI coding agents
-</code></pre></div>
-<p>Loop execution:</p>
-<div class="highlight"><pre><span></span><code>Search web
-</code></pre></div>
-<p>↓</p>
-<div class="highlight"><pre><span></span><code>Read articles
-</code></pre></div>
-<p>↓</p>
-<div class="highlight"><pre><span></span><code>Extract information
-</code></pre></div>
-<p>↓</p>
-<div class="highlight"><pre><span></span><code>Identify missing data
-</code></pre></div>
-<p>↓</p>
-<div class="highlight"><pre><span></span><code>Search again
-</code></pre></div>
-<p>↓</p>
-<div class="highlight"><pre><span></span><code>Generate report
-</code></pre></div>
-<p>↓</p>
-<div class="highlight"><pre><span></span><code>Goal Achieved
-</code></pre></div>
-<p>The Agent repeatedly acquires new information before producing a final result.</p>
-<hr>
-<h2 id="why-the-loop-matters">Why the Loop Matters<a class="headerlink" href="#why-the-loop-matters" title="Permanent link">¶</a></h2>
-<p>Without a loop:</p>
-<div class="highlight"><pre><span></span><code>Input
- ↓
-Output
-</code></pre></div>
-<p>The system cannot adapt.</p>
-<p>With a loop:</p>
-<div class="highlight"><pre><span></span><code>Observe
- ↓
-Act
- ↓
-Observe
- ↓
-Act
-</code></pre></div>
-<p>The system can respond to changing conditions.</p>
-<p>This ability is what makes Agents useful for complex tasks.</p>
-<hr>
-<h2 id="common-agent-loop-variations">Common Agent Loop Variations<a class="headerlink" href="#common-agent-loop-variations" title="Permanent link">¶</a></h2>
-<h3 id="ooda-loop">OODA Loop<a class="headerlink" href="#ooda-loop" title="Permanent link">¶</a></h3>
-<p>Originally developed for military decision making.</p>
-<div class="highlight"><pre><span></span><code>Observe
- ↓
-Orient
- ↓
-Decide
- ↓
-Act
-</code></pre></div>
-<p>Many Agent systems resemble this structure.</p>
-<hr>
-<h3 id="react">ReAct<a class="headerlink" href="#react" title="Permanent link">¶</a></h3>
-<p>One of the most influential Agent patterns.</p>
-<div class="highlight"><pre><span></span><code>Thought
- ↓
-Action
- ↓
-Observation
-</code></pre></div>
-<p>Repeated until completion.</p>
-<hr>
-<h3 id="plan-and-execute">Plan-and-Execute<a class="headerlink" href="#plan-and-execute" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code>Create Plan
-      ↓
-Execute Step
-      ↓
-Execute Step
-      ↓
-Execute Step
-</code></pre></div>
-<p>Suitable for long tasks.</p>
-<hr>
-<h3 id="reflection-loop">Reflection Loop<a class="headerlink" href="#reflection-loop" title="Permanent link">¶</a></h3>
-<p>Adds self-review.</p>
-<div class="highlight"><pre><span></span><code>Generate
-    ↓
-Review
-    ↓
-Improve
-</code></pre></div>
-<p>Used by advanced Agent systems.</p>
-<hr>
-<h2 id="modern-agent-runtime">Modern Agent Runtime<a class="headerlink" href="#modern-agent-runtime" title="Permanent link">¶</a></h2>
-<p>Most production agents implement a loop similar to:</p>
-<div class="highlight"><pre><span></span><code>while not goal_completed:
-
-    observe()
-
-    think()
-
-    choose_action()
-
-    execute_action()
-
-    evaluate_result()
-</code></pre></div>
-<p>This runtime loop is the heart of every Agent system.</p>
-<p>Whether the Agent is:</p>
+<h2 id="why-this-distinction-matters">Why This Distinction Matters<a class="headerlink" href="#why-this-distinction-matters" title="Permanent link">¶</a></h2>
+<p>Modern confusion comes from mixing:</p>
 <ul>
-<li>a coding assistant</li>
-<li>a research assistant</li>
-<li>a browser agent</li>
-<li>a multi-agent system</li>
+<li>tool calling systems</li>
+<li>workflow automation</li>
+<li>true agents</li>
 </ul>
-<p>the same fundamental pattern exists.</p>
+<p>They look similar in UI but are fundamentally different in architecture.</p>
+<hr>
+<h2 id="common-misunderstandings">Common Misunderstandings<a class="headerlink" href="#common-misunderstandings" title="Permanent link">¶</a></h2>
+<h3 id="misunderstanding-1">Misunderstanding 1<a class="headerlink" href="#misunderstanding-1" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>If it uses tools → it is an agent
+</code></pre></div>
+<p>False.</p>
+<hr>
+<h3 id="misunderstanding-2">Misunderstanding 2<a class="headerlink" href="#misunderstanding-2" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>If it has an LLM → it is an agent
+</code></pre></div>
+<p>False.</p>
+<hr>
+<h3 id="misunderstanding-3">Misunderstanding 3<a class="headerlink" href="#misunderstanding-3" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>If it can execute code → it is an agent
+</code></pre></div>
+<p>False.</p>
+<hr>
+<h2 id="design-principle">Design Principle<a class="headerlink" href="#design-principle" title="Permanent link">¶</a></h2>
+<p>A good Agent design is:</p>
+<div class="highlight"><pre><span></span><code>Maximize autonomy
+with controlled tooling
+</code></pre></div>
+<p>Not:</p>
+<div class="highlight"><pre><span></span><code>Maximize tools
+</code></pre></div>
+<p>Not:</p>
+<div class="highlight"><pre><span></span><code>Maximize prompting complexity
+</code></pre></div>
+<hr>
+<h2 id="practical-architecture-view">Practical Architecture View<a class="headerlink" href="#practical-architecture-view" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>                Agent
+                  │
+      ┌───────────┼───────────┐
+      ▼           ▼           ▼
+ Autonomy     Planning     Tooling
+      │           │           │
+      └───────────┼───────────┘
+                  ▼
+              Execution Loop
+</code></pre></div>
+<p>Autonomy determines:</p>
+<ul>
+<li>what tools to use</li>
+<li>when to use them</li>
+<li>whether to retry</li>
+<li>when to stop</li>
+</ul>
 <hr>
 <h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>The Agent Loop is the core mechanism of an Agent.
+<div class="highlight"><pre><span></span><code>Tools define what an Agent can do.
 
-Agent Loop:
+Autonomy defines what an Agent will do.
 
-Observe
-→ Reason
-→ Plan
-→ Act
-→ Observe
+An Agent is not defined by tools,
+but by decision-making over tools.
 
-An LLM typically generates one response.
-
-An Agent continuously interacts with its environment.
-
-The ability to repeatedly observe and act
-is what transforms an LLM-powered system
-into an Agent.
+High-quality agents balance:
+- flexible tooling
+- strong autonomy
+- controlled execution
 </code></pre></div>
 
 
@@ -5910,14 +6190,14 @@ document.addEventListener("DOMContentLoaded", updateGiscusTheme);
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["header.autohide", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["header.autohide", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
-        <script src="../../../javascripts/mermaid-init.js"></script>
+        <script src="../../../../javascripts/mermaid-init.js"></script>
       
     
   
