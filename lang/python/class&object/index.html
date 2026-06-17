@@ -1583,10 +1583,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#constructor-__init__" class="md-nav__link">
     <span class="md-ellipsis">
       
         Constructor (__init__)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instance-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Variables
       
     </span>
   </a>
@@ -1605,6 +1627,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#self-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self Keyword
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#multiple-objects" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1613,8 +1646,30 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Multiple Objects">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-variables-vs-instance-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class Variables vs Instance Variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class Variables vs Instance Variables">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-variable-shared" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class Variable (shared)
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#instance-variable-unique" class="md-nav__link">
@@ -1629,6 +1684,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple Example
+      
+    </span>
+  </a>
   
 </li>
       
@@ -5355,10 +5421,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#constructor-__init__" class="md-nav__link">
     <span class="md-ellipsis">
       
         Constructor (__init__)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instance-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Variables
       
     </span>
   </a>
@@ -5377,6 +5465,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#self-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self Keyword
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#multiple-objects" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5385,8 +5484,30 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Multiple Objects">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-variables-vs-instance-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class Variables vs Instance Variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class Variables vs Instance Variables">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-variable-shared" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class Variable (shared)
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#instance-variable-unique" class="md-nav__link">
@@ -5401,6 +5522,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple Example
+      
+    </span>
+  </a>
   
 </li>
       
@@ -5511,119 +5643,105 @@
 <hr>
 <h2 id="class">Class<a class="headerlink" href="#class" title="Permanent link">¶</a></h2>
 <p>A class is a blueprint for creating objects.</p>
-<p>```python id="a1b2c3"
-class Person:
-    pass
-</p><div class="highlight"><pre><span></span><code>---
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">:</span>
+    <span class="k">pass</span>
+</code></pre></div>
+<hr>
+<h2 id="object">Object<a class="headerlink" href="#object" title="Permanent link">¶</a></h2>
+<p>An object is an instance of a class.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">:</span>
+    <span class="k">pass</span>
 
-## Object
-
-An object is an instance of a class.
-
-```python id="d4e5f6"
-class Person:
-    pass
-
-p1 = Person()
-print(p1)
-</code></pre></div><p></p>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+</code></pre></div>
 <hr>
 <h2 id="constructor-__init__">Constructor (<code>__init__</code>)<a class="headerlink" href="#constructor-__init__" title="Permanent link">¶</a></h2>
 <p>The constructor is called when an object is created.</p>
-<p>```python id="g7h8i9"
-class Person:
-    def <strong>init</strong>(self, name, age):
-        self.name = name
-        self.age = age</p>
-<p>p1 = Person("Alice", 20)</p>
-<p>print(p1.name)
-print(p1.age)
-</p><div class="highlight"><pre><span></span><code>---
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
 
-## Instance Variables
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">"Alice"</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 
-Variables defined using `self` belong to each object.
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+<h2 id="instance-variables">Instance Variables<a class="headerlink" href="#instance-variables" title="Permanent link">¶</a></h2>
+<p>Variables defined using <code>self</code> belong to each object.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
 
-```python id="j1k2l3"
-class Person:
-    def __init__(self, name):
-        self.name = name
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">"Alice"</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">"Bob"</span><span class="p">)</span>
 
-p1 = Person("Alice")
-p2 = Person("Bob")
-
-print(p1.name)
-print(p2.name)
-</code></pre></div><p></p>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div>
 <hr>
 <h2 id="instance-methods">Instance Methods<a class="headerlink" href="#instance-methods" title="Permanent link">¶</a></h2>
 <p>Methods inside a class operate on object data.</p>
-<p>```python id="m4n5o6"
-class Person:
-    def <strong>init</strong>(self, name):
-        self.name = name</p>
-<div class="highlight"><pre><span></span><code>def greet(self):
-    print(f"Hello, I am {self.name}")
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Hello, I am </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">"Alice"</span><span class="p">)</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">greet</span><span class="p">()</span>
 </code></pre></div>
-<p>p1 = Person("Alice")
-p1.greet()
-</p><div class="highlight"><pre><span></span><code>---
+<hr>
+<h2 id="self-keyword">Self Keyword<a class="headerlink" href="#self-keyword" title="Permanent link">¶</a></h2>
+<p><code>self</code> refers to the current object.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
-## Self Keyword
-
-`self` refers to the current object.
-
-```python id="p7q8r9"
-class Person:
-    def show(self):
-        print(self)
-
-p1 = Person()
-p1.show()
-</code></pre></div><p></p>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
 <hr>
 <h2 id="multiple-objects">Multiple Objects<a class="headerlink" href="#multiple-objects" title="Permanent link">¶</a></h2>
 <p>Each object has its own data.</p>
-<p>```python id="s1t2u3"
-class Person:
-    def <strong>init</strong>(self, name):
-        self.name = name</p>
-<p>p1 = Person("Alice")
-p2 = Person("Bob")</p>
-<p>print(p1.name)
-print(p2.name)
-</p><div class="highlight"><pre><span></span><code>---
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
 
-## Class Variables vs Instance Variables
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">"Alice"</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">"Bob"</span><span class="p">)</span>
 
-### Class Variable (shared)
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+<h2 id="class-variables-vs-instance-variables">Class Variables vs Instance Variables<a class="headerlink" href="#class-variables-vs-instance-variables" title="Permanent link">¶</a></h2>
+<h3 id="class-variable-shared">Class Variable (shared)<a class="headerlink" href="#class-variable-shared" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">:</span>
+    <span class="n">species</span> <span class="o">=</span> <span class="s2">"Human"</span>
 
-```python id="v4w5x6"
-class Person:
-    species = "Human"
-
-print(Person.species)
-</code></pre></div><p></p>
+<span class="nb">print</span><span class="p">(</span><span class="n">Person</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="instance-variable-unique">Instance Variable (unique)<a class="headerlink" href="#instance-variable-unique" title="Permanent link">¶</a></h3>
-<p>```python id="y7z8a9"
-class Person:
-    def <strong>init</strong>(self, name):
-        self.name = name
-</p><div class="highlight"><pre><span></span><code>---
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+</code></pre></div>
+<hr>
+<h2 id="simple-example">Simple Example<a class="headerlink" href="#simple-example" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Dog</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
 
-## Simple Example
+    <span class="k">def</span><span class="w"> </span><span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> is barking"</span><span class="p">)</span>
 
-```python id="b1c2d3"
-class Dog:
-    def __init__(self, name):
-        self.name = name
-
-    def bark(self):
-        print(f"{self.name} is barking")
-
-d1 = Dog("Buddy")
-d1.bark()
-</code></pre></div><p></p>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">"Buddy"</span><span class="p">)</span>
+<span class="n">d1</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
+</code></pre></div>
 <hr>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <ul>
