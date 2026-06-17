@@ -1349,6 +1349,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#install-formatting-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Formatting Tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ide-configuration-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 IDE Configuration: Visual Studio Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 IDE Configuration: Visual Studio Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-vs-code-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure VS Code Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5181,6 +5220,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#install-formatting-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Formatting Tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ide-configuration-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 IDE Configuration: Visual Studio Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 IDE Configuration: Visual Studio Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-vs-code-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure VS Code Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5289,8 +5367,66 @@
 <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>--version
 </code></pre></div>
 <blockquote>
-<p>Add alias python='python3' to ~/.zshrc</p>
+<p>Add <code>alias python='python3'</code> to <code>~/.zshrc</code></p>
 </blockquote>
+<hr>
+<h2 id="install-formatting-tools">Install Formatting Tools<a class="headerlink" href="#install-formatting-tools" title="Permanent link">¶</a></h2>
+<p>Install industry-standard tools to keep your code clean and consistent:
+</p><div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+pip<span class="w"> </span>install<span class="w"> </span>black<span class="w"> </span>isort
+</code></pre></div>
+- <strong><a href="https://black.readthedocs.io/">Black</a></strong>: The uncompromising Python code formatter.
+- <strong><a href="https://pycqa.github.io/isort/">isort</a></strong>: A utility to sort your Python imports alphabetically and automatically separated into sections.<p></p>
+<hr>
+<h2 id="ide-configuration-visual-studio-code">💻 IDE Configuration: Visual Studio Code<a class="headerlink" href="#ide-configuration-visual-studio-code" title="Permanent link">¶</a></h2>
+<ol>
+<li>Download and install <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</li>
+<li>Open your project folder in VS Code (<code>File &gt; Open Folder</code>).</li>
+<li>Open the Extensions view (<code>Ctrl+Shift+X</code> or <code>Cmd+Shift+X</code>) and install the following:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Extension</th>
+<th style="text-align: left;">Publisher</th>
+<th style="text-align: left;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Python</strong></td>
+<td style="text-align: left;">Microsoft</td>
+<td style="text-align: left;">Core Python language support, debugging, and REPL.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pylance</strong></td>
+<td style="text-align: left;">Microsoft</td>
+<td style="text-align: left;">Fast, feature-rich language support (type checking, IntelliSense).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Black Formatter</strong></td>
+<td style="text-align: left;">Microsoft</td>
+<td style="text-align: left;">Official extension to format code on save using Black.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>isort</strong></td>
+<td style="text-align: left;">Microsoft</td>
+<td style="text-align: left;">Automatically sorts and organizes import statements.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="configure-vs-code-settings">Configure VS Code Settings<a class="headerlink" href="#configure-vs-code-settings" title="Permanent link">¶</a></h3>
+<p>Add the following to your <code>.vscode/settings.json</code> (or user settings) to format code automatically when you save:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"[python]"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"editor.defaultFormatter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ms-python.black-formatter"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.formatOnSave"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.codeActionsOnSave"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"source.organizeImports"</span><span class="p">:</span><span class="w"> </span><span class="s2">"explicit"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
