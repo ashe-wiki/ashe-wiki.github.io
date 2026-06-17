@@ -1611,6 +1611,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#catch-specific-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Catch Specific Exceptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#multiple-exceptions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1619,7 +1630,18 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Multiple Exceptions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#else-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        else Block
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="else Block">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1639,10 +1661,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#finally-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        finally Block
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#raising-exceptions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Raising Exceptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-exception-handling-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Exception Handling Pattern
       
     </span>
   </a>
@@ -5355,6 +5399,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#catch-specific-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Catch Specific Exceptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#multiple-exceptions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5363,7 +5418,18 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Multiple Exceptions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#else-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        else Block
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="else Block">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5383,10 +5449,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#finally-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        finally Block
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#raising-exceptions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Raising Exceptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-exception-handling-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Exception Handling Pattern
       
     </span>
   </a>
@@ -5511,86 +5599,72 @@
 <p>Python provides <code>try</code>, <code>except</code>, <code>else</code>, and <code>finally</code> to handle errors gracefully.</p>
 <hr>
 <h2 id="basic-try-except">Basic try-except<a class="headerlink" href="#basic-try-except" title="Permanent link">¶</a></h2>
-<p>```python id="a1b2d3"
-try:
-    result = 10 / 0
-except:
-    print("An error occurred")
-</p><div class="highlight"><pre><span></span><code>---
-
-## Catch Specific Exceptions
-
-It is better to catch specific errors.
-
-```python id="e4f5g6"
-try:
-    result = 10 / 0
-except ZeroDivisionError:
-    print("Cannot divide by zero")
-</code></pre></div><p></p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"An error occurred"</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+<h2 id="catch-specific-exceptions">Catch Specific Exceptions<a class="headerlink" href="#catch-specific-exceptions" title="Permanent link">¶</a></h2>
+<p>It is better to catch specific errors.</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Cannot divide by zero"</span><span class="p">)</span>
+</code></pre></div>
 <hr>
 <h2 id="multiple-exceptions">Multiple Exceptions<a class="headerlink" href="#multiple-exceptions" title="Permanent link">¶</a></h2>
-<p>```python id="h7i8j9"
-try:
-    value = int("abc")
-except ZeroDivisionError:
-    print("Division error")
-except ValueError:
-    print("Invalid value")
-</p><div class="highlight"><pre><span></span><code>---
-
-## else Block
-
-Runs only if no exception occurs.
-
-```python id="k1l2m3"
-try:
-    result = 10 / 2
-except ZeroDivisionError:
-    print("Error")
-else:
-    print("Success:", result)
-</code></pre></div><p></p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">"abc"</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Division error"</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid value"</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+<h2 id="else-block">else Block<a class="headerlink" href="#else-block" title="Permanent link">¶</a></h2>
+<p>Runs only if no exception occurs.</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Success:"</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">¶</a></h3>
-<p>```text id="n4o5p6"
-Success: 5.0
-</p><div class="highlight"><pre><span></span><code>---
-
-## finally Block
-
-Always runs, whether there is an error or not.
-
-```python id="q7r8s9"
-try:
-    file = open("test.txt", "r")
-    content = file.read()
-except FileNotFoundError:
-    print("File not found")
-finally:
-    print("Execution finished")
-</code></pre></div><p></p>
+<div class="highlight"><pre><span></span><code>Success: 5.0
+</code></pre></div>
+<hr>
+<h2 id="finally-block">finally Block<a class="headerlink" href="#finally-block" title="Permanent link">¶</a></h2>
+<p>Always runs, whether there is an error or not.</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"test.txt"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"File not found"</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Execution finished"</span><span class="p">)</span>
+</code></pre></div>
 <hr>
 <h2 id="raising-exceptions">Raising Exceptions<a class="headerlink" href="#raising-exceptions" title="Permanent link">¶</a></h2>
 <p>You can manually raise errors using <code>raise</code>.</p>
-<p>```python id="t1u2v3"
-age = -1</p>
-<p>if age &lt; 0:
-    raise ValueError("Age cannot be negative")
-</p><div class="highlight"><pre><span></span><code>---
+<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 
-## Custom Exception Handling Pattern
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Age cannot be negative"</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+<h2 id="custom-exception-handling-pattern">Custom Exception Handling Pattern<a class="headerlink" href="#custom-exception-handling-pattern" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"b cannot be zero"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
 
-```python id="w4x5y6"
-def divide(a, b):
-    if b == 0:
-        raise ValueError("b cannot be zero")
-    return a / b
-
-try:
-    print(divide(10, 0))
-except ValueError as e:
-    print("Error:", e)
-</code></pre></div><p></p>
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">divide</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error:"</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</code></pre></div>
 <hr>
 <h2 id="common-built-in-exceptions">Common Built-in Exceptions<a class="headerlink" href="#common-built-in-exceptions" title="Permanent link">¶</a></h2>
 <table>
