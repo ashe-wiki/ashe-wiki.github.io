@@ -5832,16 +5832,16 @@ git<span class="w"> </span>rebase<span class="w"> </span>main
 </ul>
 <h3 id="_2">日常开发流程<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># 1. 切换到个人分支</span>
-git<span class="w"> </span>checkout<span class="w"> </span>dev-ashe
+git<span class="w"> </span>co<span class="w"> </span>dev-ashe
 
 <span class="c1"># 2. 开发、提交代码</span>
 git<span class="w"> </span>add<span class="w"> </span>.
 git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat: xxx"</span>
 
 <span class="c1"># 3. 同步主干最新代码（rebase 保持线性历史）</span>
-git<span class="w"> </span>checkout<span class="w"> </span>dev
+git<span class="w"> </span>co<span class="w"> </span>dev
 git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>dev
-git<span class="w"> </span>checkout<span class="w"> </span>dev-ashe
+git<span class="w"> </span>co<span class="w"> </span>dev-ashe
 git<span class="w"> </span>rebase<span class="w"> </span>dev
 
 <span class="c1"># 4. 如果有冲突，解决后继续</span>
