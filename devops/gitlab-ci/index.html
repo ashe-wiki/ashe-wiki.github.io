@@ -1533,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/python/basic/file-i%5Co/" class="md-nav__link">
+      <a href="../../lang/python/basic/file-i/o.md" class="md-nav__link">
         
   
   
@@ -5755,37 +5755,37 @@ hello_world:
 <p>构建：maven clean package</p>
 <p>运行jar包：nohup java -jar xxx.jar</p>
 <p>因此修改.gitlab-ci.yml文件</p>
-<div class="highlight"><pre><span></span><code>&nbsp;stages:
-  - build
-  - deploy
+<div class="highlight"><pre><span></span><code><span class="err">&nbsp;</span><span class="nt">stages</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
 
-build_job:
-  stage: build
-  script:
-    - echo "build start"
-    - pwd
-    - mvn clean package
-    - echo "build end"
-  artifacts:
-    paths:
-      - target/  # 将target目录保存为artifacts
-  tags:
-    - oh
+<span class="nt">build_job</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo "build start"</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pwd</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mvn clean package</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo "build end"</span>
+<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">target/</span><span class="w">  </span><span class="c1"># 将target目录保存为artifacts</span>
+<span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">oh</span>
 
-deploy_job:
-  stage: deploy
-  script:
-    - echo "deploy start"
-    - pwd
-    - ls -l  # 列出当前目录内容，确认是否接收到artifacts
-    - cp /home/deploy/start.sh start.sh
-    - chmod +x start.sh
-    - ./start.sh
-    - echo "deploy end"
-  dependencies:
-    - build_job  # 确保这个job依赖于build_job
-  tags:
-    - oh
+<span class="nt">deploy_job</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo "deploy start"</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pwd</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ls -l</span><span class="w">  </span><span class="c1"># 列出当前目录内容，确认是否接收到artifacts</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cp /home/deploy/start.sh start.sh</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chmod +x start.sh</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./start.sh</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo "deploy end"</span>
+<span class="w">  </span><span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build_job</span><span class="w">  </span><span class="c1"># 确保这个job依赖于build_job</span>
+<span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">oh</span>
 </code></pre></div>
 <p>上述内容中的启动脚本/home/deploy/start.sh，这个文件依然要确保用户为gitlab-runner否则还是会失败（要明确yml中的所有行为都是由gitlab-runner用户执行的）</p>
 <p>推送代码，触发CI/CD，然后查看job的执行情况</p>
