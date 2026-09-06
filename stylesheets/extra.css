@@ -2,3 +2,16 @@
 .md-sidebar--primary > .md-sidebar__scrollwrap > .md-nav > .md-nav__title {
   display: none;
 }
+
+/* 自定义主颜色 */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #56a9a8;
+  --md-primary-fg-color--light: #56a9a8;
+  --md-primary-fg-color--dark: #56a9a8;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #3A5F4B;
+  --md-primary-fg-color--light: #3A5F4B;
+  --md-primary-fg-color--dark: #3A5F4B;
+}
