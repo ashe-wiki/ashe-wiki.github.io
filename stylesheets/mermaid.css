@@ -1,0 +1,41 @@
+.mermaid {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 200px;
+}
+
+.mermaid-zoom-controls {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+
+    display: flex;
+    gap: 4px;
+
+    padding: 4px;
+
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.mermaid-zoom-controls button {
+    width: 32px;
+    height: 32px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: white;
+
+    font-size: 20px;
+    line-height: 32px;
+
+    cursor: pointer;
+}
+
+.mermaid-zoom-controls button:hover {
+    background: #eee;
+}
