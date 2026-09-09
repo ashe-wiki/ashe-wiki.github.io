@@ -5957,7 +5957,11 @@ git<span class="w"> </span>rebase<span class="w"> </span>main
 <li><code>dev-ashe</code> — 个人开发分支</li>
 </ul>
 <h3 id="_2">日常开发流程<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># 1. 切换到个人分支</span>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>sw<span class="w"> </span>-c<span class="w"> </span>new-branch<span class="w">   </span><span class="c1"># 创建并切换</span>
+git<span class="w"> </span>br<span class="w"> </span>-d<span class="w"> </span>old-branch<span class="w">   </span><span class="c1"># 删除分支</span>
+
+
+<span class="c1"># 1. 切换到个人分支</span>
 git<span class="w"> </span>sw<span class="w"> </span>dev-ashe
 
 <span class="c1"># 2. 开发、提交代码</span>
