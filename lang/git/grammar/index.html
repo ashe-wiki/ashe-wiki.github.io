@@ -5987,8 +5987,11 @@ git<span class="w"> </span>add<span class="w"> </span>.
 git<span class="w"> </span>rebase<span class="w"> </span>--continue
 
 <span class="c1"># 5. 推送个人分支</span>
-git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>dev-ashe<span class="w"> </span>--force-with-lease
+<span class="c1"># 无冲突</span>
+git<span class="w"> </span>push
 
+<span class="c1"># 有冲突</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>dev-ashe<span class="w"> </span>--force-with-lease
 <span class="c1"># 或者已设置 Git alias：</span>
 git<span class="w"> </span>push-fwl
 
