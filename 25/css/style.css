@@ -11,32 +11,169 @@ body {
     justify-content: center;
 
     font-family: system-ui, sans-serif;
+    background: #248067;
+    color: #eee;
+}
+
+.days-left {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #edc3ae;
 }
 
 .timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer__frame {
+    position: relative;
+    width: 660px;
+    height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer__border {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.timer__quote {
+    position: absolute;
+    top: 60px;
+    left: 80px;
+    font-size: 16px;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    color: #edc3ae;
+    opacity: 0.7;
+    transform: rotate(-30deg);
+    transform-origin: top left;
+    white-space: nowrap;
+}
+
+.timer__face {
+    position: relative;
+    width: 420px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer__progress {
+    position: absolute;
+    inset: 0;
+}
+
+.timer__track {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.15);
+    stroke-width: 4;
+}
+
+.timer__ring {
+    fill: none;
+    stroke: #edc3ae;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 565.48;
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dashoffset 0.5s linear;
+}
+
+.timer__info {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
 }
 
 .timer__label {
-    margin-bottom: 12px;
-    font-size: 14px;
+    margin-bottom: 4px;
+    font-size: 13px;
     letter-spacing: 0.15em;
+    opacity: 0.7;
 }
 
 .timer__time {
-    font-size: 96px;
+    font-size: 48px;
     font-weight: 600;
     line-height: 1;
     font-variant-numeric: tabular-nums;
 }
 
+.timer__option {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+    color: #ccc;
+
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.timer__option:hover {
+    border-color: #edc3ae;
+    color: #fff;
+}
+
+.timer__option--active {
+    background: #edc3ae;
+    border-color: #edc3ae;
+    color: #fff;
+}
+
+.timer__option:nth-child(3) {
+    left: 32%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timer__option:nth-child(4) {
+    left: 50%;
+    top: 72%;
+    transform: translate(-50%, -50%);
+}
+
+.timer__option:nth-child(5) {
+    left: 68%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .timer__button {
-    margin-top: 32px;
-    padding: 10px 28px;
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 36px;
 
     border: 0;
-    border-radius: 8px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #eee;
 
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
+    transition: background 0.2s;
+}
+
+.timer__button:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
