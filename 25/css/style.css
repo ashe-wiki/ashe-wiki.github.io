@@ -19,7 +19,8 @@ body {
     position: fixed;
     top: 20px;
     left: 20px;
-    font-size: 24px;
+    font-size: 28px;
+    font-family: 'Great Vibes', cursive;
     color: #edc3ae;
 }
 
@@ -43,20 +44,6 @@ body {
     inset: 0;
     width: 100%;
     height: 100%;
-}
-
-.timer__quote {
-    position: absolute;
-    top: 60px;
-    left: 80px;
-    font-size: 16px;
-    font-style: italic;
-    letter-spacing: 0.05em;
-    color: #edc3ae;
-    opacity: 0.7;
-    transform: rotate(-30deg);
-    transform-origin: top left;
-    white-space: nowrap;
 }
 
 .timer__face {
@@ -102,6 +89,8 @@ body {
 .timer__label {
     margin-bottom: 4px;
     font-size: 13px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
     letter-spacing: 0.15em;
     opacity: 0.7;
 }
