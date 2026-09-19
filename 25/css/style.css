@@ -15,7 +15,20 @@ body {
     color: #eee;
 }
 
+.days-left-link {
+    text-decoration: none;
+}
+
 .days-left {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 28px;
+    font-family: 'Great Vibes', cursive;
+    color: #edc3ae;
+}
+
+.quote-top {
     position: fixed;
     top: 20px;
     left: 20px;
@@ -172,9 +185,15 @@ body {
         margin-top: -60px;
     }
 
-    .days-left {
-        font-size: 20px;
+    .quote-top {
+        font-size: 18px;
         top: 10px;
+        left: 10px;
+    }
+
+    .days-left {
+        font-size: 18px;
+        bottom: 10px;
         left: 10px;
     }
 
