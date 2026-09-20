@@ -9,8 +9,14 @@ const CIRCUMFERENCE = 2 * Math.PI * 90;
 progressElement.style.strokeDasharray = CIRCUMFERENCE;
 
 let duration = 25 * 60;
-let remaining = duration;
+let endTime = null;
 let timer = null;
+
+function getRemaining() {
+    if (endTime === null) return duration;
+    const diff = Math.ceil((endTime - Date.now()) / 1000);
+    return diff > 0 ? diff : 0;
+}
 
 function updateDaysLeft() {
     const now = new Date();
@@ -50,6 +56,7 @@ function playEndSound() {
 }
 
 function render() {
+    const remaining = getRemaining();
     const minutes = Math.floor(remaining / 60);
     const seconds = remaining % 60;
 
@@ -62,14 +69,16 @@ function render() {
 }
 
 function start() {
-    if (timer !== null) {
+    if (endTime !== null) {
         return;
     }
 
     playStartSound();
 
+    endTime = Date.now() + duration * 1000;
+
     timer = setInterval(() => {
-        remaining--;
+        const remaining = getRemaining();
 
         render();
 
@@ -77,26 +86,36 @@ function start() {
             stop();
             playEndSound();
         }
-    }, 1000);
+    }, 250);
 }
 
 function stop() {
     clearInterval(timer);
     timer = null;
+    endTime = null;
 }
 
 function reset() {
     stop();
-    remaining = duration;
     render();
 }
 
 function skip() {
     stop();
-    remaining = 0;
+    endTime = Date.now();
     render();
     playEndSound();
 }
+
+document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+        render();
+        if (endTime !== null && getRemaining() <= 0) {
+            stop();
+            playEndSound();
+        }
+    }
+});
 
 skipButton.addEventListener("click", skip);
 
@@ -106,7 +125,8 @@ optionButtons.forEach((btn) => {
         btn.classList.add("timer__option--active");
 
         duration = parseInt(btn.dataset.minutes) * 60;
-        reset();
+        stop();
+        render();
         start();
     });
 });
