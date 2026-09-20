@@ -37,6 +37,19 @@ body {
     color: #edc3ae;
 }
 
+.github-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #edc3ae;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.github-link:hover {
+    opacity: 1;
+}
+
 .timer {
     display: flex;
     flex-direction: column;
