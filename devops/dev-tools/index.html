@@ -5848,7 +5848,7 @@
   
 
 
-<h1 id="devtools">DevTools 调试入门<a class="headerlink" href="#devtools" title="Permanent link">¶</a></h1>
+<h1 id="devtools">DevTools 调试<a class="headerlink" href="#devtools" title="Permanent link">¶</a></h1>
 <p>DevTools（开发者工具）是浏览器内置的一套调试工具。不用安装任何软件，几乎每个现代浏览器（Chrome、Edge、Firefox、Safari 等）都自带。</p>
 <p>它能帮你回答三个最常见的开发问题：</p>
 <ul>
@@ -5874,7 +5874,7 @@
 <li><strong>修改 CSS</strong>：双击样式值可以直接修改，页面会实时更新，适合快速试错</li>
 <li><strong>查看尺寸信息</strong>：选中元素后，可视化展示它的 width / height / margin / padding</li>
 </ul>
-<p>&gt; <strong>什么时候用它</strong>：页面样式不对、元素布局不对（错位、间距异常、不居中）时查看。</p>
+<p><strong>什么时候用它</strong>：页面样式不对、元素布局不对（错位、间距异常、不居中）时查看。</p>
 <p>注意：在 Elements 里改的内容刷新页面后会丢失，确认有效的改动要记回代码里。</p>
 <h2 id="3-console">3. Console<a class="headerlink" href="#3-console" title="Permanent link">¶</a></h2>
 <p><strong>位置</strong>：DevTools 顶部的「Console」标签页。</p>
@@ -5884,7 +5884,7 @@
 <li><strong>使用 <code>console.log()</code></strong>：在代码里打印变量，调试最常用的手段</li>
 <li><strong>执行简单 JavaScript</strong>：可以直接输入表达式并回车执行，例如 <code>document.title</code></li>
 </ul>
-<p>&gt; <strong>什么时候用它</strong>：JavaScript 报错、代码行为异常时查看。</p>
+<p><strong>什么时候用它</strong>：JavaScript 报错、代码行为异常时查看。</p>
 <p>养成习惯：<strong>页面有问题，第一反应就是先看 Console</strong>。很多「页面不工作」其实只是这里有一行红色报错。</p>
 <h2 id="4-network">4. Network<a class="headerlink" href="#4-network" title="Permanent link">¶</a></h2>
 <p><strong>位置</strong>：DevTools 顶部的「Network」标签页。</p>
@@ -5895,7 +5895,7 @@
 <li><strong>Status</strong>：HTTP 状态码，请求是成功还是失败</li>
 <li><strong>Request / Response</strong>：请求带了什么参数，服务器返回了什么数据</li>
 </ul>
-<p>&gt; <strong>什么时候用它</strong>：API 请求失败、接口返回异常时查看。</p>
+<p><strong>什么时候用它</strong>：API 请求失败、接口返回异常时查看。</p>
 <p>打开面板后刷新页面，就能看到所有请求。点击任意一条，可以查看它的详细信息。</p>
 <h3 id="_1">常见状态码<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
 <table>
@@ -5941,18 +5941,18 @@
 <li><strong>Breakpoint（断点）</strong>：在代码某一行点击行号，代码执行到这里时会暂停</li>
 <li><strong>单步执行</strong>：暂停后逐行运行代码，配合 <code>console.log</code> 观察每一步的变量变化</li>
 </ul>
-<p>&gt; <strong>什么时候用它</strong>：JavaScript 逻辑有问题，需要一步一步查看代码执行过程时使用。</p>
+<p><strong>什么时候用它</strong>：JavaScript 逻辑有问题，需要一步一步查看代码执行过程时使用。</p>
 <p>断点调试比到处写 <code>console.log</code> 更适合排查「逻辑为什么这么走」的问题，但入门阶段先会用 <code>console.log</code> 就够了。</p>
 <h2 id="6">6. 一个最简单的调试思路<a class="headerlink" href="#6" title="Permanent link">¶</a></h2>
 <p>遇到页面问题，不要慌，按这个顺序来：</p>
-<p>```text
-页面有问题
+<div class="highlight"><pre><span></span><code>页面有问题
     ↓
 先看 Console
     ↓
 样式问题 → Elements
 接口问题 → Network
-代码逻辑问题 → Sources</p>
+代码逻辑问题 → Sources
+</code></pre></div>
 
 
 
