@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#devtools" class="md-skip">
+        <a href="#getting-started-with-devtools" class="md-skip">
           Skip to content
         </a>
       
@@ -5062,10 +5062,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#1-devtools" class="md-nav__link">
+  <a href="#1-how-to-open-devtools" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 如何打开 DevTools
+        1. How to Open DevTools
       
     </span>
   </a>
@@ -5107,10 +5107,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#common-status-codes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        常见状态码
+        Common Status Codes
       
     </span>
   </a>
@@ -5134,10 +5134,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
+  <a href="#6-a-simple-debugging-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. 一个最简单的调试思路
+        6. A Simple Debugging Workflow
       
     </span>
   </a>
@@ -5693,10 +5693,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#1-devtools" class="md-nav__link">
+  <a href="#1-how-to-open-devtools" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 如何打开 DevTools
+        1. How to Open DevTools
       
     </span>
   </a>
@@ -5738,10 +5738,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#common-status-codes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        常见状态码
+        Common Status Codes
       
     </span>
   </a>
@@ -5765,10 +5765,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
+  <a href="#6-a-simple-debugging-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. 一个最简单的调试思路
+        6. A Simple Debugging Workflow
       
     </span>
   </a>
@@ -5848,110 +5848,111 @@
   
 
 
-<h1 id="devtools">DevTools 调试<a class="headerlink" href="#devtools" title="Permanent link">¶</a></h1>
-<p>DevTools（开发者工具）是浏览器内置的一套调试工具。不用安装任何软件，几乎每个现代浏览器（Chrome、Edge、Firefox、Safari 等）都自带。</p>
-<p>它能帮你回答三个最常见的开发问题：</p>
+<h1 id="getting-started-with-devtools">Getting Started with DevTools<a class="headerlink" href="#getting-started-with-devtools" title="Permanent link">¶</a></h1>
+<p>DevTools (Developer Tools) is a set of debugging tools built into your browser. Nothing to install — every modern browser (Chrome, Edge, Firefox, Safari, etc.) ships with them.</p>
+<p>They help you answer three of the most common development questions:</p>
 <ul>
-<li>这个元素的样式为什么不对？</li>
-<li>这段 JavaScript 为什么报错了？</li>
-<li>这个接口请求为什么失败了？</li>
+<li>Why does this element look wrong?</li>
+<li>Why is this JavaScript throwing an error?</li>
+<li>Why is this API request failing?</li>
 </ul>
-<h2 id="1-devtools">1. 如何打开 DevTools<a class="headerlink" href="#1-devtools" title="Permanent link">¶</a></h2>
-<p>最常用的方式：</p>
+<p>This guide covers only the most commonly used panels. The goal is to help you know <em>where to look</em>, not to teach you everything.</p>
+<h2 id="1-how-to-open-devtools">1. How to Open DevTools<a class="headerlink" href="#1-how-to-open-devtools" title="Permanent link">¶</a></h2>
+<p>The most common ways:</p>
 <ul>
-<li><strong>macOS</strong>：<code>Cmd + Option + I</code></li>
-<li><strong>Windows / Linux</strong>：<code>F12</code>，或 <code>Ctrl + Shift + I</code></li>
-<li><strong>右键 → 检查（Inspect）</strong>：在页面任意元素上右键，选择「检查」，会直接定位到该元素</li>
-<li><strong>切换桌面端 / 移动端视图</strong>：<code>Cmd + Shift + M</code>（macOS），或 <code>Ctrl + Shift + M</code>（Windows / Linux）</li>
+<li><strong>macOS</strong>: <code>Cmd + Option + I</code></li>
+<li><strong>Windows / Linux</strong>: <code>F12</code>, or <code>Ctrl + Shift + I</code></li>
+<li><strong>Right-click → Inspect</strong>: Right-click any element on the page and choose "Inspect" — it jumps straight to that element</li>
+<li><strong>Toggle device (mobile) view</strong>: <code>Cmd + Shift + M</code> (macOS), or <code>Ctrl + Shift + M</code> (Windows / Linux)</li>
 </ul>
-<p>打开后，界面通常分为左右或上下几个区域，下面介绍的几个面板都可以在顶部的标签页中找到。</p>
+<p>Once open, the interface is usually split into a few sections. All the panels below are available as tabs at the top.</p>
 <h2 id="2-elements">2. Elements<a class="headerlink" href="#2-elements" title="Permanent link">¶</a></h2>
-<p><strong>位置</strong>：DevTools 顶部的第一个标签页。</p>
-<p>主要功能：</p>
+<p><strong>Where</strong>: The first tab in DevTools.</p>
+<p>What it does:</p>
 <ul>
-<li><strong>查看 HTML / DOM</strong>：页面实际渲染出来的结构，和源码不完全一样</li>
-<li><strong>查看 CSS</strong>：选中某个元素后，右侧会显示它应用的所有样式</li>
-<li><strong>修改 CSS</strong>：双击样式值可以直接修改，页面会实时更新，适合快速试错</li>
-<li><strong>查看尺寸信息</strong>：选中元素后，可视化展示它的 width / height / margin / padding</li>
+<li><strong>View HTML / DOM</strong>: The structure the page actually renders — not always identical to the source code</li>
+<li><strong>View CSS</strong>: Select an element to see all styles applied to it in the right-hand pane</li>
+<li><strong>Edit CSS</strong>: Double-click a style value to change it — the page updates live, great for quick experimentation</li>
+<li><strong>Inspect dimensions</strong>: Selecting an element shows its width / height / margin / padding visually</li>
 </ul>
-<p><strong>什么时候用它</strong>：页面样式不对、元素布局不对（错位、间距异常、不居中）时查看。</p>
-<p>注意：在 Elements 里改的内容刷新页面后会丢失，确认有效的改动要记回代码里。</p>
+<p><strong>When to use it</strong>: When page styles look wrong or the layout is off (misaligned, odd spacing, not centered).</p>
+<p>Note: changes you make in Elements disappear on refresh — once you find a fix, copy it back into your code.</p>
 <h2 id="3-console">3. Console<a class="headerlink" href="#3-console" title="Permanent link">¶</a></h2>
-<p><strong>位置</strong>：DevTools 顶部的「Console」标签页。</p>
-<p>主要功能：</p>
+<p><strong>Where</strong>: The "Console" tab in DevTools.</p>
+<p>What it does:</p>
 <ul>
-<li><strong>查看 JavaScript 错误</strong>：红色的报错信息都会出现在这里，包括出错的文件和行号</li>
-<li><strong>使用 <code>console.log()</code></strong>：在代码里打印变量，调试最常用的手段</li>
-<li><strong>执行简单 JavaScript</strong>：可以直接输入表达式并回车执行，例如 <code>document.title</code></li>
+<li><strong>View JavaScript errors</strong>: Red error messages appear here, including the file and line number</li>
+<li><strong>Use <code>console.log()</code></strong>: Print variables from your code — the most common debugging technique</li>
+<li><strong>Run JavaScript directly</strong>: Type an expression and press Enter, e.g. <code>document.title</code></li>
 </ul>
-<p><strong>什么时候用它</strong>：JavaScript 报错、代码行为异常时查看。</p>
-<p>养成习惯：<strong>页面有问题，第一反应就是先看 Console</strong>。很多「页面不工作」其实只是这里有一行红色报错。</p>
+<p><strong>When to use it</strong>: When JavaScript errors occur or the code behaves unexpectedly.</p>
+<p>Build a habit: <strong>whenever something is wrong with a page, check the Console first</strong>. Many "the page doesn't work" moments turn out to be a single red error line here.</p>
 <h2 id="4-network">4. Network<a class="headerlink" href="#4-network" title="Permanent link">¶</a></h2>
-<p><strong>位置</strong>：DevTools 顶部的「Network」标签页。</p>
-<p>主要功能：查看浏览器发送的所有 HTTP 请求，每一条请求包含：</p>
+<p><strong>Where</strong>: The "Network" tab in DevTools.</p>
+<p>What it does: shows every HTTP request the browser makes. Each request includes:</p>
 <ul>
-<li><strong>URL</strong>：请求发到了哪里</li>
-<li><strong>Method</strong>：请求方式（GET、POST 等）</li>
-<li><strong>Status</strong>：HTTP 状态码，请求是成功还是失败</li>
-<li><strong>Request / Response</strong>：请求带了什么参数，服务器返回了什么数据</li>
+<li><strong>URL</strong>: where the request was sent</li>
+<li><strong>Method</strong>: the request type (GET, POST, etc.)</li>
+<li><strong>Status</strong>: the HTTP status code — whether the request succeeded or failed</li>
+<li><strong>Request / Response</strong>: the parameters sent and the data returned by the server</li>
 </ul>
-<p><strong>什么时候用它</strong>：API 请求失败、接口返回异常时查看。</p>
-<p>打开面板后刷新页面，就能看到所有请求。点击任意一条，可以查看它的详细信息。</p>
-<h3 id="_1">常见状态码<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<p><strong>When to use it</strong>: When an API request fails or the response looks wrong.</p>
+<p>Open the panel and refresh the page to see all requests. Click any one of them for details.</p>
+<h3 id="common-status-codes">Common Status Codes<a class="headerlink" href="#common-status-codes" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
-<th>状态码</th>
-<th>含义</th>
+<th>Status Code</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>200</code></td>
-<td>成功</td>
+<td>OK</td>
 </tr>
 <tr>
 <td><code>400</code></td>
-<td>请求参数有问题（Bad Request）</td>
+<td>Bad Request — the request parameters are wrong</td>
 </tr>
 <tr>
 <td><code>401</code></td>
-<td>未登录或登录已过期（Unauthorized）</td>
+<td>Unauthorized — not logged in or session expired</td>
 </tr>
 <tr>
 <td><code>403</code></td>
-<td>没有权限（Forbidden）</td>
+<td>Forbidden — no permission</td>
 </tr>
 <tr>
 <td><code>404</code></td>
-<td>资源不存在（Not Found）</td>
+<td>Not Found — the resource doesn't exist</td>
 </tr>
 <tr>
 <td><code>500</code></td>
-<td>服务器内部错误（Internal Server Error）</td>
+<td>Internal Server Error — something broke on the server</td>
 </tr>
 </tbody>
 </table>
-<p>定位接口问题时，先看状态码，再看 Response 里的报错信息。</p>
+<p>When debugging an API issue, check the status code first, then look at the error message in the Response.</p>
 <h2 id="5-sources">5. Sources<a class="headerlink" href="#5-sources" title="Permanent link">¶</a></h2>
-<p><strong>位置</strong>：DevTools 顶部的「Sources」标签页。</p>
-<p>主要功能：</p>
+<p><strong>Where</strong>: The "Sources" tab in DevTools.</p>
+<p>What it does:</p>
 <ul>
-<li><strong>查看 JavaScript 源代码</strong>：按文件浏览页面加载的所有脚本</li>
-<li><strong>Breakpoint（断点）</strong>：在代码某一行点击行号，代码执行到这里时会暂停</li>
-<li><strong>单步执行</strong>：暂停后逐行运行代码，配合 <code>console.log</code> 观察每一步的变量变化</li>
+<li><strong>View JavaScript source code</strong>: Browse every script the page loads, organized by file</li>
+<li><strong>Breakpoint</strong>: Click a line number to pause execution when the code reaches that line</li>
+<li><strong>Step through code</strong>: Once paused, run the code line by line, watching how variables change — often alongside <code>console.log</code></li>
 </ul>
-<p><strong>什么时候用它</strong>：JavaScript 逻辑有问题，需要一步一步查看代码执行过程时使用。</p>
-<p>断点调试比到处写 <code>console.log</code> 更适合排查「逻辑为什么这么走」的问题，但入门阶段先会用 <code>console.log</code> 就够了。</p>
-<h2 id="6">6. 一个最简单的调试思路<a class="headerlink" href="#6" title="Permanent link">¶</a></h2>
-<p>遇到页面问题，不要慌，按这个顺序来：</p>
-<div class="highlight"><pre><span></span><code>页面有问题
+<p><strong>When to use it</strong>: When the JavaScript logic is wrong and you need to trace through the execution step by step.</p>
+<p>Breakpoints are better than scattering <code>console.log</code> everywhere for figuring out <em>why the code took a certain path</em> — but at the beginner stage, <code>console.log</code> alone is enough.</p>
+<h2 id="6-a-simple-debugging-workflow">6. A Simple Debugging Workflow<a class="headerlink" href="#6-a-simple-debugging-workflow" title="Permanent link">¶</a></h2>
+<p>When something goes wrong on a page, don't panic — follow this order:</p>
+<div class="highlight"><pre><span></span><code>Something is wrong with the page
     ↓
-先看 Console
+Check the Console first
     ↓
-样式问题 → Elements
-接口问题 → Network
-代码逻辑问题 → Sources
+Style issue        → Elements
+API/request issue  → Network
+Logic issue        → Sources
 </code></pre></div>
 
 
