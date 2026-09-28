@@ -1,6 +1,11 @@
-/* 只隐藏一级 section 标题 */
-.md-sidebar--primary > .md-sidebar__scrollwrap > .md-nav > .md-nav__title {
-  display: none;
+/* 一级导航已由顶部 tabs 展示，桌面侧栏只保留当前一级导航的子项。 */
+@media screen and (min-width: 76.25em) {
+  .md-nav--lifted
+    > .md-nav__list
+    > .md-nav__item--active
+    > .md-nav__link {
+    display: none;
+  }
 }
 
 /* 自定义主颜色 */
