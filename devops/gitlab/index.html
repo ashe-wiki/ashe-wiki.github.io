@@ -5707,7 +5707,7 @@ https://mirror.tuna.tsinghua.edu.cn/help/gitlab-ce/</p>
 <p>安装指定版本（不指定版本时默认最新版本 yum install gitlab-ce）
 </p><div class="highlight"><pre><span></span><code>yum<span class="w"> </span>install<span class="w"> </span>gitlab-ce-11.1.1
 </code></pre></div><p></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/gitlab.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/gitlab.png"></a></p>
+<p></p>
 <p>于/etc/gitlab/gitlab.rb配置文件处，修改你的GitLab外部访问地址</p>
 <p>默认GitLab外部访问地址是：external_url 'http://gitlab.example.com'</p>
 <p>需要将其改成访问你服务器的GitLab地址，由于我没有域名只有ip，我的修改为<code>external_url 'http://server_ip:10086'</code></p>
@@ -5721,7 +5721,7 @@ https://mirror.tuna.tsinghua.edu.cn/help/gitlab-ce/</p>
 <p>查看GitLab应用root用户生成的默认密码</p>
 <p><code>cat /etc/gitlab/initial_root_password</code></p>
 <p>做好密码备份，该文件会在24小时后自动删除，如果你想修改root的密码，请参考https://docs.gitlab.com/ee/security/reset_user_password.html</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/gitlab-login.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/gitlab-login.png"></a></p>
+<p></p>
 <p>使用浏览器访问<code>server_ip:10086</code>，键入 用户 &amp; 密码 登录即可。</p>
 <p>停止Gitlab程序进程 <code>gitlab-ctl stop</code></p>
 

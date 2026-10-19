@@ -5853,10 +5853,10 @@
 <h2 id="logstash">安装Logstash<a class="headerlink" href="#logstash" title="Permanent link">¶</a></h2>
 <p>https://www.elastic.co/guide/en/logstash/8.16/installing-logstash.html</p>
 <p>尽量保持你的Elasticsearch、Kibana、Logstash的version一致，我所使用的version为8.16.0</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-1.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-1.png"></a></p>
+<p></p>
 <p>启动成功，并演示了hello world后，就可以准备Logstash的配置文件和SpringBoot的jar了。</p>
 <h2 id="springbootjar">准备SpringBoot的jar<a class="headerlink" href="#springbootjar" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-2.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-2.png"></a></p>
+<p></p>
 <p>log4j2-spring.xml
 </p><div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;Configuration</span><span class="w"> </span><span class="na">status=</span><span class="s">"INFO"</span><span class="nt">&gt;</span>
@@ -5917,14 +5917,14 @@ output<span class="w"> </span><span class="o">{</span>
 <p>通过这个配置文件来启动Logstash （我将其保存在了Logstash的conf目录下）
 <code>bin/logstash -f /home/es/logstash-8.16.0/config/logstash.conf</code></p>
 <h2 id="data-view">data-view页面验证日志是否成功插入<a class="headerlink" href="#data-view" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-3.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-3.png"></a>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-4.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-4.png"></a></p>
+<p>
+</p>
 <p>通过调用接口，less日志文件，可以看到已经有对应的日志输出了。</p>
 <p>这时我们在data-view的检索窗口，尝试检索“Expressing”</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-5.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-5.png"></a></p>
+<p></p>
 <p>可以看到，已经查询到了对应日志所映射生成的document了。</p>
 <p>在Kibana页面还可以更方面的展开日志</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-6.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/elk-6.png"></a></p>
+<p></p>
 
 
 

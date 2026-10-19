@@ -5756,13 +5756,13 @@
 <p>理解以上概念后，现在处理问题（我的Elasticsearch集群单节点是安装在本地Windows主机上的）：</p>
 <p>查看index列表</p>
 <p>https://localhost:9200/_cat/indices</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/yellow-index-1.png" data-desc-position="bottom"><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/yellow-index-1.png"></a></p>
+<p></p>
 <p>可以看到除new_index以外，其他index都是yellow状态，为啥会出现这些区别呢？</p>
 <p>因为products，users这两个index在创建索引的时候没有显式指定主分片数和副本分片数，Elasticsearch默认分配了1个主分片和1个副本分片，但是我的Elasticsearch只有一个节点，根据其分配算法，主分片和副本分片不应该在一个节点，因此副本分片分配节点时失败。</p>
 <p>my_index是在创建时，显式指定了主分片数为3，副本分片数为1，给1个副本分片分配节点时失败。</p>
 <p>new_index在创建时，显式指定了主分片数为1，副本分片数为0，因此这个index的健康状态是green。</p>
 <p>cat_index在创建是，显式指定了主分片数为1，副本分片数为1，给1个副本分片分配节点时失败。</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/yellow-index-2.png" data-desc-position="bottom"><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/yellow-index-2.png"></a></p>
+<p></p>
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">"elastic:your_password"</span><span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span><span class="s2">"https://127.0.0.1:9200/cat_index"</span><span class="w"> </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">"{\"settings\":{\"number_of_shards\":1,\"number_of_replicas\":1}}"</span>
 </code></pre></div>
 <p>现在我准备修改my_index和cat_index的副本分片数为0，使得其健康状态恢复成green</p>
@@ -5770,10 +5770,10 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-u<span class="w"> </span><span class="s2">"elastic:your_password"</span><span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span><span class="s2">"https://localhost:9200/cat_index/_settings"</span><span class="w"> </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">"{ \"index\": { \"number_of_replicas\": 0 }}"</span>
 </code></pre></div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/yellow-index-3.png" data-desc-position="bottom"><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/yellow-index-3.png"></a></p>
+<p></p>
 <p>现在我把所有index的副本分片数都修改为0后（所有index的健康状态都已经为green），再检查Elasticsearch集群的健康状态</p>
 <p>https://localhost:9200/_cluster/health</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/yellow-index-4.png" data-desc-position="bottom"><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/yellow-index-4.png"></a></p>
+<p></p>
 <p>总结：在创建索引的时候，其配置的主分片数和副本分片数，要与你使用的Elasticsearch集群的节点数契合。</p>
 <p>参考：<a href="https://www.cnblogs.com/chenjw-note/articles/10956057.html">elasticsearch 未分配分片unassigned导致集群为Yellow状态修复</a></p>
 
