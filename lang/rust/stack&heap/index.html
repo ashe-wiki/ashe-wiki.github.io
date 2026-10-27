@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -28,10 +28,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -5774,7 +5774,7 @@
 
 <p>Many programming languages don’t require you to think about the stack and the heap very often. 许多编程语言并不会要求你经常思考堆栈。But in a system programming language like Rust, whether a value is on the stack or the heap affects how the language behaves and why you have to make certain decisions. 但是对于Rust这样的系统级编程语言来说，值存储在栈或是堆中将直接影响语言的行为以及为什么必须做出某些确切的决定。Parts of ownership will be described in relation on the stack and the heap later in this chapter, so here is a brief explanation in preparation.由于Rust中的所有权与其存在关联，因此这是一个开胃菜（准备）的解释。</p>
 <p>Both the stack and the heap are parts of memory available to your code to use at runtime, but they are structured in different ways.栈与堆都是你代码在运行时所使用的内存。但是二者之间的结构存在一定不同之处。 The stack stores values in the order it gets them and removes the values in the opposite order. 栈空间存储值与释放值空间的顺序相反。This is referred to as last in, first out. 被称为后进先出。Think of a stack of plates: when you add more plates, you put them on top of the pile, and when you need a plate, you take one off the top.这里有一叠盘子，堆放时只能从最上方堆叠，拿取时只能从最上方移除。 Adding or removing plates from the middle or bottom wouldn’t work as well! 从中间或底部来堆叠或移除盘子都是不恰当的！Adding data is called pushing onto the stack, and removing data is called popping off the stack.添加数据称为入栈，移除数据称为出栈。 All data stored on the stack must have a known, fixed size. Data with an unknown size at compile time or a size that might change must be stored on the heap instead.所有栈区储存的数据必须是已知的、固定的内存大小。如果在编译时数据时未知的内存大小或者可能会变化的内存大小，那么该数据必须存储在堆区间。</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/rust/stack%26heap.png" data-desc-position="bottom"><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/rust/stack%26heap.png"></a></p>
 <p>The heap is less organized: when you put data on the heap, you request a certain amount of space. 堆区组织性较差，当你将数据储存在堆中，你需要请求一定量的内存空间。The memory allocator finds an empty spot in the heap that is big enough, mark it as being in use, and returns a pointer, which is the address of that location. 内存分配器会找到一块未被使用的、足够的内存区域，将其标记为使用中，并返回指针（这块内存区域的内存地址）。This process is called allocating on the heap and is sometimes abbreviated as just allocating(pushing values onto the stack is not considered allocating).这一过程被称为堆上分配，有时会简写为allocating（入栈不被视为allocating）。 Because the pointer to the heap is a known, fixed size, you can store the pointer on the stack, but when you want the actual data, you must follow the pointer.因为指针是已知的、固定的内存大小，你可以在栈区存储指针，如果你想获取实际数据，则必须通过其内存地址来获取。 Think of being seated at restaurant. When you enter, you state the number of people in your group, and the host finds an empty table that fits everyone and leads you there. If someone in your group comes late, they can ask where you’ve been seated to find you.试想一下餐厅的就座，当你进入餐厅，你会说明有多少人就餐，然后餐厅会安排一个（适用对应人数就餐的）空余桌子给你们并带领你们到该位置，如果你们一行人中有人来晚了，也可以根据就座的位置（内存地址）找到你们。</p>
 <p>Pushing to the stack is faster than allocating on the heap because the allocator never has to search for a place to store new data;入栈比堆上分配更快，因为内存分配器不需要寻找存储新数据的内存空间。 that location is always at the top of the stack. 其位置永远在栈区的最上方。Comparatively, allocating space on the heap requires more work because the allocator must first find a big enough space to hold the data and then perform bookkeeping to prepare for the next allocation.相较而言，堆上分配需要做更多工作，因为内存分配器需要先寻找一个空余的、足够的内存空间来储存数据，并记录，为下一次分配做准备。</p>
 <p>Accessing data in the heap is slower than accessing data on the stack because you have to follow a pointer to get there. 在堆中访问数据比在栈中访问数据更慢。Contemporary processors are faster if they jump around less in memory.对于现代处理器而言跳转的内存区域越小执行速度越快。 Continuing the analogy, consider a server at a restaurant taking orders from many tables. 继续类比，一名餐厅服务员给许多桌客人点餐。It’s most efficient to get all the orders at one table before moving on the next table.最有效率（快）的方式就是一桌接着一桌来点餐。 Taking an order from table A, then an order from table B, then one from table A again, and then one from B again would be a much slower process.若是点餐顺序从A到B再到A再到B，将会是更慢的过程。 By the same token, a processor can do its job better if it works on data that’s close to other data(as it is on the stack) rather than farther away(as it can be on the heap).同样道理，处理器在数据之间（内存距离）更近的条件下执行代码时会表现更好。</p>
@@ -5905,10 +5905,10 @@ document.addEventListener("DOMContentLoaded", updateGiscusTheme);
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["header.autohide", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["header.autohide", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="../../../javascripts/mermaid-zoom.js"></script>
       

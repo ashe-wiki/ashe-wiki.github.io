@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -28,10 +28,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -5892,30 +5892,30 @@
 </blockquote>
 <h2 id="_1">一、下载安装包并解压安装<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>https://www.elastic.co/downloads/kibana
-</p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-1.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-1.png"></a></p>
 <p>terminal进入Kibana安装目录，通过.\bin\kibana.bat指令启动。</p>
 <blockquote>
 <p>如果你是安装在Linux服务器上，需要其他电脑访问kibana页面，那么需要修改conf/kibana.yml文件，将server.host: "localhost"改为server.host: "0.0.0.0"，将允许Kibana监听所有网络接口上的连接，而非本机的连接（默认配置则只允许本机访问kibana页面）</p>
 </blockquote>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-2.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-2.png"></a></p>
 <h2 id="kibana">二、配置后登录Kibana页面<a class="headerlink" href="#kibana" title="Permanent link">¶</a></h2>
 <p>启动成功，访问http://localhost:5601/，页面会要求你填入Enrollment token（此举是将Kibana注册至你的Elasticsearch上）
-</p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-3.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-3.png"></a></p>
 <p>EnrollmentToken则是在Elasticsearch的bin目录下的elasticsearch-create-enrollment-token.bat脚本生成</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-4.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-4.png"></a></p>
 <p>因此，还是通过terminal执行该脚本获取EnrollmentToken，备份保存，填入Kibana页面后会要求你输入验证码，这个验证码可以在启动Kibana的terminal中找到</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-5.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-5.png"></a></p>
 <p>然后通过Elasticsearch的用户密码登录Kibana</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-6.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-6.png"></a></p>
 <h2 id="discoverdocument">三、通过Discover快速检索Document<a class="headerlink" href="#discoverdocument" title="Permanent link">¶</a></h2>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-7.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-7.png"></a></p>
 <p>第一次进入Discover时，会要求你Create data view，所谓的data view其实就是一个数据查询页面（与index所对应），比如创建了一个products的index，那么你可以按如下方式创建data view</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-8.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-8.png"></a></p>
 <p>然后，你就可以通过这个data view非常方便的快速检索products这个index下的所有document。 </p>
 <p>比如我创建了一个users的index，其中插入了一些document，那么我可以按如下方式快速查询：</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-9.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-9.png"></a></p>
 <p>点击检索出来的结果，还可以更直观地查阅document</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-10.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/es-k-10.png"></a></p>
 
 
 
@@ -6041,10 +6041,10 @@ document.addEventListener("DOMContentLoaded", updateGiscusTheme);
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["header.autohide", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["header.autohide", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="../../../javascripts/mermaid-zoom.js"></script>
       

@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -28,10 +28,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -5982,12 +5982,12 @@
 <p>然后浏览器访问http://server_ip:10086</p>
 <p>页面会让你初始化密码，用户默认为root。</p>
 <p>然后通过root账户登录，创建Group和Project，进入project的设置项。</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-1.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-1.png"></a></p>
 <p>在这里，获取到GitLab Runner需要使用的token，GitLab Runner通过它注册至GitLab实例。</p>
 <p>配置GitLab Runner，这里有一个坑，GitLab Runner本身是以gitlab-runner这个用户在执行指令。</p>
 <p>因此gitlab-runner start直接启动GitLab Runner会发现启动不起来（gitlab-runner status），通过sudo journalctl -u gitlab-runner -f可以查看启动时的相关日志，其中会提及到没有权限创建/home/gitlab-runner这个目录（这是其默认的工作目录）。</p>
 <p>这是因为GitLab Runner已经安装完毕，通过cat /etc/passwd可以看到gitlab-runner这个用户，所以GitLab Runner的行为实际上是以gitlab-runner用户来执行的。</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-2.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-2.png"></a></p>
 <p>由此，我们手动创建其默认的工作目录/home/gitlab-runner，然后将这个工作目录的用户更改为gitlab-runner且允许读写权限</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>gitlab-runner:gitlab-runner<span class="w"> </span>/home/gitlab-runner
 </code></pre></div>
@@ -6007,7 +6007,7 @@
 <div class="highlight"><pre><span></span><code>gitlab-runner<span class="w"> </span>start
 </code></pre></div>
 于Gitlab页面查看，Runner是否注册成功且为激活状态<p></p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-3.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-3.png"></a></p>
 <h2 id="pipeline">推送代码触发pipeline<a class="headerlink" href="#pipeline" title="Permanent link">¶</a></h2>
 <p>首先新建一个项目推送至你的Gitlab服务器。</p>
 <p>然后在项目根路径下新建一个.gitlab-ci.yml文件。Gitlab服务器会根据这个文件来触发Pipeline，使得Gitlab Runner来执行yml文件中的job。</p>
@@ -6025,9 +6025,9 @@ hello_world:
 <span class="w">    </span>-<span class="w"> </span>oh
 </code></pre></div>
 推送代码，然后在Pipeline中查看job是否被成功执行。<p></p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-4.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-4.png"></a></p>
 <p>点进去可以查看具体执行的细节（CI/CD验证成功）</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-5.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-5.png"></a></p>
 <h2 id="pipelinejobcicd">将Pipeline的job尝试替换为构建应用并运行(CI/CD)<a class="headerlink" href="#pipelinejobcicd" title="Permanent link">¶</a></h2>
 <p>在此，我的项目为SpringBoot项目，因此分为两个步骤</p>
 <p>构建：maven clean package</p>
@@ -6067,9 +6067,9 @@ hello_world:
 </code></pre></div>
 <p>上述内容中的启动脚本/home/deploy/start.sh，这个文件依然要确保用户为gitlab-runner否则还是会失败（要明确yml中的所有行为都是由gitlab-runner用户执行的）</p>
 <p>推送代码，触发CI/CD，然后查看job的执行情况</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-6.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-6.png"></a></p>
 <p>在服务器上，通过ps -ef | grep ${程序名}查看进程的启动时间是否与你CI/CD的部署时间吻合，若一致则说明整个构建&amp;部署流程全部成功。</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-7.png" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/devops/gitlab-ci-7.png"></a></p>
 <p>最后，你可以通过修改接口推送代码，测试接口，来判断当前部署的程序是否已经是更新后的程序。</p>
 
 
@@ -6196,10 +6196,10 @@ document.addEventListener("DOMContentLoaded", updateGiscusTheme);
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["header.autohide", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["header.autohide", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="../../javascripts/mermaid-zoom.js"></script>
       

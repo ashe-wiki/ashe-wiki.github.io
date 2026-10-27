@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -28,10 +28,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -5889,9 +5889,9 @@
 <h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>https://www.elastic.co/guide/en/elasticsearch/client/java-api-client/current/installation.html</p>
 <p>以上是Elasticsearch对接Java的官方文档（pom依赖部分）
-</p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/sb-es-1.png" data-desc-position="bottom"><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/sb-es-1.png"></a></p>
 <p>我本地Windows安装的Elasticsearch也是8.15.3版本
-</p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/sb-es-2.png" data-desc-position="bottom"><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/sb-es-2.png"></a></p>
 <h2 id="_2">启动报错<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * Java Client: 8.10</span>
@@ -5992,7 +5992,7 @@ Correct<span class="w"> </span>the<span class="w"> </span>classpath<span class="
 报错翻译：大意是指正在调用一个不存在的method，这个method对应的class在我的本地maven仓库的xxx路径，并提到了elasticsearch-rest-client的版本，给出的建议是纠正该client的唯一性&amp;兼容性……<p></p>
 <p>我Google了一下报错内容，在Elasticsearch官网中找到了一个类似的issue，官方给出的回答是elasticsearch-rest-client版本不对，但是那个issue最后并未被发起者确认解决问题，而是在一段时间后自动关闭了。</p>
 <h2 id="_3">依赖分析<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/sb-es-3.png" data-desc-position="bottom"><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/sb-es-3.png"></a></p>
 <p>发现官方推荐的依赖中集成的elasticsearch-rest-client版本是6.4.3而非8.15.3</p>
 <p>因此尝试手动添加elasticsearch-rest-client8.15.3版本的依赖
 </p><div class="highlight"><pre><span></span><code><span class="w">        </span>&lt;dependency&gt;
@@ -6024,7 +6024,7 @@ Correct<span class="w"> </span>the<span class="w"> </span>classpath<span class="
 </code></pre></div><p></p>
 <p>我检索了该报错，在Elasticsearch官网有相关issue页面</p>
 <p>https://discuss.elastic.co/t/host-name-does-not-match-the-certificate/186618</p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/sb-es-4.png" data-desc-position="bottom"><img alt="p" src="https://raw.githubusercontent.com/ashe-c0de/wiki-src/refs/heads/main/db/sb-es-4.png"></a></p>
 <p>初始化RestClient的时候，需要配置跳过SSL证书验证（8.15.3 version则不需要配置该项）
 </p><div class="highlight"><pre><span></span><code><span class="p">.</span><span class="na">setSSLHostnameVerifier</span><span class="p">(</span><span class="n">NoopHostnameVerifier</span><span class="p">.</span><span class="na">INSTANCE</span><span class="p">)</span>
 </code></pre></div><p></p>
@@ -6153,10 +6153,10 @@ document.addEventListener("DOMContentLoaded", updateGiscusTheme);
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["header.autohide", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["header.autohide", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "toc.follow", "content.code.copy", "content.action.edit", "search.highlight"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="../../../javascripts/mermaid-zoom.js"></script>
       
