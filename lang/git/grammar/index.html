@@ -6132,17 +6132,14 @@ git<span class="w"> </span>fetch<span class="w"> </span>origin
 git<span class="w"> </span>rebase<span class="w"> </span>origin/dev
 
 <span class="c1"># 4. 如果有冲突，解决后继续</span>
-<span class="c1">#    无冲突则跳过</span>
-git<span class="w"> </span>add<span class="w"> </span>.
+<span class="c1">#    无冲突则自动完成 rebase</span>
+<span class="c1">#    有冲突时，解决冲突后执行：</span>
+git<span class="w"> </span>add<span class="w"> </span>&lt;resolved-files&gt;
 git<span class="w"> </span>rebase<span class="w"> </span>--continue
 
-<span class="c1"># 5. 推送个人分支</span>
-<span class="c1"># 无冲突</span>
-git<span class="w"> </span>push
+<span class="c1"># 如果还有冲突，重复上述步骤，直到 rebase 完成</span>
 
-<span class="c1"># 有冲突</span>
-git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>dev-ashe<span class="w"> </span>--force-with-lease
-<span class="c1"># 或者已设置 Git alias：</span>
+<span class="c1"># 5. 推送个人分支</span>
 git<span class="w"> </span>push-fwl
 
 <span class="c1"># 6. 创建 MR</span>
